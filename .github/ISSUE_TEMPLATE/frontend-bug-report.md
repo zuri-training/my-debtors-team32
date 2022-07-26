@@ -2,7 +2,7 @@
 name: Frontend Bug report
 about: Create a report to help us improve
 title: 'fix: correct the nav link on the homepage'
-labels: ''
+labels: bug, frontend
 assignees: ''
 
 ---

@@ -2,7 +2,7 @@
 name: Backend Feature request
 about: Describe the idea you want to work on
 title: 'feat: created authentication models'
-labels: enhancement, feature
+labels: feature, frontend
 assignees: ''
 
 ---

@@ -2,7 +2,7 @@
 name: Frontend Feature request
 about: Describe the idea you want to work on
 title: 'feat: created the lading page'
-labels: ''
+labels: backend, feature
 assignees: ''
 
 ---

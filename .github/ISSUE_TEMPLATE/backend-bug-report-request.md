@@ -2,7 +2,7 @@
 name: Backend Bug report request
 about: Create a report to help us improve a feature
 title: 'fix: changed user model foreign keys'
-labels: bug
+labels: backend, bug
 assignees: ''
 
 ---
