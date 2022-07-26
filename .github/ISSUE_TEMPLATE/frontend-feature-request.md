@@ -2,7 +2,7 @@
 name: Frontend Feature request
 about: Describe the idea you want to work on
 title: ''
-labels: backend, feature
+labels: feature, frontend
 assignees: ''
 
 ---
