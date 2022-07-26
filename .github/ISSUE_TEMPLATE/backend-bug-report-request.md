@@ -1,14 +1,14 @@
 ---
 name: Backend Bug report request
 about: Create a report to help us improve a feature
-title: 'fix: changed user model foreign keys'
+title: ''
 labels: backend, bug
 assignees: ''
 
 ---
 
 **Describe the bug**
-A clear and concise description of what the bug is.
+<!-- A clear and concise description of what the bug is. -->
 
 **To Reproduce**
 Steps to reproduce the behavior:
@@ -18,7 +18,7 @@ Steps to reproduce the behavior:
 4. See error
 
 **Screenshots**
-If applicable, add screenshots to help explain your problem.
+<!-- If applicable, add screenshots to help explain your problem. -->
 
 **Additional context**
-Add any other context about the problem here.
+<!-- Add any other context about the problem here. -->
