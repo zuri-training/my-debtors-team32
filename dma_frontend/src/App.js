@@ -9,6 +9,7 @@ function App() {
         style={{
           borderBottom: 'solid 1px',
           paddingBottom: '1rem',
+          textColor: 'black',
         }}
       >
         <Link to='/'>Home</Link> | <Link to='/contact'>Contact</Link> |{' '}
