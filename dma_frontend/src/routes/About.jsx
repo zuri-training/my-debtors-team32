@@ -4,23 +4,49 @@ import '../styles/About-us-page.css';
 const AboutPage = () => {
   return (
     <div>
-      <header className='main-header px-4'>
-        <div className='nav-buttons flex justify-between w-full'>
-          <div className='space-x-3 flex-1 flex text-white'>
+      {/* <header className='main-header px-4'>
+        <div className='nav-buttons flex w-full justify-between'>
+          <div className='flex flex-1 space-x-3 text-white'>
             <Link to='/'>Home</Link>
-            <Link to='!#'>Features</Link>
+            <Link to='/feature'>Features</Link>
             <Link to='/contact'>Contact us</Link>
           </div>
 
           <div className='log-reg space-x-3  '>
-            <Link className='nav-links' to='!#'>
+            <Link className='nav-links' to='/login'>
               Login
             </Link>
-            <Link className='nav-links' to='!#'>
+            <Link className='nav-links' to='/register'>
               Register
             </Link>
           </div>
         </div>
+      </header> */}
+      <header className='w-full bg-[#b4b1b1]'>
+        <nav className='mx-4 flex justify-between py-2'>
+          <ul className='flex space-x-4'>
+            <li>
+              <Link to='/'>Home</Link>
+            </li>
+            <li>
+              <Link to='/features'>Features</Link>
+            </li>
+            <li>
+              <Link to='/about'>About</Link>
+            </li>
+            <li>
+              <Link to='/contact'>Contact</Link>
+            </li>
+          </ul>
+          <ul className='flex space-x-3'>
+            <li>
+              <Link to='/login'>Login</Link>
+            </li>
+            <li>
+              <Link to='/register'>Register</Link>
+            </li>
+          </ul>
+        </nav>
       </header>
       <div className='head1'>
         <div className='what'>
