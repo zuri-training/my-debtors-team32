@@ -4,14 +4,20 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { StyledEngineProvider } from '@mui/material/styles';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import AboutPage from './routes/About';
+import ContactPage from './routes/Contact';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <StyledEngineProvider injectFirst>
       <BrowserRouter>
-        <App />
+        <Routes>
+          <Route path='/' element={<App />} />
+          <Route path='/about' element={<AboutPage />} />
+          <Route path='contact' element={<ContactPage />} />
+        </Routes>
       </BrowserRouter>
     </StyledEngineProvider>
   </React.StrictMode>
