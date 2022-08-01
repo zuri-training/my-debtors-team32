@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 // import { Link } from 'react-router-dom';
 import '../styles/home.css';
 const HomePageComp = () => {
+  let navigate = useNavigate();
   return (
     <div>
       <header className='top-section'>
@@ -18,12 +19,12 @@ const HomePageComp = () => {
             <div className='line'></div>
           </div>
           <div className='right-nav'>
-            <div className='nav-list' id='mid-nav-item'>
+            <div className='nav-list tw-w-full' id='mid-nav-item'>
               <ul className='nav-bar-items' id='pry-nav'>
                 <li className=' nav-item'>
-                  <a className='active' href='index.html'>
+                  <Link className='active' to='/'>
                     Home
-                  </a>
+                  </Link>
                 </li>
                 {/* <li className=' nav-item'>
                   <a href='#about'>About</a>
@@ -46,13 +47,24 @@ const HomePageComp = () => {
                 <li className=' nav-item'>
                   <Link to='/contact'>Contact</Link>
                 </li>
+                <li className=' nav-item'>
+                  <Link to='/signup'>Sign Up</Link>
+                </li>
               </ul>
             </div>
             <div className='nav-list' id='right-nav-item'>
-              <button className='login btn_1' id='top_login'>
+              <button
+                onClick={() => navigate(`/login`)}
+                className='login btn_1 tw-flex tw-w-fit tw-justify-center'
+                id='top_login'
+              >
                 LogIn
               </button>
-              <button className='reg btn_1' id='top_reg'>
+              <button
+                onClick={() => navigate(`/register`)}
+                className='reg btn_1 tw-flex tw-w-fit tw-justify-center tw-no-underline'
+                id='top_reg'
+              >
                 Register
               </button>
             </div>
