@@ -5,6 +5,12 @@
   color: rgb(171, 176, 182);
 }
 
+<<<<<<< HEAD
+=======
+main {
+}
+
+>>>>>>> 1a6100cb543bd1603e123f94ff367c2f7cacbace
 #p-1 {
   font-family: sans-serif;
   font-size: xx-large;
@@ -24,7 +30,11 @@
   gap: 350px;
 }
 
+<<<<<<< HEAD
 .form {
+=======
+form {
+>>>>>>> 1a6100cb543bd1603e123f94ff367c2f7cacbace
   padding-top: 50px;
 }
 
@@ -39,17 +49,28 @@
   text-align: center;
 }
 
+<<<<<<< HEAD
 .bold {
+=======
+a {
+>>>>>>> 1a6100cb543bd1603e123f94ff367c2f7cacbace
   font-weight: bold;
   color: black;
 }
 
+<<<<<<< HEAD
 .btn {
+=======
+button {
+>>>>>>> 1a6100cb543bd1603e123f94ff367c2f7cacbace
   background-color: white;
   opacity: 1.5;
   width: 400px;
   height: 30px;
+<<<<<<< HEAD
   cursor: pointer;
+=======
+>>>>>>> 1a6100cb543bd1603e123f94ff367c2f7cacbace
 }
 
 #small2 {
