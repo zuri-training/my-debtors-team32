@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const SignupPage = () => {
   return (
     <div>
-      <header className='tw-w-full'>
+      <header className='tw-w-full tw-p-3'>
         <nav className='tw-mx-4 tw-my-2 tw-flex tw-justify-between'>
           <ul className='tw-flex tw-space-x-4'>
             <li>

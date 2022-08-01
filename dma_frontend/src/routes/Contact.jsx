@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom';
 import '../styles/contact-us.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleDot } from '@fortawesome/free-regular-svg-icons';
+import { Button } from '@mui/material';
 
 const ContactPage = () => {
   return (
     <div>
-      <header className='tw-w-full'>
+      <header className='tw-w-full tw-p-3'>
         <nav className='tw-mx-4 tw-my-2 tw-flex tw-justify-between'>
           <ul className='tw-flex tw-space-x-4'>
             <li>
@@ -122,10 +123,14 @@ const ContactPage = () => {
                   placeholder='Enter Your Message'
                 ></textarea>
               </div>
-              <div className='tw-flex'>
-                <button className='submit-btn btn' type='button'>
+              <div className=' tw-flex'>
+                <Button
+                  variant='outlined'
+                  className='tw-w-full tw-capitalize'
+                  type='button'
+                >
                   <strong>Submit</strong>
-                </button>
+                </Button>
               </div>
             </form>
           </div>

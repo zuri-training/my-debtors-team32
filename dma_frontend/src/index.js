@@ -13,6 +13,7 @@ import SchoolPage from './routes/School';
 import StudentPage from './routes/Student';
 import FeaturesPage from './routes/Features';
 import ErrorPage from './routes/Error';
+import SignupComp from './routes/SignUp';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -28,6 +29,7 @@ root.render(
           <Route path='login' element={<LoginPage />} />
           <Route path='school' element={<SchoolPage />} />
           <Route path='student' element={<StudentPage />} />
+          <Route path='signup' element={<SignupComp />} />
           <Route path='*' element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>

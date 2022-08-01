@@ -4,7 +4,7 @@ import '../styles/About-us-page.css';
 const AboutPage = () => {
   return (
     <div>
-      <header className='tw-w-full tw-bg-[#b4b1b1]'>
+      <header className='tw-w-full tw-bg-[#b4b1b1] tw-p-3'>
         <nav className='tw-mx-4 tw-flex tw-justify-between tw-py-2'>
           <ul className='tw-flex tw-space-x-4'>
             <li>
