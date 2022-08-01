@@ -6,9 +6,9 @@ import { Button, TextField } from '@mui/material';
 const StudentPage = () => {
   return (
     <div>
-      <header className='w-full'>
-        <nav className='mx-4 my-2 flex justify-between'>
-          <ul className='flex space-x-4'>
+      <header className='tw-w-full'>
+        <nav className='tw-mx-4 tw-my-2 tw-flex tw-justify-between'>
+          <ul className='tw-flex tw-space-x-4'>
             <li>
               <Link to='/'>Home</Link>
             </li>
@@ -22,7 +22,7 @@ const StudentPage = () => {
               <Link to='/contact'>Contact</Link>
             </li>
           </ul>
-          <ul className='flex space-x-3'>
+          <ul className='tw-flex tw-space-x-3'>
             <li>
               <Link to='/login'>Login</Link>
             </li>
@@ -32,18 +32,18 @@ const StudentPage = () => {
           </ul>
         </nav>
       </header>
-      <div className='flex w-full px-4 pt-8'>
-        <Link to='/register' className='flex items-center space-x-2'>
+      <div className='tw-tw-flex tw-w-full tw-px-4 tw-pt-8'>
+        <Link to='/register' className='tw-flex tw-items-center tw-space-x-2'>
           {' '}
           <ArrowBackIcon /> <span>Back</span>
         </Link>
-        <h1 className='w-full text-center text-2xl font-bold'>
+        <h1 className='tw-w-full tw-text-center tw-text-2xl tw-font-bold'>
           Register As Student
         </h1>
       </div>
-      <section className='mx-auto my-5 flex max-w-lg flex-col space-y-4 rounded-md p-3 shadow-md'>
-        <div className='flex items-center space-x-2 '>
-          <label for='name' name='name' className='w-2/3'>
+      <section className='tw-mx-auto tw-my-5 tw-flex tw-max-w-lg tw-flex-col tw-space-y-4 tw-rounded-md tw-p-3 tw-shadow-md'>
+        <div className='tw-flex tw-items-center tw-space-x-2 '>
+          <label for='name' name='name' className='tw-w-2/3'>
             <p>Name of Student: </p>
           </label>
           <TextField
@@ -51,11 +51,11 @@ const StudentPage = () => {
             name='name'
             id='name'
             size='small'
-            className=' w-full rounded-md'
+            className=' tw-w-full tw-rounded-md'
           />
         </div>
-        <div className='flex items-center space-x-2 '>
-          <label for='email' name='email' className='w-2/3'>
+        <div className='tw-flex tw-items-center tw-space-x-2 '>
+          <label for='email' name='email' className='tw-w-2/3'>
             <p>Email Address: </p>
           </label>
           <TextField
@@ -64,12 +64,11 @@ const StudentPage = () => {
             name='email'
             id='email'
             size='small'
-            className='w-full rounded-md'
+            className='tw-w-full tw-rounded-md'
           />
         </div>
-
-        <div className='flex items-center space-x-2 '>
-          <label for='contact' name='contact' className='w-2/3'>
+        <div className='tw-flex tw-items-center tw-space-x-2 '>
+          <label for='contact' name='contact' className='tw-w-2/3'>
             <p>Phone Number: </p>
           </label>
           <TextField
@@ -78,11 +77,11 @@ const StudentPage = () => {
             size='small'
             name='contact'
             id='contact'
-            className=' w-full rounded-md'
+            className=' tw-w-full tw-rounded-md'
           />
         </div>
-        <div className='flex items-center space-x-2 '>
-          <label for='schoolName' name='schoolName' className='w-2/3'>
+        <div className='tw-flex tw-items-center tw-space-x-2 '>
+          <label for='schoolName' name='schoolName' className='tw-w-2/3'>
             <p>Name of school: </p>
           </label>
           <TextField
@@ -90,12 +89,13 @@ const StudentPage = () => {
             type='text'
             size='small'
             name='schoolName'
+            tw-
             id='schoolName'
-            className=' w-full rounded-md'
+            className=' tw-w-full tw-rounded-md'
           />
         </div>
-        <div className='flex space-x-2 '>
-          <label for='parentName' name='parentName' className='w-2/3'>
+        <div className='tw-flex tw-space-x-2 '>
+          <label for='parentName' name='parentName' className='tw-w-2/3'>
             <p>Name of Parent(s): </p>
           </label>
           <TextField
@@ -106,13 +106,16 @@ const StudentPage = () => {
             // size='small'
             rows={2}
             cols='33'
-            className='w-full rounded-md'
+            className='tw-w-full tw-rounded-md'
           />
         </div>
-
-        <p className='py-4 text-lg font-bold '>Document uploads</p>
-        <div className='flex items-center space-x-2'>
-          <label for='taxCertificate' name='taxCertificate' className='w-2/3'>
+        <p className='tw-py-4 tw-text-lg tw-font-bold '>Document uploads</p>
+        <div className='tw-flex tw-items-center tw-space-x-2'>
+          <label
+            for='taxCertificate'
+            name='taxCertificate'
+            className='tw-w-2/3'
+          >
             <p>School Identity Card: </p>
           </label>
           <input
@@ -122,11 +125,12 @@ const StudentPage = () => {
             accept='.doc, .docx, .pdf'
           />
         </div>
-        <div className='flex items-center space-x-2'>
+        tw-
+        <div className='tw-flex tw-items-center tw-space-x-2'>
           <label
             for='registrationCertificate'
             name='registrationCertificate'
-            className='w-2/3'
+            className='tw-w-2/3'
           >
             <p>Birth Certificate: </p>
           </label>
@@ -137,18 +141,16 @@ const StudentPage = () => {
             accept='.doc, .docx, .pdf'
           />
         </div>
-
         <Button
           variant='outlined'
-          className=' w-fit rounded-md px-4 py-2 capitalize transition duration-300 ease-in-out'
+          className=' tw-w-fit tw-rounded-md tw-px-4 tw-py-2 tw-capitalize tw-transition tw-duration-300 tw-ease-in-out'
         >
           Upload Document
         </Button>
-
-        <div className=' pt-8'>
+        <div className=' tw-pt-8'>
           <Button
             variant='contained'
-            className='w-full rounded-md bg-blue-400 px-4 py-2 capitalize text-white transition duration-300 ease-in-out hover:bg-blue-500'
+            className='tw-w-full tw-rounded-md tw-bg-blue-400 tw-px-4 tw-py-2 tw-capitalize tw-text-white tw-transition tw-duration-300 tw-ease-in-out hover:tw-bg-blue-500'
           >
             Submit
           </Button>

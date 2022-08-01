@@ -7,7 +7,7 @@ import { StyledEngineProvider } from '@mui/material/styles';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AboutPage from './routes/About';
 import ContactPage from './routes/Contact';
-import SignupPage from './routes/Signup';
+import SignupPage from './routes/SchoolSignup';
 import LoginPage from './routes/Login';
 import SchoolPage from './routes/School';
 import StudentPage from './routes/Student';

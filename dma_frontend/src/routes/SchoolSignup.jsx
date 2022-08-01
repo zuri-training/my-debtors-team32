@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 const SignupPage = () => {
   return (
     <div>
-      <header className='w-full'>
-        <nav className='mx-4 my-2 flex justify-between'>
-          <ul className='flex space-x-4'>
+      <header className='tw-w-full'>
+        <nav className='tw-mx-4 tw-my-2 tw-flex tw-justify-between'>
+          <ul className='tw-flex tw-space-x-4'>
             <li>
               <Link to='/'>Home</Link>
             </li>
@@ -20,7 +20,7 @@ const SignupPage = () => {
               <Link to='/contact'>Contact</Link>
             </li>
           </ul>
-          <ul className='flex space-x-3'>
+          <ul className='tw-flex tw-space-x-3'>
             <li>
               <Link to='/login'>Login</Link>
             </li>
@@ -30,35 +30,35 @@ const SignupPage = () => {
           </ul>
         </nav>
       </header>
-      <section className='mx-auto my-6 max-w-2xl rounded-lg shadow-md '>
-        <div className='flex justify-between p-8'>
+      <section className='tw-mx-auto tw-my-6 tw-max-w-2xl tw-rounded-lg tw-shadow-md '>
+        <div className='tw-flex tw-justify-between tw-p-8'>
           <img
             src='https://eply.com/wp-content/uploads/2021/12/ePly-1.jpg'
             alt='registraion placeholder'
-            className='h-[12rem] w-[15rem] overflow-hidden rounded-lg'
+            className='tw-h-[12rem] tw-w-[15rem] tw-overflow-hidden tw-rounded-lg'
           />
-          <div className='flex flex-col space-y-4'>
-            <h2 className='text-xl font-bold'>
+          <div className='tw-flex tw-flex-col tw-space-y-4'>
+            <h2 className='tw-text-xl tw-font-bold'>
               Register your account for free!
             </h2>
             <ul>
-              <li className='flex flex-col space-y-2'>
+              <li className='tw-flex tw-flex-col tw-space-y-2'>
                 <Link
                   to='/school'
-                  className='w-fit rounded-md border p-2 text-sm'
+                  className='tw-w-fit tw-rounded-md tw-border tw-p-2 tw-text-sm'
                 >
                   🏫 Register as a school
                 </Link>
 
                 <Link
                   to='/student'
-                  className='w-fit rounded-md border p-2 text-sm'
+                  className='tw-w-fit tw-rounded-md tw-border tw-p-2 tw-text-sm'
                 >
                   👨🏽‍🎓 Register as a student
                 </Link>
               </li>
             </ul>
-            <div className=' pt-6 text-center text-xs text-gray-500'>
+            <div className=' tw-pt-6 tw-text-center tw-text-xs tw-text-gray-500'>
               <span>Already have an account? </span>
               <Link to='/login'>Login here</Link>
             </div>
