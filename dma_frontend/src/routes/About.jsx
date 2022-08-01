@@ -22,9 +22,9 @@ const AboutPage = () => {
           </div>
         </div>
       </header> */}
-      <header className='w-full bg-[#b4b1b1]'>
-        <nav className='mx-4 flex justify-between py-2'>
-          <ul className='flex space-x-4'>
+      <header className='tw-w-full tw-bg-[#b4b1b1]'>
+        <nav className='tw-mx-4 tw-flex tw-justify-between tw-py-2'>
+          <ul className='tw-flex tw-space-x-4'>
             <li>
               <Link to='/'>Home</Link>
             </li>
@@ -38,7 +38,7 @@ const AboutPage = () => {
               <Link to='/contact'>Contact</Link>
             </li>
           </ul>
-          <ul className='flex space-x-3'>
+          <ul className='tw-flex tw-space-x-3'>
             <li>
               <Link to='/login'>Login</Link>
             </li>
