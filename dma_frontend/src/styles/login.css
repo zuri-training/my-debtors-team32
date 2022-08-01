@@ -1,20 +1,20 @@
-*,
+/* *,
 *::before,
 *::after {
     box-sizing: border-box;
     color: #636466;
     font-weight: 400;
-}
-a {
+} */
+.a-link {
     text-decoration: none;
 }
 .info {
-    border: 5px solid black;
+    border: 1px solid black;
     border-radius: 5px;
     font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
     overflow: hidden;
     width: 55%;
-    height: 500px;
+    /* height: 500px; */
     margin: 10px auto;
     padding: 20px 20px 0 20px;
 }
@@ -54,14 +54,14 @@ a {
     margin: 0;
     padding: 0;
 }
-#eye-off-outline {
+/* #eye-off-outline {
     margin-left: -25px;
     margin-bottom: -3.5px;
 }
 #lock-closed-outline {
     margin-right: -22px;
     margin-bottom: -3.5px;
-}
+} */
 .login-remember label {
     margin-top: 1px;
     margin-bottom: 10px;
