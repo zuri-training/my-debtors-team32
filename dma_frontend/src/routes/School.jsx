@@ -1,0 +1,183 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import {
+  Button,
+  FormControl,
+  MenuItem,
+  Select,
+  TextField,
+} from '@mui/material';
+
+const SchoolPage = () => {
+  return (
+    <div>
+      <header className='w-full'>
+        <nav className='mx-4 my-2 flex justify-between'>
+          <ul className='flex space-x-4'>
+            <li>
+              <Link to='/'>Home</Link>
+            </li>
+            <li>
+              <Link to='/features'>Features</Link>
+            </li>
+            <li>
+              <Link to='/about'>About</Link>
+            </li>
+            <li>
+              <Link to='/contact'>Contact</Link>
+            </li>
+          </ul>
+          <ul className='flex space-x-3'>
+            <li>
+              <Link to='/login'>Login</Link>
+            </li>
+            <li>
+              <Link to='/register'>Register</Link>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div className='flex w-full px-4 pt-8'>
+        <Link to='/register' className='flex space-x-2'>
+          {' '}
+          <ArrowBackIcon /> <span>Back</span>
+        </Link>
+        <h1 className='w-full text-center text-2xl font-bold'>
+          Register As School
+        </h1>
+      </div>
+      <section className='mx-auto my-5 flex max-w-lg flex-col space-y-4 rounded-md p-3 shadow-md'>
+        <div className='flex items-center space-x-2 '>
+          <label for='name' name='Name' className='w-2/3'>
+            <p>Name of School: </p>
+          </label>
+          <TextField
+            name='name'
+            size='small'
+            id='name'
+            variant='outlined'
+            className='w-full overflow-hidden rounded-md p-1'
+          />
+        </div>
+        <div className='flex items-center space-x-2'>
+          <label for='schoolCategory' name='schoolCategory' className='w-2/3'>
+            <p>School Category: </p>
+          </label>
+          <FormControl sx={{ m: 1 }} className='w-full' size='small'>
+            <Select
+              name='schoolCategory'
+              id='schoolCategory'
+              className='w-full rounded-md'
+            >
+              <MenuItem value=''>--Please choose an option--</MenuItem>
+              <MenuItem value='dog'>Pre School</MenuItem>
+              <MenuItem value='cat'>Primary</MenuItem>
+              <MenuItem value='hamster'>Secondary</MenuItem>
+              <MenuItem value='parrot'>Tertiary</MenuItem>
+              <MenuItem value='spider'>Post Graduate</MenuItem>
+            </Select>
+          </FormControl>
+        </div>
+        <div className='flex space-x-2 '>
+          <label for='description' name='description' className='w-2/3'>
+            <p>School Description: </p>
+          </label>
+          <TextField
+            multiline
+            id='description'
+            name='description'
+            rows={3}
+            variant='outlined'
+            className='w-full rounded-md p-1'
+          />
+        </div>
+        <div className='flex space-x-2 '>
+          <label for='address' name='address' className='w-2/3'>
+            <p>School Address: </p>
+          </label>
+          <TextField
+            multiline
+            id='address'
+            variant='outlined'
+            name='address'
+            rows={2}
+            className=' w-full rounded-md'
+          />
+        </div>
+        <div className='flex items-center space-x-2 '>
+          <label for='contact' name='contact' className='w-2/3'>
+            <p>Contact Number: </p>
+          </label>
+          <TextField
+            type='tel'
+            name='contact'
+            id='contact'
+            size='small'
+            className='w-full overflow-hidden rounded-md p-1'
+          />
+        </div>
+        <p className='py-4 text-lg font-bold '>Document uploads</p>
+        <div className='flex items-center space-x-2'>
+          <label for='taxCertificate' name='taxCertificate' className='w-2/3'>
+            <p>Tax Certificate: </p>
+          </label>
+          <input
+            type='file'
+            name='taxCertificate'
+            id='taxCertificate'
+            accept='.doc, .docx, .pdf'
+          />
+        </div>
+        <div className='flex items-center space-x-2'>
+          <label
+            for='registrationCertificate'
+            name='registrationCertificate'
+            className='w-2/3'
+          >
+            <p>Registration Certificate: </p>
+          </label>
+          <input
+            type='file'
+            name='registrationCertificate'
+            id='registrationCertificate'
+            accept='.doc, .docx, .pdf'
+          />
+        </div>
+        <div className='flex items-center space-x-2'>
+          <label
+            for='ministryApproval'
+            name='ministryApproval'
+            className='w-2/3'
+          >
+            <p>Ministry Approval: </p>
+          </label>
+          <input
+            type='file'
+            name='ministryApproval'
+            id='ministryApproval'
+            accept='.doc, .docx, .pdf'
+          />
+        </div>
+
+        <Button
+          variant='outlined'
+          className=' w-fit rounded-md px-4 py-2 capitalize transition duration-300 ease-in-out'
+        >
+          Upload Document
+        </Button>
+
+        <div className=' pt-8'>
+          <Button
+            variant='contained'
+            className='w-full rounded-md bg-blue-400 px-4 py-2 capitalize text-white transition duration-300 ease-in-out hover:bg-blue-500'
+          >
+            Submit
+          </Button>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default SchoolPage;

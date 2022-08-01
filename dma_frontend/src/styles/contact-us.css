@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&family=Montserrat:wght@400;700;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Ubuntu:wght@400;700&display=swap');
+
+.banner {
+    margin: 20px;
+}
+
+.container {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.contact-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.phone {
+    text-decoration: none;
+}
+
+.left {
+    text-align: left;
+    padding: 20px 50px 20px 20px;
+}
+
+.big-heading {
+    padding: 25px 0 35px;
+}
+
+.contact-detail {
+    margin: 30px 0;
+    display: flex;
+}
+
+.contact-detail p{
+    line-height: 20px;
+    margin: 2px 5px;
+}
+
+.dot-icon {
+    margin-right: 20px;
+}
+
+.input-entry {
+    padding-bottom: 20px;
+}
+
+.submit-btn {
+    width: 100%;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
