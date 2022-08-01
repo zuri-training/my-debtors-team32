@@ -4,24 +4,6 @@ import '../styles/About-us-page.css';
 const AboutPage = () => {
   return (
     <div>
-      {/* <header className='main-header px-4'>
-        <div className='nav-buttons flex w-full justify-between'>
-          <div className='flex flex-1 space-x-3 text-white'>
-            <Link to='/'>Home</Link>
-            <Link to='/feature'>Features</Link>
-            <Link to='/contact'>Contact us</Link>
-          </div>
-
-          <div className='log-reg space-x-3  '>
-            <Link className='nav-links' to='/login'>
-              Login
-            </Link>
-            <Link className='nav-links' to='/register'>
-              Register
-            </Link>
-          </div>
-        </div>
-      </header> */}
       <header className='tw-w-full tw-bg-[#b4b1b1]'>
         <nav className='tw-mx-4 tw-flex tw-justify-between tw-py-2'>
           <ul className='tw-flex tw-space-x-4'>
