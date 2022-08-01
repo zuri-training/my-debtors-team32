@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 const FeaturesPage = () => {
   return (
     <div>
-      <header className='w-full'>
-        <nav className='mx-4 my-2 flex justify-between'>
-          <ul className='flex space-x-4'>
+      <header className='tw-w-full'>
+        <nav className='tw-mx-4 tw-my-2 tw-flex tw-justify-between'>
+          <ul className='tw-flex tw-space-x-4'>
             <li>
               <Link to='/'>Home</Link>
             </li>
@@ -21,7 +21,7 @@ const FeaturesPage = () => {
               <Link to='/contact'>Contact</Link>
             </li>
           </ul>
-          <ul className='flex space-x-3'>
+          <ul className='tw-flex tw-space-x-3'>
             <li>
               <Link to='/login'>Login</Link>
             </li>

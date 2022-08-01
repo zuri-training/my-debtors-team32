@@ -12,9 +12,9 @@ import {
 const SchoolPage = () => {
   return (
     <div>
-      <header className='w-full'>
-        <nav className='mx-4 my-2 flex justify-between'>
-          <ul className='flex space-x-4'>
+      <header className='tw-w-full'>
+        <nav className='tw-mx-4 tw-my-2 tw-flex tw-justify-between'>
+          <ul className='tw-flex tw-space-x-4'>
             <li>
               <Link to='/'>Home</Link>
             </li>
@@ -28,7 +28,7 @@ const SchoolPage = () => {
               <Link to='/contact'>Contact</Link>
             </li>
           </ul>
-          <ul className='flex space-x-3'>
+          <ul className='tw-flex tw-space-x-3'>
             <li>
               <Link to='/login'>Login</Link>
             </li>
@@ -38,18 +38,18 @@ const SchoolPage = () => {
           </ul>
         </nav>
       </header>
-      <div className='flex w-full px-4 pt-8'>
-        <Link to='/register' className='flex space-x-2'>
+      <div className='tw-flex tw-w-full tw-px-4 tw-pt-8'>
+        <Link to='/register' className='tw-flex tw-space-x-2'>
           {' '}
           <ArrowBackIcon /> <span>Back</span>
         </Link>
-        <h1 className='w-full text-center text-2xl font-bold'>
+        <h1 className='tw-w-full tw-text-center tw-text-2xl tw-font-bold'>
           Register As School
         </h1>
       </div>
-      <section className='mx-auto my-5 flex max-w-lg flex-col space-y-4 rounded-md p-3 shadow-md'>
-        <div className='flex items-center space-x-2 '>
-          <label for='name' name='Name' className='w-2/3'>
+      <section className='tw-mx-auto tw-my-5 tw-flex tw-max-w-lg tw-flex-col tw-space-y-4 tw-rounded-md tw-p-3 tw-shadow-md'>
+        <div className='tw-flex tw-items-center tw-space-x-2 '>
+          <label for='name' name='Name' className='tw-w-2/3'>
             <p>Name of School: </p>
           </label>
           <TextField
@@ -57,18 +57,22 @@ const SchoolPage = () => {
             size='small'
             id='name'
             variant='outlined'
-            className='w-full overflow-hidden rounded-md p-1'
+            className='tw-w-full tw-overflow-hidden tw-rounded-md tw-p-1'
           />
         </div>
-        <div className='flex items-center space-x-2'>
-          <label for='schoolCategory' name='schoolCategory' className='w-2/3'>
+        <div className='tw-flex tw-items-center tw-space-x-2'>
+          <label
+            for='schoolCategory'
+            name='schoolCategory'
+            className='tw-w-2/3'
+          >
             <p>School Category: </p>
           </label>
-          <FormControl sx={{ m: 1 }} className='w-full' size='small'>
+          <FormControl sx={{ m: 1 }} className='tw-w-full' size='small'>
             <Select
               name='schoolCategory'
               id='schoolCategory'
-              className='w-full rounded-md'
+              className='tw-w-full tw-rounded-md'
             >
               <MenuItem value=''>--Please choose an option--</MenuItem>
               <MenuItem value='dog'>Pre School</MenuItem>
@@ -79,8 +83,8 @@ const SchoolPage = () => {
             </Select>
           </FormControl>
         </div>
-        <div className='flex space-x-2 '>
-          <label for='description' name='description' className='w-2/3'>
+        <div className='tw-flex tw-space-x-2 '>
+          <label for='description' name='description' className='tw-w-2/3'>
             <p>School Description: </p>
           </label>
           <TextField
@@ -89,11 +93,11 @@ const SchoolPage = () => {
             name='description'
             rows={3}
             variant='outlined'
-            className='w-full rounded-md p-1'
+            className='tw-w-full tw-rounded-md tw-p-1'
           />
         </div>
-        <div className='flex space-x-2 '>
-          <label for='address' name='address' className='w-2/3'>
+        <div className='tw-flex tw-space-x-2 '>
+          <label for='address' name='address' className='tw-w-2/3'>
             <p>School Address: </p>
           </label>
           <TextField
@@ -102,11 +106,11 @@ const SchoolPage = () => {
             variant='outlined'
             name='address'
             rows={2}
-            className=' w-full rounded-md'
+            className=' tw-w-full tw-rounded-md'
           />
         </div>
-        <div className='flex items-center space-x-2 '>
-          <label for='contact' name='contact' className='w-2/3'>
+        <div className='tw-flex tw-items-center tw-space-x-2 '>
+          <label for='contact' name='contact' className='tw-w-2/3'>
             <p>Contact Number: </p>
           </label>
           <TextField
@@ -114,12 +118,16 @@ const SchoolPage = () => {
             name='contact'
             id='contact'
             size='small'
-            className='w-full overflow-hidden rounded-md p-1'
+            className='tw-w-full tw-overflow-hidden tw-rounded-md tw-p-1'
           />
         </div>
-        <p className='py-4 text-lg font-bold '>Document uploads</p>
-        <div className='flex items-center space-x-2'>
-          <label for='taxCertificate' name='taxCertificate' className='w-2/3'>
+        <p className='tw-py-4 tw-text-lg tw-font-bold '>Document uploads</p>
+        <div className='tw-flex tw-items-center tw-space-x-2'>
+          <label
+            for='taxCertificate'
+            name='taxCertificate'
+            className='tw-w-2/3'
+          >
             <p>Tax Certificate: </p>
           </label>
           <input
@@ -129,11 +137,11 @@ const SchoolPage = () => {
             accept='.doc, .docx, .pdf'
           />
         </div>
-        <div className='flex items-center space-x-2'>
+        <div className='tw-flex tw-items-center tw-space-x-2'>
           <label
             for='registrationCertificate'
             name='registrationCertificate'
-            className='w-2/3'
+            className='tw-w-2/3'
           >
             <p>Registration Certificate: </p>
           </label>
@@ -144,11 +152,11 @@ const SchoolPage = () => {
             accept='.doc, .docx, .pdf'
           />
         </div>
-        <div className='flex items-center space-x-2'>
+        <div className='tw-flex tw-items-center tw-space-x-2'>
           <label
             for='ministryApproval'
             name='ministryApproval'
-            className='w-2/3'
+            className='tw-w-2/3'
           >
             <p>Ministry Approval: </p>
           </label>
@@ -162,7 +170,7 @@ const SchoolPage = () => {
 
         <Button
           variant='outlined'
-          className=' w-fit rounded-md px-4 py-2 capitalize transition duration-300 ease-in-out'
+          className=' tw-w-fit tw-rounded-md tw-px-4 tw-py-2 tw-capitalize tw-transition tw-duration-300 tw-ease-in-out'
         >
           Upload Document
         </Button>
@@ -170,7 +178,7 @@ const SchoolPage = () => {
         <div className=' pt-8'>
           <Button
             variant='contained'
-            className='w-full rounded-md bg-blue-400 px-4 py-2 capitalize text-white transition duration-300 ease-in-out hover:bg-blue-500'
+            className='tw-w-full tw-rounded-md tw-bg-blue-400 tw-px-4 tw-py-2 tw-capitalize tw-text-white tw-transition tw-duration-300 tw-ease-in-out hover:tw-bg-blue-500'
           >
             Submit
           </Button>
