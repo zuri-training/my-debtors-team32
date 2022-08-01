@@ -7,9 +7,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const LoginPage = () => {
   return (
     <div>
-      <header className='w-full'>
-        <nav className='mx-4 my-2 flex justify-between'>
-          <ul className='flex space-x-4'>
+      <header className='tw-w-full'>
+        <nav className='tw-mx-4 tw-my-2 tw-flex tw-justify-between'>
+          <ul className='tw-flex tw-space-x-4'>
             <li>
               <Link to='/'>Home</Link>
             </li>
@@ -23,7 +23,7 @@ const LoginPage = () => {
               <Link to='/contact'>Contact</Link>
             </li>
           </ul>
-          <ul className='flex space-x-3'>
+          <ul className='tw-flex tw-space-x-3'>
             <li>
               <Link to='/login'>Login</Link>
             </li>
@@ -58,8 +58,8 @@ const LoginPage = () => {
               </div>
               <input type="button" value="Sign In" />             
               <div>
-                  <p>Forgot password? <a href="/">Reset Password</a> </p>
-                  <p>Don't have an account? <a href="/">Sign Up</a></p>
+                  <p>Forgot password? <a className="a-link" href="/">Reset Password</a> </p>
+                  <p>Don't have an account? <a className="a-link" href="/">Sign Up</a></p>
               </div>
           </form>
         </div>

@@ -1,11 +1,11 @@
-*,
+/* *,
 *::before,
 *::after {
     box-sizing: border-box;
     color: #636466;
     font-weight: 400;
-}
-a {
+} */
+.a-link {
     text-decoration: none;
 }
 .info {
