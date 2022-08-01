@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contend Page</title>
+    <link rel="stylesheet" href="contend-page.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo-nav">
+        <div class="log">LOGO</div>
+        <div class="nav">
+          <a href="#">Profile</a>
+          <a href="#">Features</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="text1">
+        <h2
+          >Contend with a school on <br />
+          your finances!</h2
+        >
+      </div>
+      <div class="text2">
+        <p>Fill Complaint Form</p>
+        <p>Enter the details below to start contending with schools</p>
+      </div>
+
+      <div class="contact__right">
+        <form action="" class="contact__form">
+          <div class="input_data">
+            <div>
+              <!-- school's name -->
+              <label for="schname" class="schname">School's name:</label>
+              <input type="text" id="name" class="schname" />
+            </div>
+
+            <!-- student name -->
+            <div>
+              <label for="stdname" class="stdname">Student's name:</label>
+              <input type="text" id="name" class="stdname" />
+            </div>
+
+            <!-- parent's name -->
+            <div>
+              <label for="parent" class="parent">Parent's name:</label>
+              <input type="text" id="name" class="parent" />
+            </div>
+
+            <!-- parent's email address-->
+            <div>
+              <label for="email" class="email">Parent's Email Address:</label>
+              <input type="text" id="email" class="email" />
+            </div>
+
+            <!-- textarea -->
+            <div>
+              <label for="message" class="message">The issue:</label>
+              <textarea
+                name="message"
+                id="message"
+                cols="35"
+                rows="12"
+                class="message"
+                placeholder="Explain the issue briefly"
+              ></textarea>
+            </div>
+
+            <!-- file upload -->
+            <div>
+              <label for="document" class="doc">Proof of complaint:</label>
+              <input type="file" id="myFile" name="filename" /> </div
+            ><br />
+            <button>Submit Complaint</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
