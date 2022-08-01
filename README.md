@@ -2,7 +2,7 @@
 
 This is the Github repo for Team 32 on the debtors web application. This project is a platform that allows schools in a certain locality list directory of people owing them - to help them avoid going to other schools.
 
-## Frontend Workflow 🍃
+## Frontend & Backend Workflow 🍃
 
 1. Clone the repo and open the project on your prefered code editor
    `git clone https://github.com/zuri-training/my-debtors-team32.git`
