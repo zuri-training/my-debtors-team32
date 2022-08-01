@@ -1,0 +1,92 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.logo-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 80%;
+  padding-top: 1%;
+  padding-left: 5%;
+}
+
+.nav {
+  word-spacing: 50px;
+}
+
+.anchor {
+  text-decoration: none;
+  color: black;
+}
+
+.text1 {
+  margin-top: 10%;
+  text-align: center;
+}
+
+.text2 {
+  margin: 5%;
+  line-height: 30px;
+}
+
+/* .contact__form {
+  margin: 5%;
+} */
+
+.contact__form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 5px;
+}
+
+.schname,
+.stdname,
+.parent,
+.email {
+  width: 300px;
+  height: 40px;
+  background: transparent;
+  border-radius: 2px;
+}
+
+#label {
+  display: inline-block;
+  float: left;
+  clear: left;
+  width: 250px;
+  padding-left: 60px;
+}
+#name, #email, #myfile {
+  display: inline-block;
+  float: left;
+}
+
+#label2 {
+  padding-left: 60px;
+  vertical-align: top;
+}
+
+#message{
+  margin-left: 120px;
+}
+
+#myFile {
+  margin-left: 50px;
+}
+
+#btn-1 {
+  width: 200px;
+  height: 64px;
+  border-radius: 8px;
+  opacity: 8px;
+  padding: 8px;
+  gap: 8px;
+  background-color: #cfcdcd;
+  margin-left: 280px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
