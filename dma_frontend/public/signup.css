@@ -1,0 +1,70 @@
+#p-2 {
+  color: rgb(75, 71, 71);
+}
+::placeholder {
+  color: rgb(171, 176, 182);
+}
+
+#p-1 {
+  font-family: sans-serif;
+  font-size: xx-large;
+}
+
+.fname,
+.email,
+.pswd,
+.cpswd {
+  width: 400px;
+  height: 30px;
+}
+
+.flex-container {
+  display: flex;
+  padding-left: 100px;
+  gap: 350px;
+}
+
+.form {
+  padding-top: 50px;
+}
+
+.flex-item-2 {
+  width: 40%;
+  margin-top: 5%;
+  margin-right: 5%;
+  padding-bottom: 20%;
+  background-color: #c0bdbb;
+  align-items: center;
+  padding-top: 200px;
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+  color: black;
+}
+
+.btn {
+  background-color: white;
+  opacity: 1.5;
+  width: 400px;
+  height: 30px;
+  cursor: pointer;
+}
+
+#small2 {
+  padding-left: 100px;
+}
+
+@media screen and (min-width: 200px) and (max-width: 672px) {
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .flex-item-2 {
+    width: 300px;
+  }
+}
