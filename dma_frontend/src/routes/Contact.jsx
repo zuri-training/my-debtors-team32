@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import '../styles/contact-us.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleDot } from '@fortawesome/free-regular-svg-icons';
-import { Button } from '@mui/material';
+import Button from 'react-bootstrap/Button';
 
 const ContactPage = () => {
   return (
@@ -125,9 +125,8 @@ const ContactPage = () => {
               </div>
               <div className=' tw-flex'>
                 <Button
-                  variant='outlined'
+                  variant='outlined-info'
                   className='tw-w-full tw-capitalize'
-                  type='button'
                 >
                   <strong>Submit</strong>
                 </Button>
