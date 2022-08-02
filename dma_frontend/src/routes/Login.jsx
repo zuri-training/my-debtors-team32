@@ -1,4 +1,3 @@
-import { Typography } from '@mui/material';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/login.css';
@@ -33,7 +32,7 @@ const LoginPage = () => {
           </ul>
         </nav>
       </header>
-      <Typography>Login Page</Typography>
+      <p>Login Page</p>
       <div className='info'>
         <div className='image'>
           <img src='' alt='logo' />

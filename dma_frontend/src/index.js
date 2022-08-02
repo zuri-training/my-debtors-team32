@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { StyledEngineProvider } from '@mui/material/styles';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AboutPage from './routes/About';
 import ContactPage from './routes/Contact';
@@ -18,22 +17,20 @@ import SignupComp from './routes/SignUp';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <StyledEngineProvider injectFirst>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<App />} />
-          <Route path='/about' element={<AboutPage />} />
-          <Route path='/features' element={<FeaturesPage />} />
-          <Route path='contact' element={<ContactPage />} />
-          <Route path='register' element={<SignupPage />} />
-          <Route path='login' element={<LoginPage />} />
-          <Route path='school' element={<SchoolPage />} />
-          <Route path='student' element={<StudentPage />} />
-          <Route path='signup' element={<SignupComp />} />
-          <Route path='*' element={<ErrorPage />} />
-        </Routes>
-      </BrowserRouter>
-    </StyledEngineProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<App />} />
+        <Route path='/about' element={<AboutPage />} />
+        <Route path='/features' element={<FeaturesPage />} />
+        <Route path='contact' element={<ContactPage />} />
+        <Route path='register' element={<SignupPage />} />
+        <Route path='login' element={<LoginPage />} />
+        <Route path='school' element={<SchoolPage />} />
+        <Route path='student' element={<StudentPage />} />
+        <Route path='signup' element={<SignupComp />} />
+        <Route path='*' element={<ErrorPage />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
