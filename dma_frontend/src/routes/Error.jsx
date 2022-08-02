@@ -1,4 +1,5 @@
-import { Button, Typography } from '@mui/material';
+import Button from 'react-bootstrap/Button';
+
 import React from 'react';
 // import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
@@ -13,19 +14,19 @@ const ErrorPage = () => {
       </div>
 
       <div className='tw-flex tw-flex-col tw-space-y-1'>
-        <Typography className='tw-bg-gradient-to-r tw-from-red-500 tw-to-yellow-400 tw-bg-clip-text tw-text-center tw-text-xl tw-font-black tw-text-transparent md:tw-text-3xl'>
+        <p className='tw-bg-gradient-to-r tw-from-red-500 tw-to-yellow-400 tw-bg-clip-text tw-text-center tw-text-xl tw-font-black tw-text-transparent md:tw-text-3xl'>
           This Page is Missing!!!
-        </Typography>
+        </p>
 
-        <Typography className='tw-text-center tw-text-xs tw-text-gray-400 md:tw-text-base'>
+        <p className='tw-text-center tw-text-xs tw-text-gray-400 md:tw-text-base'>
           You Navigated to a wrong place
-        </Typography>
+        </p>
       </div>
 
       <div className='tw-mt-5'>
         <Button
           className='capitalize'
-          variant='outlined'
+          variant='outlined-primary'
           // color='error'
           onClick={() => navigate(`/`)}
         >

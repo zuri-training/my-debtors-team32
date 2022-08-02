@@ -61,6 +61,10 @@
   padding-left: 100px;
 }
 
+.anchor-log{
+  color: black;
+}
+
 @media screen and (min-width: 200px) and (max-width: 672px) {
   .flex-container {
     display: flex;
