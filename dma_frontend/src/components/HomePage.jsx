@@ -3,6 +3,7 @@ import React from 'react';
 // import { Link } from 'react-router-dom';
 import '../styles/home.css';
 import ProjectLayoutComp from './layout/ProjectLayout';
+
 const HomePageComp = () => {
   // let navigate = useNavigate();
   return (

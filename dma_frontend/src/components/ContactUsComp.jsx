@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/contact-us.css';
+
 const ContactUsComp = () => {
   return (
     <div className=''>
