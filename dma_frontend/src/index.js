@@ -13,6 +13,7 @@ import StudentPage from './routes/Student';
 import FeaturesPage from './routes/Features';
 import ErrorPage from './routes/Error';
 import SignupComp from './routes/SignUp';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
