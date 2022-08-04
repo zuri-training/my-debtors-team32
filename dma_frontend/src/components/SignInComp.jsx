@@ -5,13 +5,13 @@ const SignInComp = () => {
   return (
     <div className=''>
       <div className=''>
-        {         <div class="in-container">
-         <div class="in-item-2">
+        {         <div className="in-container">
+         <div className="in-item-2">
            <img id="flex-img-in" src={signin} alt="img2" />
          </div>
-         <div class="in-item-1">
-           <div class="known-in">
-             <div class="tnav-in">
+         <div className="in-item-1">
+           <div className="known-in">
+             <div className="tnav-in">
                <img src="/svg/svg" alt="" />
                <div id="myLinks">
                  <a href="HomePage.jsx">Home</a>
@@ -26,41 +26,40 @@ const SignInComp = () => {
            <img id="img-desktop-in" src="/svg/svg" alt="" />
            <p id="p-in">Sign In</p>
  
-           <form class="forme">
- 
-             <label for="email">Email address*</label><br /><br />
+           <form className="forme">
+             <label htmlFor="email">Email address*</label><br /><br />
              <input
                type="email"
-               class="email-in"
+               className="email-in"
                name="email"
                required=""
                placeholder="Enter your Email Address"
              /><br /><br /><br />
  
-             <label for="pswd">Password*</label><br /><br />
+             <label htmlFor="pswd">Password*</label><br /><br />
              <input
                type="password"
                name="password"
                placeholder="******************"
-               class="pswd01-in"
+               className="pswd01-in"
                autocomplete="current-password"
                required=""
                id="id_password-in"
              />
-             <i class="far fa-eye"
+             <i className="far fa-eye"
                id="togglePassword-in"></i>
              <script src="signup.js"></script><br /><br />
              <div className="Rem-For">
               <div className="Rem">
               <input type="Checkbox" id="remember" />&nbsp; 
-             <label for="remember">Remember Me</label>
+             <label htmlFor="remember">Remember Me</label>
               </div>
              <div className="For"><a href='HomePage.jsx'>Forgot Password?</a></div>
              </div>
              
              <br /><br />
-             <button class="btn-a-in">Sign In</button><br /><br />
-             <small id="small2-in">Don't have an account? <a href="SignInComp.jsx" class="bolde-2">Sign up</a></small>
+             <button className="btn-a-in">Sign In</button><br /><br />
+             <small id="small2-in">Don't have an account? <a href="SignInComp.jsx" className="bolde-2">Sign up</a></small>
            </form>
          </div>
        </div> }

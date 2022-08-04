@@ -6,13 +6,13 @@ const SignUpComp = () => {
     <div className=''>
       <div className=''>
         {
-         <div class="flex-contain">
-         <div class="flex-item-2">
+         <div className="flex-contain">
+         <div className="flex-item-2">
            <img id="flex-img" src={signup} alt="img1" />
          </div>
-         <div class="flex-item-1">
-           <div class="known">
-             <div class="tnav">
+         <div className="flex-item-1">
+           <div className="known">
+             <div className="tnav">
                <img src="/svg/svg" alt="" />
                <div id="myLinks">
                  <a href="HomePage.jsx">Home</a>
@@ -27,46 +27,46 @@ const SignUpComp = () => {
            <img id="img-desktop" src="/svg/svg" alt="" />
            <p id="p-1">Sign up</p>
  
-           <form class="forme">
-             <label for="name">Full name*</label><br /><br />
+           <form className="forme">
+             <label htmlFor="name">Full name*</label><br /><br />
              <input
                type="text"
-               class="fname"
+               className="fname"
                name="text"
                required=""
                placeholder="Enter your full name"
              /><br /><br />
  
-             <label for="email">Email address*</label><br /><br />
+             <label htmlFor="email">Email address*</label><br /><br />
              <input
                type="email"
-               class="email"
+               className="email"
                name="email"
                required=""
                placeholder="Enter your Email Address"
              /><br /><br />
  
-             <label for="pswd">Password*</label><br /><br />
+             <label htmlFor="pswd">Password*</label><br /><br />
              <input
                type="password"
                name="password"
                placeholder="******************"
-               class="pswd01"
+               className="pswd01"
                autocomplete="current-password"
                required=""
                id="id_password"
              />
-             <i class="far fa-eye"
+             <i className="far fa-eye"
                id="togglePassword"></i>
              <script src="signup.js"></script>
              <p id="p-2"
                ><small
                  >By clicking the button you are agreeing to our
-                 <a href="HomePage.jsx" class="bold-1"> Terms of services</a>
+                 <a href="HomePage.jsx" className="bold-1"> Terms of services</a>
                </small></p
              ><br />
-             <button class="btn-a">Sign Up</button><br />
-             <small id="small2">Already have an account? <a href="SignInComp.jsx" class="bold-2">Sign In</a></small>
+             <button className="btn-a">Sign Up</button><br />
+             <small id="small2">Already have an account? <a href="SignInComp.jsx" className="bold-2">Sign In</a></small>
            </form>
          </div>
        </div>
