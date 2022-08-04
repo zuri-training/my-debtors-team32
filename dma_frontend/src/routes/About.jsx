@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import ProjectLayoutComp from '../components/layout/ProjectLayout';
 import '../styles/About-us-page.css';
 const AboutPage = () => {

@@ -79,20 +79,10 @@ const SchoolPage = () => {
             </Form.Group>
           </Form>
 
-          <Button
-            variant='outline-primary'
-            // className=' tw-w-fit tw-rounded-md tw-px-4 tw-py-2 tw-capitalize tw-transition tw-duration-300 tw-ease-in-out'
-          >
-            Upload Document
-          </Button>
+          <Button variant='outline-primary'>Upload Document</Button>
 
           <div className=' pt-8'>
-            <Button
-              variant='primary'
-              // className='tw-w-full tw-rounded-md  tw-px-4 tw-py-2 tw-capitalize  tw-transition tw-duration-300 tw-ease-in-out '
-            >
-              Submit
-            </Button>
+            <Button variant='primary'>Submit</Button>
           </div>
         </section>
       </ProjectLayoutComp>
