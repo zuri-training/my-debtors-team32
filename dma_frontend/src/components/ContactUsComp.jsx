@@ -59,7 +59,7 @@ const ContactUsComp = () => {
             <form>
               <div className='input-entry tw-mb-4'>
                 <label
-                  for='fullname'
+                  htmlFor='fullname'
                   className='tw-mb-3 tw-block tw-text-sm tw-font-bold tw-text-gray-700'
                 >
                   Full Name
@@ -73,7 +73,7 @@ const ContactUsComp = () => {
               </div>
               <div className='input-entry tw-mb-4'>
                 <label
-                  for='email'
+                  htmlFor='email'
                   className='tw-mb-3 tw-block tw-text-sm tw-font-bold tw-text-gray-700'
                 >
                   Email Address
@@ -87,7 +87,7 @@ const ContactUsComp = () => {
               </div>
               <div className='input-entry tw-mb-4'>
                 <label
-                  for='message'
+                  htmlFor='message'
                   className='tw-mb-3 tw-block tw-text-sm tw-font-bold tw-text-gray-700'
                 >
                   Message
