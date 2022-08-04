@@ -1,8 +1,5 @@
 import React from 'react';
 import '../styles/contact-us.css';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faCircleDot, faEnvelope, faPhone, faLocationDot } from '@fortawesome/free-regular-svg-icons';
-// import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { FiPhoneCall } from 'react-icons/fi';
 import { FaRegEnvelope } from 'react-icons/fa';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
