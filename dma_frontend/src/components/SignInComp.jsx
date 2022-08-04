@@ -1,11 +1,69 @@
 import React from 'react';
-import '../styles/login.css';
-
+import '../styles/signin.css';
+import signin from '../images/signin.jpg'
 const SignInComp = () => {
   return (
     <div className=''>
       <div className=''>
-        {/* TYPE YOUR CODE HERE. IF YOU USE TAILWINDCSS MAKE SURE TO ADD THE tw- PREFIX TO THE UTILITY CLASS AND IF YOU WRITE VANILLA CSS KINDLY USE login.css FILE */}
+        {         <div class="in-container">
+         <div class="in-item-2">
+           <img id="flex-img-in" src={signin} alt="img2" />
+         </div>
+         <div class="in-item-1">
+           <div class="known-in">
+             <div class="tnav-in">
+               <img src="/svg/svg" alt="" />
+               <div id="myLinks">
+                 <a href="HomePage.jsx">Home</a>
+                 <a href="SignInComp.jsx">Sign In</a>
+                 <a href="ContactUsComp.jsx">Contact Us</a>
+               </div>
+               {/* <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                 <i class="fa fa-bars"></i>
+               </a> */}
+             </div>
+           </div>
+           <img id="img-desktop-in" src="/svg/svg" alt="" />
+           <p id="p-in">Sign In</p>
+ 
+           <form class="forme">
+ 
+             <label for="email">Email address*</label><br /><br />
+             <input
+               type="email"
+               class="email-in"
+               name="email"
+               required=""
+               placeholder="Enter your Email Address"
+             /><br /><br /><br />
+ 
+             <label for="pswd">Password*</label><br /><br />
+             <input
+               type="password"
+               name="password"
+               placeholder="******************"
+               class="pswd01-in"
+               autocomplete="current-password"
+               required=""
+               id="id_password-in"
+             />
+             <i class="far fa-eye"
+               id="togglePassword-in"></i>
+             <script src="signup.js"></script><br /><br />
+             <div className="Rem-For">
+              <div className="Rem">
+              <input type="Checkbox" id="remember" />&nbsp; 
+             <label for="remember">Remember Me</label>
+              </div>
+             <div className="For"><a href='HomePage.jsx'>Forgot Password?</a></div>
+             </div>
+             
+             <br /><br />
+             <button class="btn-a-in">Sign In</button><br /><br />
+             <small id="small2-in">Don't have an account? <a href="SignInComp.jsx" class="bolde-2">Sign up</a></small>
+           </form>
+         </div>
+       </div> }
       </div>
     </div>
   );
