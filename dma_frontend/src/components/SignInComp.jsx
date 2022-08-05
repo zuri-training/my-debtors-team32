@@ -10,21 +10,8 @@ const SignInComp = () => {
             <img id='flex-img-in' src={signin} alt='img2' />
           </div>
           <div className='in-item-1'>
-            <div className='known-in'>
-              <div className='tnav-in'>
-                <img src='/svg/svg' alt='' />
-                <div id='myLinks'>
-                  <a href='HomePage.jsx'>Home</a>
-                  <a href='SignInComp.jsx'>Sign In</a>
-                  <a href='ContactUsComp.jsx'>Contact Us</a>
-                </div>
-                {/* <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                 <i class="fa fa-bars"></i>
-               </a> */}
-              </div>
-            </div>
             <img id='img-desktop-in' src='/svg/svg' alt='' />
-            <p id='p-in'>Sign In</p>
+            <p id='p-in'>Sign In To Your Account</p>
 
             <form className='forme'>
               <label htmlFor='email'>Email address*</label>
@@ -76,7 +63,7 @@ const SignInComp = () => {
               <small id='small2-in'>
                 Don't have an account?{' '}
                 <a href='SignInComp.jsx' className='bolde-2'>
-                  Sign up
+                  <strong>Sign up</strong>
                 </a>
               </small>
             </form>
