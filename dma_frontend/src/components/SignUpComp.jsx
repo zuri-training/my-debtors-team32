@@ -3,27 +3,11 @@ import '../styles/signup.css';
 import signup from '../images/signup.png'
 const SignUpComp = () => {
   return (
-    <div className=''>
-      <div className=''>
-        {
          <div className="flex-contain">
          <div className="flex-item-2">
            <img id="flex-img" src={signup} alt="img1" />
          </div>
          <div className="flex-item-1">
-           <div className="known">
-             <div className="tnav">
-               <img src="/svg/svg" alt="" />
-               <div id="myLinks">
-                 <a href="HomePage.jsx">Home</a>
-                 <a href="SignInComp.jsx">Sign In</a>
-                 <a href="ContactUsComp.jsx">Contact Us</a>
-               </div>
-               {/* <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                 <i class="fa fa-bars"></i>
-               </a> */}
-             </div>
-           </div>
            <img id="img-desktop" src="/svg/svg" alt="" />
            <p id="p-1">Sign up</p>
  
@@ -70,9 +54,6 @@ const SignUpComp = () => {
            </form>
          </div>
        </div>
-    }
-      </div>
-    </div>
   );
 };
 
