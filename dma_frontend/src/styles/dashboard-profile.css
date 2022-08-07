@@ -1,0 +1,77 @@
+.profile-header {
+    display: flex;
+    padding: 15px 25px;
+  }
+  
+  .p-header {
+    width: 45%;
+    margin: 5px 20px;
+  }
+  
+  .p-header-button Button {
+    float: right;
+  }
+  
+  .navoo {
+    background-color: transparent;
+  }
+  
+  .navoo-link {
+    text-decoration: none !important;
+    color: #5b5959b2;
+  }
+  
+  .navoo::after {
+    content: "";
+    display: block;
+    position: relative;
+    top: 4px;
+    width: 100%;
+    height: 5.5px;
+    background-color: #888282;
+    border-radius: 50px;
+  }
+  
+  .uche {
+    width: 17%;
+  }
+  
+  .tab-row {
+    display: flex;
+    flex-direction: row;
+    border-width: 1.3px;
+    border-color: #b4b1b1;
+    border-style: none none solid;
+    height: fit-content;
+  }
+  
+  .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0;
+    width: 100%;
+  }
+  
+  .each-user {
+    width: 45%;
+    margin: 20px 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 0 10px;
+  }
+  
+  .final-detail {
+    border: 2px solid #b2beb5;
+    padding: 6px;
+  }
+  
+  .row-entry {
+    margin: 50px 0;
+  }
+  
+  .docs-list {
+    margin: 50px 0 0 37px;
+  }
+  
+  .req-list {
+    margin: 10px 0;
+  }
