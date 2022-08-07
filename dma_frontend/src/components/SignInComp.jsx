@@ -1,11 +1,74 @@
 import React from 'react';
-import '../styles/login.css';
-
+import '../styles/signin.css';
+import signin from '../images/signin.jpg';
 const SignInComp = () => {
   return (
     <div className=''>
       <div className=''>
-        {/* TYPE YOUR CODE HERE. IF YOU USE TAILWINDCSS MAKE SURE TO ADD THE tw- PREFIX TO THE UTILITY CLASS AND IF YOU WRITE VANILLA CSS KINDLY USE login.css FILE */}
+        <div className='in-container'>
+          <div className='in-item-2'>
+            <img id='flex-img-in' src={signin} alt='img2' />
+          </div>
+          <div className='in-item-1'>
+            <img id='img-desktop-in' src='/svg/svg' alt='' />
+            <p id='p-in'>Sign In To Your Account</p>
+
+            <form className='forme'>
+              <label htmlFor='email'>Email address*</label>
+              <br />
+              <br />
+              <input
+                type='email'
+                className='email-in'
+                name='email'
+                required=''
+                placeholder='Enter your Email Address'
+              />
+              <br />
+              <br />
+              <br />
+
+              <label htmlFor='pswd'>Password*</label>
+              <br />
+              <br />
+              <input
+                type='password'
+                name='password'
+                placeholder='******************'
+                className='pswd01-in'
+                autocomplete='current-password'
+                required=''
+                id='id_password-in'
+              />
+              <i className='far fa-eye' id='togglePassword-in'></i>
+              <script src='signup.js'></script>
+              <br />
+              <br />
+              <div className='Rem-For'>
+                <div className='Rem'>
+                  <input type='Checkbox' id='remember' />
+                  &nbsp;
+                  <label htmlFor='remember'>Remember Me</label>
+                </div>
+                <div className='For'>
+                  <a href='HomePage.jsx'>Forgot Password?</a>
+                </div>
+              </div>
+
+              <br />
+              <br />
+              <button className='btn-a-in'>Sign In</button>
+              <br />
+              <br />
+              <small id='small2-in'>
+                Don't have an account?{' '}
+                <a href='SignInComp.jsx' className='bolde-2'>
+                  <strong>Sign up</strong>
+                </a>
+              </small>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   );

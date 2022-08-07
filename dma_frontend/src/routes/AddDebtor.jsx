@@ -1,15 +1,15 @@
 import React from 'react';
-import AboutUsComp from '../components/AboutUsComp';
+import AddDebtorComp from '../components/AddDebtorComp';
 import ProjectLayoutComp from '../components/layout/ProjectLayout';
-import '../styles/About-us-page.css';
-const AboutPage = () => {
+
+const AddDeptor = () => {
   return (
     <div>
       <ProjectLayoutComp>
-        <AboutUsComp />
+        <AddDebtorComp />
       </ProjectLayoutComp>
     </div>
   );
 };
 
-export default AboutPage;
+export default AddDeptor;

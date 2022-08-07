@@ -1,12 +1,9 @@
-// import './App.css';
-import HomePageComp from './components/HomePage';
-// import ProjectLayoutComp from './components/layout/ProjectLayout';
+import HomePageComp from './routes/HomePage';
 
 function App() {
   return (
     <div className=''>
       <HomePageComp />
-      {/* <ProjectLayoutComp /> */}
     </div>
   );
 }
