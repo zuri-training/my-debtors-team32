@@ -19,6 +19,11 @@ import DeptorsSearch from './routes/DeptorsSearch';
 import DebtorsContend from './routes/DebtorsContend';
 import AddDebtor from './routes/AddDebtor';
 import Dashboard from './routes/Dashboard';
+<<<<<<< HEAD
+=======
+import DashboardProfile from './routes/DashboardProfile';
+import SchoolRegistration from './routes/SchoolRegistration';
+>>>>>>> ef0c1e549a5079fcdb529847fca9b57204f5694f
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -39,6 +44,8 @@ root.render(
         <Route path='deptorlist' element={<DeptorsList />} />
         <Route path='deptorsearch' element={<DeptorsSearch />} />
         <Route path='deptorcontend' element={<DebtorsContend />} />
+        <Route path='dashboardprofile' element={<DashboardProfile />} />
+        <Route path='schoolreg' element={<SchoolRegistration />} />
         <Route path='*' element={<ErrorPage />} />
       </Routes>
     </BrowserRouter>
