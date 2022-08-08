@@ -25,6 +25,7 @@ import SchoolList from './routes/SchoolList';
 import Documentation from './routes/Documentation';
 import Notifications from './routes/Notifications';
 import DashboardProfileUpdate from './routes/DashboardProfileUpdate';
+import ContendForm from './routes/ContendForm';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -44,6 +45,7 @@ root.render(
 
         <Route path='/admin/adddebtor' element={<AddDebtor />} />
         <Route path='/admin/contend' element={<DebtorsContend />} />
+        <Route path='/contend' element={<ContendForm />} />
         <Route path='/admin/listdebtors' element={<DeptorsList />} />
         <Route path='/admin/listschools' element={<SchoolList />} />
         <Route path='/admin/notifications' element={<Notifications />} />
