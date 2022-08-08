@@ -1,5 +1,5 @@
 import Button from 'react-bootstrap/Button';
-
+import error_1 from '../images/error_1.png';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -9,7 +9,7 @@ const ErrorPage = () => {
     <div className='tw-mx-2 tw-flex tw-h-screen tw-flex-col tw-items-center tw-justify-center'>
       {/* image */}
       <div className='tw-relative tw-h-44 tw-w-44 md:tw-h-80 md:tw-w-80'>
-        <img src='error_1.png' alt='error name' />
+        <img src={error_1} alt='error name' />
       </div>
 
       <div className='tw-flex tw-flex-col tw-space-y-1'>

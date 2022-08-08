@@ -1,8 +1,8 @@
 import React from 'react';
-import AddDebtorComp from '../components/AddDebtorComp';
+import DocumentationComp from '../components/DocumentationComp';
 import DashboardSideNav from '../components/layout/DashboardSideNav';
 
-const AddDeptor = () => {
+const Documentation = () => {
   return (
     <div>
       <div className='tw-flex tw-flex-col tw-space-x-4 lg:tw-flex-row'>
@@ -10,10 +10,10 @@ const AddDeptor = () => {
         <div className=''>
           <DashboardSideNav />
         </div>
-        <AddDebtorComp />
+        <DocumentationComp />
       </div>
     </div>
   );
 };
 
-export default AddDeptor;
+export default Documentation;
