@@ -101,7 +101,7 @@ const DeptorListComp = () => {
     <td>Abandoned payment</td>
   </tr>
   <tr>
-    <td>Fatima Chidinma</td>
+    <td>Fatimah Chidinma</td>
     <td>Children Intl’ school</td>
     <td>Pending payment</td>
   </tr>

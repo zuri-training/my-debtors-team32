@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import '../styles/addDebtor.css';
-
-const AddDeptorComp = () => {
-  return  (
-
-<div>
-  <div className = 'hjfjkf'></div>
-  <label htmlFor='email'>Email address*</label>
-  <input type='text'
-                name='email'
-                required=''
-                placeholder='Enter your Email Address'
-              />
-</div>
-  ) 
-
-  
-
-=======
 import React from "react";
 import '../styles/addDebtor.css';
 
@@ -62,7 +41,6 @@ const AddDeptorComp = () => {
     </div>
   )
               
->>>>>>> 522bd2e775d7d78f261d749bdbe06b98e3fb6231
 };
 
 export default AddDeptorComp;

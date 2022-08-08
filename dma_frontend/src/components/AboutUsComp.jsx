@@ -93,29 +93,6 @@ const AboutUsComp = () => {
             <br />
             <br />
 
-<<<<<<< HEAD
-</div>
-<div className="us-images">
-  <div className="img01"><img id='grid-img01' src={AboutUs01} alt='img01' /></div>
-  <div className="img02"><img id='grid-img02' src={AboutUs02} alt='img02' /></div>
-  <div className="img03"><img id='grid-img03' src={AboutUs03} alt='img03' /></div>
-</div>
-<a href="https://my-debtors-team32.vercel.app/school">
-<button className='mabt-btn01'>Register</button>
-</a>
-        </div>
-<div className="middle01">
-  <div className="head-purpose">
-    <h2>Our Purpose</h2>
-  </div>
-  <div className="text-purpose">
-    <ul className='mylist'>
-      <li>To ensure that the school's financing needs and its payment obligationsare met at <br />the lowest possible cost over the medium to long run, consistent with a prudent <br /> degree of risk</li><br />
-      <li>we make sure parents/guardians of the wards are free to contend such claims via <br /> submission of payment evidence, and can also plead to be given more time</li><br />
-    <li>We help you build reliable financial systems by fishing out potential debtors</li>
-    </ul>
-  </div>
-=======
             <div className='myfooter01'>
               <div className='team-meet'>
                 <h2>Meet Our Team</h2>
@@ -132,7 +109,6 @@ const AboutUsComp = () => {
                       CEO
                     </figcaption>
                   </figure>
->>>>>>> 522bd2e775d7d78f261d749bdbe06b98e3fb6231
 
                   <figure id='fig02'>
                     <img id='grid-img07' src={Rectangle02} alt='img07' />
