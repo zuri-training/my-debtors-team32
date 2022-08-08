@@ -1,17 +1,17 @@
 import React from 'react';
-import DashboardProfileComp from '../components/DashboardProfileComp';
 import DashboardSideNav from '../components/layout/DashboardSideNav';
+import NotificationComp from '../components/NotificationComp';
 
-const DashboardProfile = () => {
+const Notifications = () => {
   return (
     <div className='tw-flex tw-flex-col tw-space-x-6 lg:tw-flex-row '>
       {/* sidebar */}
       <div className=''>
         <DashboardSideNav />
       </div>
-      <DashboardProfileComp />
+      <NotificationComp />
     </div>
   );
 };
 
-export default DashboardProfile;
+export default Notifications;

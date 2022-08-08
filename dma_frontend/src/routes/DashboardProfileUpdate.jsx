@@ -1,17 +1,17 @@
 import React from 'react';
-import DashboardProfileComp from '../components/DashboardProfileComp';
+import DashboardProfileUpdateComp from '../components/DashboardProfileUpdateComp';
 import DashboardSideNav from '../components/layout/DashboardSideNav';
 
-const DashboardProfile = () => {
+const DashboardProfileUpdate = () => {
   return (
     <div className='tw-flex tw-flex-col tw-space-x-6 lg:tw-flex-row '>
       {/* sidebar */}
       <div className=''>
         <DashboardSideNav />
       </div>
-      <DashboardProfileComp />
+      <DashboardProfileUpdateComp />
     </div>
   );
 };
 
-export default DashboardProfile;
+export default DashboardProfileUpdate;
