@@ -1,7 +1,13 @@
 import React from 'react';
+// import DashboardSideNav from './layout/DashboardSideNav';
 
 const DashboardComp = () => {
-  return <div>DashboardComp</div>;
+  return (
+    <div className=''>
+      {/* main content */}
+      <div>sidebar</div>
+    </div>
+  );
 };
 
 export default DashboardComp;
