@@ -31,7 +31,7 @@ const AboutUsComp = () => {
   <div className="img02"><img id='grid-img02' src={AboutUs02} alt='img02' /></div>
   <div className="img03"><img id='grid-img03' src={AboutUs03} alt='img03' /></div>
 </div>
-<a href="SignUpComp.jsx">
+<a href="https://my-debtors-team32.vercel.app/school">
 <button className='mabt-btn01'>Register</button>
 </a>
         </div>
