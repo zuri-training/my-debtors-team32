@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
+import '../styles/dashboard-profile.css';
 
 function DashboardProfileUpdateComp() {
-  return(
+  return (
     <div className=''>
-      <div className=''>Profile Upade</div>
+      <div className=''>Profile Update</div>
     </div>
   );
 
