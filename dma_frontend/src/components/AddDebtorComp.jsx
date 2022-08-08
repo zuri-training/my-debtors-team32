@@ -20,7 +20,7 @@ const AddDeptorComp = () => {
   console.log('formValue', formValue);
 
   const handleClose = () => {
-    navigate('/admin/listschools', { replace: true });
+    navigate('/admin/listdebtors', { replace: true });
     setModalShow(false);
     setBtnLoad(false);
   };
