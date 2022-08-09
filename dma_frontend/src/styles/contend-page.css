@@ -174,3 +174,74 @@ cursor: pointer;
       margin-top: 50px;
     }
 }
+
+
+
+/* Debtor contend */
+.compt {
+  font-family: 'Space Grotesk', sans-serif;
+  padding: 50px 50px 0;
+  color: #484747;
+}
+
+.compt--text--1 {
+  text-align: center;
+  color: #0A5694;
+}
+
+.compt--text--2 {
+  font-size: 30px;
+}
+
+.compt--text--3 {
+  font-size: 22px;
+  padding-bottom: 30px;
+}
+
+.compt--table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.compt--link {
+  text-decoration: none;
+  color: #484747;
+}
+
+.compt--link:hover {
+  color: #0A5694;
+}  
+
+th {
+  font-size: 20px;
+}
+
+@media screen and (min-width: 280px) and (max-width: 768px) {
+  .compt {
+    padding: 20px 0;
+  }
+
+  .compt--text--2 {
+    font-size: 18px;
+  }
+
+  .compt--text--3 {
+    font-size: 14px;
+    padding-bottom: 10px;
+  }
+
+  th, td {
+    font-size: 11px;
+  }
+
+  .bgc--green {
+    background-color: #DBF7D4;
+  }
+}
+
+@media screen and (min-width: 440px) and (max-width: 768px) {
+  th, td {
+    font-size: 15px;
+  }
+}
