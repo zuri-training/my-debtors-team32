@@ -1,12 +1,19 @@
 import React from 'react';
 import DebtorContendComp from '../components/DebtorContendComp';
-import ProjectLayoutComp from '../components/layout/ProjectLayout';
+import DashboardSideNav from '../components/layout/DashboardSideNav';
 
 const DeptorsContend = () => {
   return (
-    <ProjectLayoutComp>
-      <DebtorContendComp />
-    </ProjectLayoutComp>
+    <div>
+      <div className='tw-flex tw-flex-col tw-space-x-4 lg:tw-flex-row'>
+        {/* sidebar */}
+        <div className=''>
+          <DashboardSideNav />
+        </div>
+
+        <DebtorContendComp />
+      </div>
+    </div>
   );
 };
 

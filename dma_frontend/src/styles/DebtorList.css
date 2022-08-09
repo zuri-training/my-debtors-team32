@@ -1,0 +1,62 @@
+.debtorhead {
+  text-align: center;
+  padding-bottom: 30px;
+  color: #003865;
+}
+
+.inputsearch {
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  background-color: rgb(255, 255, 255);
+  padding: 8px;
+  color: rgba(6, 0, 0, 0.465);
+  width: 70%;
+  margin-left: 200px;
+}
+.input-search {
+  width: 95%;
+  padding: 0.5px;
+  border-radius: 30px;
+  background-color: rgb(255, 255, 255);
+  outline: none;
+  color: rgba(6, 0, 0, 0.465);
+}
+
+.deji-table {
+  font-family: arial, sans-serif;
+  width: 60%;
+  margin-top: 30px;
+  margin-left: 250px;
+}
+
+.deji-table td,
+.deji-table th {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.deji-table tr:nth-child(even) {
+  background-color: #d4f6cc;
+}
+
+@media screen and (min-width: 280px) and (max-width: 600px) {
+  .inputsearch {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    background-color: rgb(255, 255, 255);
+    padding: 8px;
+    color: rgba(6, 0, 0, 0.465);
+    width: 70%;
+    margin: auto;
+  }
+
+  .deji-table {
+    font-family: arial, sans-serif;
+    width: 60%;
+    margin-top: 30px;
+    margin-left: 5%;
+  }
+}
