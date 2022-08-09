@@ -1,3 +1,3 @@
-Please Kindly find below the links to the issues i worked on:
+Please Kindly find below the links to the issues I worked on:
 
-https://docs.google.com/document/d/13R5jkDzPGmqGgu3ekikSMzDy8MvMQJFrJMKWkXncNBk/edit?usp=sharing
+https://docs.google.com/document/d/1Hh6LjD6yCTcCKkB80HuHM912n5xCwYYmeX60_AY3urA/edit?usp=drivesdk
