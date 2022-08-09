@@ -1,6 +1,4 @@
 import React from 'react';
-
-import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/dashboard-profile.css';
 
 function DashboardProfileUpdateComp() {
@@ -9,6 +7,7 @@ function DashboardProfileUpdateComp() {
       <div className=''>Profile Update</div>
     </div>
   );
+
 }
 
 export default DashboardProfileUpdateComp;
