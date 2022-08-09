@@ -234,6 +234,10 @@ th {
   th, td {
     font-size: 11px;
   }
+
+  .bgc--green {
+    background-color: #DBF7D4;
+  }
 }
 
 @media screen and (min-width: 440px) and (max-width: 768px) {
