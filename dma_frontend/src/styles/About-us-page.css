@@ -1,12 +1,12 @@
-.heading {
-  display: flex;
-  padding-left: 10px;
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&family=Montserrat:wght@400;700;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Ubuntu:wght@400;700&display=swap');
+
+.about-body {
+  font-family: 'Space Grotesk', sans-serif;
 }
 
-.middle01 {
+.heading {
   display: flex;
-  padding-left: 30px;
-  padding-top: 80px;
+  padding: 10px;
 }
 
 .myfooter01 {
@@ -16,21 +16,35 @@
 
 .myfooter02 {
   display: flex;
-  gap: 60px;
-  padding-left: 30px;
-  padding-top: 150px;
-  padding-bottom: 50px;
+  margin: 150px 0px 60px;
 }
+
+.reg01,.reg-img {
+  width: 50%;
+}
+
+.reg-img img {
+  float: right;
+}
+
 .fig-parent {
   display: flex;
   gap: 20px;
-  padding-left: 200px;
 }
 
-.middle02 {
-  display: flex;
-  padding-left: 30px;
-  padding-top: 80px;
+.us {
+  width: 35%;
+  padding-top: 50px;
+}
+
+.us h2 {
+  font-size: 3rem;
+  padding: 10px 0 15px;
+}
+
+.us p {
+  font-size: 1.3rem;
+  padding: 0 0 15px;
 }
 
 .us-images {
@@ -38,12 +52,31 @@
   grid-template-areas:
     "a b"
     "a c";
-  padding-right: 30px;
+  width: 65%;
 }
+
+.img01,.img02,.img03 {
+  margin: 5px;
+}
+
+.middle01 {
+  display: flex;
+  margin: 150px 20px 20px;
+}
+
+.middle02 {
+  display: flex;
+  margin: 150px 20px 20px;
+}
+
+.middle02 p{
+  font-weight: 700;
+}
+
 
 #grid-img01 {
   width: 616px;
-  height: 374px;
+  height: 378px;
 }
 
 #grid-img02 {
@@ -70,13 +103,17 @@
 #grid-img07,
 #grid-img08,
 #grid-img09 {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: 300px;
 }
 
 #grid-img10 {
   width: 500px;
   height: 300px;
+}
+
+#fig01,#fig02,#fig03,#fig04 {
+  width: 24%;
 }
 
 .img01 {
@@ -91,12 +128,6 @@
   grid-area: c;
 }
 
-.us {
-  width: 400px;
-  padding-top: 50px;
-  padding-left: 70px;
-}
-
 .abt-btn01 {
   background-color: #003865;
   color: white;
@@ -107,6 +138,7 @@
   border: 2px solid black;
   border-radius: 8px;
   height: 50px;
+  margin: 15px 0 0;
 }
 
 .text-purpose {
@@ -135,19 +167,28 @@
   cursor: pointer;
   border: 2px solid black;
 }
-#myfig1,
-#myfig2,
-#myfig3,
-#myfig4 {
+
+.myfig {
   text-align: left;
+}
+
+.myfig span{
+  font-weight: 700;
+  font-size: 1.35rem;
 }
 
 #blueschool {
   text-decoration: none;
 }
 
-.mabt-btn01 {
-  visibility: hidden;
+.bull-eye {
+  display: inline;
+  color: #FA010175;
+  margin: 5px 30px 10px 0;
+}
+
+.point {
+  display: flex;
 }
 
 @media screen and (min-width: 280px) and (max-width: 600px) {

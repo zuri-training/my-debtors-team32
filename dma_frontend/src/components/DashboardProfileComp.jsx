@@ -23,7 +23,11 @@ function DashboardProfileComp() {
   }
 
   return (
+<<<<<<< HEAD
     <div>
+=======
+    <div className='profile-all'>
+>>>>>>> 14aa1ecebece8f2bb937239a30dfc23369b02131
       <div className='profile-header'>
         <div className='p-header-title p-header'>
           <h2>Apata Memorial High School</h2>
@@ -32,7 +36,12 @@ function DashboardProfileComp() {
         <div className='p-header-button p-header'>
           <Button
             onClick={() => navigate('/admin/profile/update')}
+<<<<<<< HEAD
             variant='secondary'
+=======
+            variant='default'
+            className='update-button'
+>>>>>>> 14aa1ecebece8f2bb937239a30dfc23369b02131
           >
             Update profile
           </Button>{' '}
@@ -151,7 +160,11 @@ function DashboardProfileComp() {
               <Container bsPrefix='user-details'>
                 <div className='each-user'>
                   <Row className='row-entry'>
+<<<<<<< HEAD
                     <Col md={4}>
+=======
+                    <Col md={4} className='detail-title'>
+>>>>>>> 14aa1ecebece8f2bb937239a30dfc23369b02131
                       <p>Name of Proprietor</p>
                     </Col>
                     <Col className='final-detail'>
@@ -159,7 +172,11 @@ function DashboardProfileComp() {
                     </Col>
                   </Row>
                   <Row className='row-entry'>
+<<<<<<< HEAD
                     <Col md={4}>
+=======
+                    <Col md={4} className='detail-title'>
+>>>>>>> 14aa1ecebece8f2bb937239a30dfc23369b02131
                       <p>Email</p>
                     </Col>
                     <Col className='final-detail'>
@@ -167,7 +184,11 @@ function DashboardProfileComp() {
                     </Col>
                   </Row>
                   <Row className='row-entry'>
+<<<<<<< HEAD
                     <Col md={4}>
+=======
+                    <Col md={4} className='detail-title'>
+>>>>>>> 14aa1ecebece8f2bb937239a30dfc23369b02131
                       <p>Phone number</p>
                     </Col>
                     <Col className='final-detail'>
@@ -177,7 +198,11 @@ function DashboardProfileComp() {
                 </div>
                 <div className='each-user'>
                   <Row className='row-entry'>
+<<<<<<< HEAD
                     <Col md={4}>
+=======
+                    <Col md={4} className='detail-title'>
+>>>>>>> 14aa1ecebece8f2bb937239a30dfc23369b02131
                       <p>Name of Proprietor</p>
                     </Col>
                     <Col className='final-detail'>
@@ -185,7 +210,11 @@ function DashboardProfileComp() {
                     </Col>
                   </Row>
                   <Row className='row-entry'>
+<<<<<<< HEAD
                     <Col md={4}>
+=======
+                    <Col md={4} className='detail-title'>
+>>>>>>> 14aa1ecebece8f2bb937239a30dfc23369b02131
                       <p>Email</p>
                     </Col>
                     <Col className='final-detail'>
@@ -193,7 +222,11 @@ function DashboardProfileComp() {
                     </Col>
                   </Row>
                   <Row className='row-entry'>
+<<<<<<< HEAD
                     <Col md={4}>
+=======
+                    <Col md={4} className='detail-title'>
+>>>>>>> 14aa1ecebece8f2bb937239a30dfc23369b02131
                       <p>Phone number</p>
                     </Col>
                     <Col className='final-detail'>
@@ -203,7 +236,11 @@ function DashboardProfileComp() {
                 </div>
                 <div className='each-user'>
                   <Row className='row-entry'>
+<<<<<<< HEAD
                     <Col md={4}>
+=======
+                    <Col md={4} className='detail-title'>
+>>>>>>> 14aa1ecebece8f2bb937239a30dfc23369b02131
                       <p>Name of Proprietor</p>
                     </Col>
                     <Col className='final-detail'>
@@ -211,7 +248,11 @@ function DashboardProfileComp() {
                     </Col>
                   </Row>
                   <Row className='row-entry'>
+<<<<<<< HEAD
                     <Col md={4}>
+=======
+                    <Col md={4} className='detail-title'>
+>>>>>>> 14aa1ecebece8f2bb937239a30dfc23369b02131
                       <p>Email</p>
                     </Col>
                     <Col className='final-detail'>
@@ -219,7 +260,11 @@ function DashboardProfileComp() {
                     </Col>
                   </Row>
                   <Row className='row-entry'>
+<<<<<<< HEAD
                     <Col md={4}>
+=======
+                    <Col md={4} className='detail-title'>
+>>>>>>> 14aa1ecebece8f2bb937239a30dfc23369b02131
                       <p>Phone number</p>
                     </Col>
                     <Col className='final-detail'>

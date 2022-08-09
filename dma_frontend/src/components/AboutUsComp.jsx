@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/About-us-page.css';
+import { BiBullseye } from 'react-icons/bi';
 import AboutUs01 from '../images/AboutUs01.jpg';
 import AboutUs02 from '../images/AboutUs02.png';
 import AboutUs03 from '../images/AboutUs03.png';
@@ -13,7 +14,11 @@ import HeaderLayoutComp from './layout/HeaderLayout';
 
 const AboutUsComp = () => {
   return (
+<<<<<<< HEAD
     <div className='tw-mx-auto tw-min-h-screen tw-max-w-screen-xl tw-pt-6'>
+=======
+    <div className='about-body tw-mx-auto tw-min-h-screen tw-max-w-screen-xl tw-pt-6'>
+>>>>>>> 14aa1ecebece8f2bb937239a30dfc23369b02131
       <HeaderLayoutComp />
       <div className=''>
         {
@@ -41,9 +46,12 @@ const AboutUsComp = () => {
                   <img id='grid-img03' src={AboutUs03} alt='img03' />
                 </div>
               </div>
+<<<<<<< HEAD
               <a href='SignUpComp.jsx'>
                 <button className='mabt-btn01'>Register</button>
               </a>
+=======
+>>>>>>> 14aa1ecebece8f2bb937239a30dfc23369b02131
             </div>
             <div className='middle01'>
               <div className='head-purpose'>
@@ -51,6 +59,7 @@ const AboutUsComp = () => {
               </div>
               <div className='text-purpose'>
                 <ul className='mylist'>
+<<<<<<< HEAD
                   <li>
                     To ensure that the school's financing needs and its payment
                     obligationsare met at <br />
@@ -68,6 +77,35 @@ const AboutUsComp = () => {
                     We help you build reliable financial systems by fishing out
                     potential debtors
                   </li>
+=======
+                  <div className='point'>
+                    <BiBullseye className='bull-eye'/>
+                    <li>    
+                      To ensure that the school's financing needs and its payment
+                      obligationsare met at <br />
+                      the lowest possible cost over the medium to long run,
+                      consistent with a prudent <br /> degree of risk
+                    </li>
+                  </div>
+                  <br />
+                  <div className='point'>
+                    <BiBullseye className='bull-eye'/>
+                    <li>    
+                      We make sure parents/guardians of the wards are free to
+                      contend such claims via <br /> submission of payment
+                      evidence, and can also plead to be given more time
+                    </li>
+                  </div>
+                  
+                  <br />
+                  <div className='point'>
+                    <BiBullseye className='bull-eye'/>
+                    <li>    
+                      We help you build reliable financial systems by fishing out
+                      potential debtors
+                    </li>
+                  </div>
+>>>>>>> 14aa1ecebece8f2bb937239a30dfc23369b02131
                 </ul>
               </div>
             </div>
@@ -103,34 +141,57 @@ const AboutUsComp = () => {
                 <div className='fig-parent'>
                   <figure id='fig01'>
                     <img id='grid-img06' src={Rectangle01} alt='img06' />
+<<<<<<< HEAD
                     <figcaption id='myfig1'>
                       {' '}
                       Daniel Grey <br />
+=======
+                    <figcaption id='myfig1' className='myfig'>
+                      {' '}
+                      <span>Daniel Grey</span> <br />
+>>>>>>> 14aa1ecebece8f2bb937239a30dfc23369b02131
                       CEO
                     </figcaption>
                   </figure>
 
                   <figure id='fig02'>
                     <img id='grid-img07' src={Rectangle02} alt='img07' />
+<<<<<<< HEAD
                     <figcaption id='myfig2'>
                       {' '}
                       Priscilla Evans <br /> Head of Operations
+=======
+                    <figcaption id='myfig2' className='myfig'>
+                      {' '}
+                      <span>Priscillia Evans</span> <br /> Head of Operations
+>>>>>>> 14aa1ecebece8f2bb937239a30dfc23369b02131
                     </figcaption>
                   </figure>
 
                   <figure id='fig03'>
                     <img id='grid-img08' src={Rectangle03} alt='img08' />
+<<<<<<< HEAD
                     <figcaption id='myfig3'>
                       {' '}
                       Samuel Murphy <br />
+=======
+                    <figcaption id='myfig3' className='myfig'>
+                      {' '}
+                      <span>Samuel Murphy</span> <br />
+>>>>>>> 14aa1ecebece8f2bb937239a30dfc23369b02131
                       Advisor and angel investor
                     </figcaption>
                   </figure>
 
                   <figure id='fig04'>
                     <img id='grid-img09' src={Rectangle04} alt='img09' />
+<<<<<<< HEAD
                     <figcaption id='myfig4'>
                       Eric Navani <br />
+=======
+                    <figcaption id='myfig4' className='myfig'>
+                    <span>Eric Navani</span> <br />
+>>>>>>> 14aa1ecebece8f2bb937239a30dfc23369b02131
                       Director
                     </figcaption>
                   </figure>
@@ -155,7 +216,11 @@ const AboutUsComp = () => {
                   <br /> guardians{' '}
                 </p>
                 <br />
+<<<<<<< HEAD
                 <button className='reg-btn03'>Register</button>
+=======
+                <button className='abt-btn01'>Register</button>
+>>>>>>> 14aa1ecebece8f2bb937239a30dfc23369b02131
               </div>
 
               <div className='reg-img'>
