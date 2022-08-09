@@ -23,7 +23,7 @@ function DashboardProfileComp() {
   }
 
   return (
-    <div>
+    <div className='profile-all'>
       <div className='profile-header'>
         <div className='p-header-title p-header'>
           <h2>Apata Memorial High School</h2>
@@ -32,7 +32,8 @@ function DashboardProfileComp() {
         <div className='p-header-button p-header'>
           <Button
             onClick={() => navigate('/admin/profile/update')}
-            variant='secondary'
+            variant='default'
+            className='update-button'
           >
             Update profile
           </Button>{' '}
@@ -151,7 +152,7 @@ function DashboardProfileComp() {
               <Container bsPrefix='user-details'>
                 <div className='each-user'>
                   <Row className='row-entry'>
-                    <Col md={4}>
+                    <Col md={4} className='detail-title'>
                       <p>Name of Proprietor</p>
                     </Col>
                     <Col className='final-detail'>
@@ -159,7 +160,7 @@ function DashboardProfileComp() {
                     </Col>
                   </Row>
                   <Row className='row-entry'>
-                    <Col md={4}>
+                    <Col md={4} className='detail-title'>
                       <p>Email</p>
                     </Col>
                     <Col className='final-detail'>
@@ -167,7 +168,7 @@ function DashboardProfileComp() {
                     </Col>
                   </Row>
                   <Row className='row-entry'>
-                    <Col md={4}>
+                    <Col md={4} className='detail-title'>
                       <p>Phone number</p>
                     </Col>
                     <Col className='final-detail'>
@@ -177,7 +178,7 @@ function DashboardProfileComp() {
                 </div>
                 <div className='each-user'>
                   <Row className='row-entry'>
-                    <Col md={4}>
+                    <Col md={4} className='detail-title'>
                       <p>Name of Proprietor</p>
                     </Col>
                     <Col className='final-detail'>
@@ -185,7 +186,7 @@ function DashboardProfileComp() {
                     </Col>
                   </Row>
                   <Row className='row-entry'>
-                    <Col md={4}>
+                    <Col md={4} className='detail-title'>
                       <p>Email</p>
                     </Col>
                     <Col className='final-detail'>
@@ -193,7 +194,7 @@ function DashboardProfileComp() {
                     </Col>
                   </Row>
                   <Row className='row-entry'>
-                    <Col md={4}>
+                    <Col md={4} className='detail-title'>
                       <p>Phone number</p>
                     </Col>
                     <Col className='final-detail'>
@@ -203,7 +204,7 @@ function DashboardProfileComp() {
                 </div>
                 <div className='each-user'>
                   <Row className='row-entry'>
-                    <Col md={4}>
+                    <Col md={4} className='detail-title'>
                       <p>Name of Proprietor</p>
                     </Col>
                     <Col className='final-detail'>
@@ -211,7 +212,7 @@ function DashboardProfileComp() {
                     </Col>
                   </Row>
                   <Row className='row-entry'>
-                    <Col md={4}>
+                    <Col md={4} className='detail-title'>
                       <p>Email</p>
                     </Col>
                     <Col className='final-detail'>
@@ -219,7 +220,7 @@ function DashboardProfileComp() {
                     </Col>
                   </Row>
                   <Row className='row-entry'>
-                    <Col md={4}>
+                    <Col md={4} className='detail-title'>
                       <p>Phone number</p>
                     </Col>
                     <Col className='final-detail'>

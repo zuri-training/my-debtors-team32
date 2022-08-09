@@ -26,6 +26,8 @@ import Documentation from './routes/Documentation';
 import Notifications from './routes/Notifications';
 import DashboardProfileUpdate from './routes/DashboardProfileUpdate';
 import ContendForm from './routes/ContendForm';
+import ForgotPassword from './routes/ForgotPassword';
+import UpdateDebtor from './routes/UpdateDebtor';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -41,6 +43,8 @@ root.render(
         <Route path='school' element={<SchoolPage />} />
         <Route path='student' element={<StudentPage />} />
         <Route path='signup' element={<SignupComp />} />
+        <Route path='forgot-password' element={<ForgotPassword />} />
+        <Route path='update-debtor' element={<UpdateDebtor />} />
         <Route path='dashboard' element={<Dashboard />} />
 
         <Route path='/admin/adddebtor' element={<AddDebtor />} />
