@@ -1,0 +1,34 @@
+.schdebtorhead {
+  padding-top: 30px;
+  text-align: center;
+  padding-left: 300px;
+  color: #003865;
+}
+
+.schdeji-table {
+  font-family: arial, sans-serif;
+  width: 60%;
+  margin-top: 30px;
+  margin-left: 250px;
+  margin-bottom: 20px;
+}
+
+.schdeji-table td,
+.schdeji-table th {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.schdeji-table tr:nth-child(even) {
+  background-color: #d4f6cc;
+}
+
+@media screen and (min-width: 280px) and (max-width: 600px) {
+  .schdeji-table {
+    font-family: arial, sans-serif;
+    width: 60%;
+    margin-top: 30px;
+    margin-left: 5%;
+  }
+}
