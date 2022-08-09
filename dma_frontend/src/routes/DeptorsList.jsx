@@ -1,15 +1,17 @@
 import React from 'react';
 import DeptorListComp from '../components/DeptorListComp';
-import ProjectLayoutComp from '../components/layout/ProjectLayout';
+import DashboardSideNav from '../components/layout/DashboardSideNav';
 
 const DeptorsList = () => {
   return (
     <div>
-      <ProjectLayoutComp>
-        <div className='tw-mb-10'>
-          <DeptorListComp />
+      <div className='tw-flex tw-flex-col tw-space-x-4 lg:tw-flex-row'>
+        {/* sidebar */}
+        <div className=''>
+          <DashboardSideNav />
         </div>
-      </ProjectLayoutComp>
+        <DeptorListComp />
+      </div>
     </div>
   );
 };
