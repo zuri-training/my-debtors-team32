@@ -6,7 +6,7 @@ const DocumentationComp = () => {
     <div className=''>
       <div className=''>
       <header>
-      <div class="doc-heading">
+      <div className="doc-heading">
         <h2
           >Debtor Monitoring Agency <br /><br />
           for Schools</h2
@@ -14,7 +14,7 @@ const DocumentationComp = () => {
       </div>
     </header>
     <main>
-      <div class="doc-email">
+      <div className="doc-email">
         <p
           >[Debtor Monitoring Agency] <br />
           Design Desk </p
@@ -23,8 +23,8 @@ const DocumentationComp = () => {
         <p class="doc-blue">August 2022</p>
       </div>
 
-      <div class="doc-prob">
-        <div class="doc-prob1">
+      <div className="doc-prob">
+        <div className="doc-prob1">
           <h3>Problem & Opportunities</h3><br /><br />
           <p
             >The problem of private schools owners incurring debt, resulting to
@@ -46,7 +46,7 @@ const DocumentationComp = () => {
             submission documents.</p
           >
         </div>
-        <div class="doc-prob2">
+        <div className="doc-prob2">
           <h3>Product & Design Decisions</h3> <br /><br /><br />
           <p
             >For this project, Figma was used to design both the low-fi and
@@ -54,7 +54,7 @@ const DocumentationComp = () => {
             aesthetically pleasing colours.</p
           >
         </div>
-        <div class="doc-prob3">
+        <div className="doc-prob3">
           <h3> Research & Discovery </h3><br /><br />
           <p
             >A research was conducted on debt recovery, findings were that it
@@ -71,11 +71,11 @@ const DocumentationComp = () => {
             parents are free to contend claims of their debt status.
           </p>
         </div>
-        <div class="doc-prob4">
+        <div className="doc-prob4">
           <h2>Designs</h2> <br />
           <img id="docimg" src={docimg} alt="doc-img" />
         </div>
-        <div class="doc-prob5">
+        <div className="doc-prob5">
           <h3>Project Summary</h3>
           <p
             >A platform that allow schools within a given region to list a
@@ -88,7 +88,7 @@ const DocumentationComp = () => {
       </div>
     </main>
     <footer>
-      <div class="foot-doc01">
+      <div className="foot-doc01">
         <p>How might we...</p><br /><br />
         <p
           >The key of this project is to checkmate wards who are owing in their
@@ -96,8 +96,8 @@ const DocumentationComp = () => {
           changing schools.</p
         >
       </div>
-      <div class="one-foot">
-        <div class="foot-doc02">
+      <div className="one-foot">
+        <div className="foot-doc02">
           <h1>Table of Contents</h1> <br />
           <ol>
             <li>Landing Page</li>
@@ -107,7 +107,7 @@ const DocumentationComp = () => {
           </ol>
         </div>
 
-        <div class="foot-doc03">
+        <div className="foot-doc03">
           <h4>What is the business impact?</h4><br />
           <p
             >DMA’s positive impact on the schools mode of operation can never be
@@ -116,33 +116,33 @@ const DocumentationComp = () => {
             Therefore, there will be a massive reduction in debt crisis in the
             education sector for primary/secondary educational institutions.</p
           ><br />
-          <p class="doc-red"
+          <p className="doc-red"
             >With DMA, Parents are also free to contend such claims with
             evidence by submitting supporting documents</p
           >
         </div>
       </div>
-      <div class="foot-doc04">
-        <div class="head-needs">
+      <div className="foot-doc04">
+        <div className="head-needs">
           <small>Research</small><br /><br />
           <h2>Core user needs</h2>
         </div>
-        <div class="doc-flexneeds">
-          <div class="needs1">
+        <div className="doc-flexneeds">
+          <div className="needs1">
             <h4>Need</h4><br />
             <p
               >The need for school owners to avoid admitting wards that still
               has outstanding fees to pay in previous schools.</p
             >
           </div>
-          <div class="needs2">
+          <div className="needs2">
             <h4>Need</h4><br />
             <p
               >The need for parents/guardians to be credit worth, toward their
               wards.</p
             >
           </div>
-          <div class="needs3">
+          <div className="needs3">
             <h4>Need</h4><br />
             <p
               >The need for effective debtrecovery process in the educational
