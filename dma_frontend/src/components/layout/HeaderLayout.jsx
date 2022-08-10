@@ -111,6 +111,13 @@ const HeaderLayoutComp = () => {
             </NavLink>
             <NavLink
               className='tw-font-fam1 tw-text-inherit tw-text-black tw-no-underline tw-transition-all hover:tw-text-gray-500'
+              to='/documentation'
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
+              Documentation
+            </NavLink>
+            <NavLink
+              className='tw-font-fam1 tw-text-inherit tw-text-black tw-no-underline tw-transition-all hover:tw-text-gray-500'
               to='/contact'
               style={({ isActive }) => (isActive ? activeStyle : undefined)}
             >
