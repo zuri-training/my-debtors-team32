@@ -15,7 +15,7 @@ import ErrorPage from './routes/Error';
 import SignupComp from './routes/SignUp';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import DeptorsList from './routes/DeptorsList';
-import DeptorsSearch from './routes/DeptorsSearch';
+// import DeptorsSearch from './routes/DeptorsSearch';
 import DebtorsContend from './routes/DebtorsContend';
 import AddDebtor from './routes/AddDebtor';
 import Dashboard from './routes/Dashboard';
@@ -28,6 +28,7 @@ import DashboardProfileUpdate from './routes/DashboardProfileUpdate';
 import ContendForm from './routes/ContendForm';
 import ForgotPassword from './routes/ForgotPassword';
 import UpdateDebtor from './routes/UpdateDebtor';
+import DocumentationPlain from './routes/DocumentationPlain';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -58,7 +59,8 @@ root.render(
           path='/admin/profile/update'
           element={<DashboardProfileUpdate />}
         />
-        <Route path='/admin/documentation' element={<Documentation />} />
+        <Route path='documentation' element={<Documentation />} />
+
         <Route path='schoolreg' element={<SchoolRegistration />} />
         <Route path='*' element={<ErrorPage />} />
       </Routes>
