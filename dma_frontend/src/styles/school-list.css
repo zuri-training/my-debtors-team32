@@ -31,4 +31,10 @@
     margin-top: 30px;
     margin-left: 5%;
   }
+  .schdebtorhead {
+    padding-top: 30px;
+    text-align: center;
+    padding-left: 10px;
+    color: #003865;
+  }
 }
