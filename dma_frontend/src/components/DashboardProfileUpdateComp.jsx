@@ -5,7 +5,6 @@ import { Nav } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
-import { BsCheckLg } from 'react-icons/bs';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/dashboard-profile.css';
 import { useNavigate } from 'react-router-dom';
@@ -22,14 +21,6 @@ function DashboardProfileUpdateComp() {
     } else {
       return 'saliba';
     }
-  }
-
-  // function changeHeading() {
-  //   setHeading("Akpaka");
-  // }
-
-  function changeView(k) {
-    setKey(k);
   }
 
 

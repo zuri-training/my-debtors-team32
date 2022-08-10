@@ -7,6 +7,8 @@ import dmalogo from '../images/dmalogo.png';
 import { NavLink } from 'react-router-dom';
 import { RiMenu5Fill } from 'react-icons/ri';
 import NavContentComp from '../components/layout/NavContent';
+
+
 const HomePageComp = () => {
   const [show, setShow] = useState(false);
 
@@ -180,7 +182,7 @@ const HomePageComp = () => {
                 <div className="tc_img_container">
                   <div className="headerImg"></div>
                 </div>
-                <a href="#" className="reg_btn">
+                <a href="/" className="reg_btn">
                   Register
                 </a>
               </section>
@@ -253,7 +255,7 @@ const HomePageComp = () => {
                       <p className="wwd_para">
                         Our team is dedicated to providing up-to-date debt information to help Schools make compromisable decision as regard debt situations from parents.
                       </p>
-                      <a href="#" className="wwd_btn">
+                      <a href="/" className="wwd_btn">
                         About Us
                       </a>
                     </div>
@@ -327,7 +329,7 @@ const HomePageComp = () => {
                     <p className="bt_paragraph">
                     DMA ensures minimal financial loss of these schools by allowing schools within a given region to list a directory of wards of parents or guardians who owe, which in turn prevent them from admitting wards of these parents or guardians
                     </p>
-                    <a href="#" className="bt_reg">Register</a>
+                    <a href="/" className="bt_reg">Register</a>
                   </div>
                 </div>
               </section>

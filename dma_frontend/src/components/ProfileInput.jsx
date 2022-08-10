@@ -1,7 +1,5 @@
 import React from 'react';
 import { Col } from 'react-bootstrap';
-import { Nav } from 'react-bootstrap';
-import { Container } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
 
 const ProfileInput = (props) => {
