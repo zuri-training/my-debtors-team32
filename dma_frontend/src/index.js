@@ -28,6 +28,7 @@ import DashboardProfileUpdate from './routes/DashboardProfileUpdate';
 import ContendForm from './routes/ContendForm';
 import ForgotPassword from './routes/ForgotPassword';
 import UpdateDebtor from './routes/UpdateDebtor';
+import HomePageComp from './routes/HomePage';
 import DocumentationPlain from './routes/DocumentationPlain';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

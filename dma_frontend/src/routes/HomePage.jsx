@@ -3,15 +3,16 @@ import '../styles/home.css';
 import '../styles/homepage.css';
 import ProjectLayoutComp from '../components/layout/ProjectLayout';
 import HeaderLayoutComp from '../components/layout/HeaderLayout';
+import { Link } from 'react-router-dom';
+import {Swiper, SwiperSlide} from 'swiper/react';
 
 
 const HomePageComp = () => {
   
   return (
     <div>
-      <ProjectLayoutComp>
+      <ProjectLayoutComp >
         <HeaderLayoutComp />
-
         <div className=''>
           <div className=''>
             {/* TYPE YOUR CODE HERE. IF YOU USE TAILWINDCSS MAKE SURE TO ADD THE tw- PREFIX TO THE UTILITY CLASS AND IF YOU WRITE VANILLA CSS KINDLY USE contact-us.css FILE */}
@@ -121,7 +122,7 @@ const HomePageComp = () => {
                 </div>
               </section>
               {/* Testimony Slider */}
-              <section className=''>
+              {/* <section className=''>
                 <div className='tw-my-10'>
                   <h2 className='tm_title tw-py-8 tw-text-center'>
                     What Schools Think About Us
@@ -131,7 +132,7 @@ const HomePageComp = () => {
                     spaceBetween={20}
                     centeredSlides={true}
                     pagination={true}
-                    modules={[Pagination, Keyboard]}
+                    // modules={[Pagination, Keyboard]}
                     className='mySwiper'
                     loop={true}
                     keyboard={{
@@ -187,7 +188,7 @@ const HomePageComp = () => {
                     </SwiperSlide>
                   </Swiper>
                 </div>
-              </section>
+              </section> */}
               {/* bottom content section */}
               <section className='bottom_content'>
                 <div className='bt_wrapper'>
