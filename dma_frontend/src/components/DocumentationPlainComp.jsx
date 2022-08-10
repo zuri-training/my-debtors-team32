@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/documentation.css';
 import docimg from '../images/docimg.png';
 
-const DocumentationComp = () => {
+const DocumentationPlainComp = () => {
   return (
     <div className=''>
       <div className=''>
@@ -184,4 +184,4 @@ const DocumentationComp = () => {
   );
 };
 
-export default DocumentationComp;
+export default DocumentationPlainComp;

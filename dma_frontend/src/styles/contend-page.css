@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
-/* * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-} */
-
 .contend {
   font-family: 'Space Grotesk', sans-serif;
   padding: 0 50px;
@@ -16,9 +10,9 @@
   padding-bottom: 30px;
 }
 
-.primary--header{
-color: #0A5694;
-text-align: center;
+.primary--header {
+  color: #0a5694;
+  text-align: center;
 }
 
 .secondary--header,
@@ -27,8 +21,8 @@ text-align: center;
 }
 
 .form {
-width: 60%;
-margin-bottom: 30px;
+  width: 60%;
+  margin-bottom: 30px;
 }
 
 .form--group {
@@ -38,12 +32,12 @@ margin-bottom: 30px;
 }
 
 .form--label {
-flex: 0 0 35%;
+  flex: 0 0 35%;
 }
 
 .form--input {
   padding: 10px;
-  border: 1px solid #5B5959;
+  border: 1px solid #5b5959;
   border-radius: 3px;
   width: 100%;
   flex: 0 0 65%;
@@ -55,13 +49,13 @@ flex: 0 0 35%;
 }
 
 .submit {
-  background-color: #0A5694;
+  background-color: #0a5694;
   color: #fff;
   font-weight: 500;
 }
 
 .submit:hover {
-  color: #0A5694;
+  color: #0a5694;
   background-color: #fff;
 }
 
@@ -74,7 +68,7 @@ flex: 0 0 35%;
   text-decoration: none;
   padding-bottom: 10px;
   display: block;
-  color: #0A5694;
+  color: #0a5694;
   font-weight: 400;
 }
 
@@ -86,7 +80,8 @@ flex: 0 0 35%;
   margin-bottom: 50px;
 }
 
-th, td {
+th,
+td {
   padding: 10px;
 }
 
@@ -95,15 +90,15 @@ th, td {
 }
 
 .icon {
-position: absolute;
-top: 30%;
-left: 30%;
-cursor: pointer;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  cursor: pointer;
 }
 
 .attach {
   text-align: right;
-  color: #0A5694;
+  color: #0a5694;
   text-decoration: none;
   font-weight: 700;
   font-size: 16px;
@@ -113,13 +108,11 @@ cursor: pointer;
   margin-bottom: 30px;
 }
 
-
 @media screen and (min-width: 801px) and (max-width: 1100px) {
   .icon {
     left: 50%;
     top: 25%;
-    }
-    
+  }
 }
 
 @media screen and (min-width: 280px) and (max-width: 768px) {
@@ -127,55 +120,53 @@ cursor: pointer;
     padding: 0 20px;
   }
 
-.contend--header {
-  padding-bottom: 10px;
-}
+  .contend--header {
+    padding-bottom: 10px;
+  }
 
   .form {
     width: 100%;
-    }
+  }
 
-    .form--group {
-      flex-direction: column;
-      align-items: start;
-    }
+  .form--group {
+    flex-direction: column;
+    align-items: start;
+  }
 
-    .secondary--header {
-      font-size: 20px;
-    }
+  .secondary--header {
+    font-size: 20px;
+  }
 
-    .tertiary--header {
-      font-size: 12px;
-    }
+  .tertiary--header {
+    font-size: 12px;
+  }
 
-    .lists {
-      font-size: 13px;
-    }
+  .lists {
+    font-size: 13px;
+  }
 
-    .hidden {
-      display: none;
-    }
+  .hidden {
+    display: none;
+  }
 
-    .attach-box {
-      position: relative;
-      margin-top: 30px;
-     }
+  .attach-box {
+    position: relative;
+    margin-top: 30px;
+  }
 
-    .attach {
-      margin-bottom: 0;
-      background-color: #0A5694;
-      color: #fff;
-      padding: 10px 20px;
-      position: absolute;
-      right: 0;
-    }
+  .attach {
+    margin-bottom: 0;
+    background-color: #0a5694;
+    color: #fff;
+    padding: 10px 20px;
+    position: absolute;
+    right: 0;
+  }
 
-    .submit {
-      margin-top: 50px;
-    }
+  .submit {
+    margin-top: 50px;
+  }
 }
-
-
 
 /* Debtor contend */
 .compt {
@@ -186,7 +177,7 @@ cursor: pointer;
 
 .compt--text--1 {
   text-align: center;
-  color: #0A5694;
+  color: #0a5694;
 }
 
 .compt--text--2 {
@@ -210,8 +201,8 @@ cursor: pointer;
 }
 
 .compt--link:hover {
-  color: #0A5694;
-}  
+  color: #0a5694;
+}
 
 th {
   font-size: 20px;
@@ -231,17 +222,19 @@ th {
     padding-bottom: 10px;
   }
 
-  th, td {
+  th,
+  td {
     font-size: 11px;
   }
 
   .bgc--green {
-    background-color: #DBF7D4;
+    background-color: #dbf7d4;
   }
 }
 
 @media screen and (min-width: 440px) and (max-width: 768px) {
-  th, td {
+  th,
+  td {
     font-size: 15px;
   }
 }
