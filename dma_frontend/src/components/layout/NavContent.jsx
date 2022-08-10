@@ -40,6 +40,13 @@ const NavContentComp = () => {
         >
           Contact Us
         </NavLink>
+        <NavLink
+          className='tw-font-fam1 tw-text-black tw-no-underline tw-transition-all hover:tw-text-gray-500'
+          to='/documentation'
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        >
+          Documentation
+        </NavLink>
       </div>
       {/* login | register */}
       <div className='tw-absolute tw-inset-x-0 tw-bottom-3 tw-flex tw-flex-col tw-items-center tw-justify-center tw-space-y-4 tw-font-fam1'>
