@@ -59,8 +59,9 @@ root.render(
           path='/admin/profile/update'
           element={<DashboardProfileUpdate />}
         />
-        <Route path='/admin/documentation' element={<Documentation />} />
-        <Route path='/documentation' element={<DocumentationPlain />} />
+        <Route path='admin/documentation' element={<Documentation />} />
+        <Route path='documentation' element={<DocumentationPlain />} />
+
         <Route path='schoolreg' element={<SchoolRegistration />} />
         <Route path='*' element={<ErrorPage />} />
       </Routes>

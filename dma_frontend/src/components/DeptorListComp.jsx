@@ -5,22 +5,26 @@ import { BsSearch} from 'react-icons/bs';
 
 const DeptorListComp = () => {
   return (
-    <div>
+    <div className='debtor'>
 <div className="debtorhead">
   <h2>List of debtors in Schools</h2>
 </div>
+<div className="search-box">
 <div className="inputsearch">
   <input type="text" id='input-search' className='input-search' placeholder='Search Debtor'/><BsSearch/> <br />
-  
+</div>
 </div>
 <div className="mytable">
 <table className='deji-table'>
-  <tr>
+  <thead>
+  <tr id='debt'>
     <th>Name of student</th>
     <th>Name of school</th>
     <th>Payment status</th>
   </tr>
-  <tr>
+  </thead>
+  <tbody>
+  <tr className='list-1'>
     <td>Ifeanyichukwu Hanifat </td>
     <td>Corona secondary school</td>
     <td>Abandoned payment</td>
@@ -115,6 +119,7 @@ const DeptorListComp = () => {
     <td>Meadow Hall</td>
     <td>Completed</td>
   </tr>
+  </tbody>
 </table>
 
 </div>

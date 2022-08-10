@@ -123,6 +123,7 @@ const HeaderLayoutComp = () => {
             >
               Contact Us
             </NavLink>
+          
           </div>
 
           {/* login | register */}
