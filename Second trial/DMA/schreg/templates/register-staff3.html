@@ -1,0 +1,19 @@
+
+
+{% block content %} 
+
+{% load crispy_forms_tags %}         
+
+<!--Register--> 
+<div class="container py-5">
+	<h1>Register the Bursar here</h1>
+	<form method="POST" action=".">
+		{% csrf_token %}
+		{{ form|crispy }} 
+        <a href="register-staff2" class="previous">Previous &laquo;</a>
+        <input type="button" value="Submit" class="submit-btn" />
+	</form>
+	
+</div>
+
+{% endblock %}

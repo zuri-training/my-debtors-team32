@@ -1,0 +1,18 @@
+
+
+{% block content %} 
+
+{% load crispy_forms_tags %}         
+
+<!--Register--> 
+<div class="container py-5">
+	<h1>Register Your School Here</h1>
+	<form method="POST">
+		{% csrf_token %}
+		{{ form|crispy }}                    
+		<a href="register-staff/" class="next">Next &raquo;</a>     
+	</form>
+	<p class="text-center">Please click on next to register your staff.</p>
+</div>
+
+{% endblock %}
