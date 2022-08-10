@@ -24,14 +24,6 @@ function DashboardProfileUpdateComp() {
     }
   }
 
-  // function changeHeading() {
-  //   setHeading("Akpaka");
-  // }
-
-  // function changeView(k) {
-  //   setKey(k);
-  // }
-
   return (
     <div className='profile-all'>
       <div className='profile-header'>
