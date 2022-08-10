@@ -122,7 +122,6 @@ const ContendComp = () => {
           </tbody>
         </table>
       </div>
-      );
     </div>
   );
 };

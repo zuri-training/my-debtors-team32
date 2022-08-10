@@ -11,11 +11,9 @@ const NotificationComp = () => {
           {/* TYPE YOUR CODE HERE INSIDE THIS DIV*/}
           <div className="notify">
         <div className="notify--header">
-          <h1 className='text--1'>Welcome <br /> <span className='text--2'>to Apata Memorial High School Dashboard!</span></h1>
           <div className="dashbord--notify">
           <img className='notify--icon' src={notification} alt='img1' />
           <h3 className='notify--text'>Notifications</h3>
-          <h4 className='notify--num'>3</h4>
           </div>
         </div>
         <hr />

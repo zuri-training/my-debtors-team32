@@ -211,6 +211,7 @@ th {
 @media screen and (min-width: 280px) and (max-width: 768px) {
   .compt {
     padding: 20px 0;
+    margin-right: 10px;
   }
 
   .compt--text--2 {
@@ -227,8 +228,16 @@ th {
     font-size: 11px;
   }
 
-  .bgc--green {
+  /* .bgc--green {
     background-color: #dbf7d4;
+  } */
+
+  .compt--table tr:nth-child(odd) {
+    background-color: #d4f6cc;
+  }
+
+  #compt--white {
+    background-color: #fff;
   }
 }
 

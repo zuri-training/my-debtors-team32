@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+.dash {
+    font-family: 'Space Grotesk', sans-serif;
+    padding-left: 15px;
+    padding-top: 50px;
+}
+
+.text__1 {
+    color: #0A5694;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.0;
+    padding-bottom: 50px;
+}
+
+.text__2 {
+    font-size: 30px;
+}
+
+.dashbord__notify {
+    display: flex;
+    align-items: center;
+}
+
+hr {
+    border: 1px solid #B4B1B1;
+    width: 70vw;
+    margin-top: 5px;
+}
+
+.notify__icon {
+    width: 30px;
+    height: 30px;
+}
+
+.notify__text {
+    font-size: 23px;
+    color: #003865;
+    padding: 0 20px 0 10px;
+}
+
+.notify__num {
+    color: #003865;
+    font-weight: 500;
+    font-size: 20px;
+    background-color: #D4F6CC;
+    border-radius: 50%;
+    padding: 3px 10px;
+}
+
+.dashboard__cards {
+    padding-top: 70px;
+}
+
+.cards {
+    color: #003865;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 20px 50px 0 50px;
+    margin-bottom: 10px;
+}
+
+.bg__gray {
+    background-color: rgba(231, 231, 231, 0.4);
+}
+
+.card__text {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.card__view {
+    text-decoration: none;
+    color: #003865;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.card__view:hover {
+    color: #0A5694;
+}
+
+#view__gray {
+    color: #B4B1B1;
+}
+
+#view__gray:hover {
+    color: #003865;
+}
+
+@media screen and (min-width: 280px) and (max-width: 1020px) {
+    hr {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 280px) and (max-width: 768px) {
+    .dash {
+        padding: 30px 15px 30px 0;
+    }
+
+    .text__1 {
+        font-size: 20px;
+        padding-bottom: 30px;
+    }
+
+    .text__2 {
+        font-size: 15px;
+    }
+
+    .notify__icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .notify__text {
+        font-size: 15px;
+        font-weight: 500;
+    }
+    
+    .notify__num {
+        color: #fff;
+        font-size: 13px;
+        background-color: #003865;
+        padding: 3px 6px;
+    }
+
+    .dashboard__cards {
+        padding-top: 20px;
+    }
+
+    .cards {
+        padding: 5px 10px 0;
+        font-size: 12px;
+    }
+
+    .card__text {
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    .card__date {
+        color: #B4B1B1;
+    }
+
+    #col__gray {
+        color: #B4B1B1;
+    }
+}
