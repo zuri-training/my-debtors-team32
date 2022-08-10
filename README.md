@@ -1,44 +1,39 @@
-# DMA Project Team 32
+# DEMEHIN IBUKUN (I4G007632MIS) CONTRIBUTIONS
 
-This is the Github repo for Team 32 on the debtors web application. This project is a platform that allows schools in a certain locality list directory of people owing them - to help them avoid going to other schools.
+Below are some of the issues that I created for the project
 
-## Frontend & Backend Workflow 🍃
+## Issues Created / Completed
 
-1. Clone the repo and open the project on your prefered code editor
-   `git clone https://github.com/zuri-training/my-debtors-team32.git`
+- [Create "Add a Deptor Page" Hi-Fi Page](https://github.com/zuri-training/my-debtors-team32/issues/77/)
+- [Create part of the contend page (Bottom Half)](https://github.com/zuri-training/my-debtors-team32/issues/21)
+- [Create Update Admin Page](https://github.com/zuri-training/my-debtors-team32/issues/38)
+- [Create Add a Deptor Page](https://github.com/zuri-training/my-debtors-team32/issues/39)
+- [Create a responsive Hi-Fi "Add a Debtor" page](https://github.com/zuri-training/my-debtors-team32/issues/59)
+- [add more content to the README.md file](https://github.com/zuri-training/my-debtors-team32/issues/7)
+- [Create the project layouts with the navbar and footer](https://github.com/zuri-training/my-debtors-team32/issues/57)
+- [Create Other missing pages for the project infrasture](https://github.com/zuri-training/my-debtors-team32/issues/27)
+- [Integrate HTML & CSS of about us page](https://github.com/zuri-training/my-debtors-team32/issues/24)
+- [working on the pull request template](https://github.com/zuri-training/my-debtors-team32/issues/9)
+- [adding content to README.md file](https://github.com/zuri-training/my-debtors-team32/issues/6)
+- [Create Frontend Infrastructure](https://github.com/zuri-training/my-debtors-team32/issues/2)
+- [Create Registration page for schools and parents](https://github.com/zuri-training/my-debtors-team32/issues/1)
 
-2. Change directory to the frontend directory
-   `cd dma_frontend`
+## Pull Request Made
 
-3. Using your terminal set your remote connection to the main repo
-   `git remote add origin https://github.com/zuri-training/my-debtors-team32.git`
+- [feat: created the project infrastructure](https://github.com/zuri-training/my-debtors-team32/pull/4)
+- [corrected some missing structures](https://github.com/zuri-training/my-debtors-team32/pull/70)
+- [refactor: minor correction on project layout](https://github.com/zuri-training/my-debtors-team32/pull/65)
+- [new project structure](https://github.com/zuri-training/my-debtors-team32/pull/63)
+- [correct style clashing](https://github.com/zuri-training/my-debtors-team32/pull/52)
+- [add homepage to the repo](https://github.com/zuri-training/my-debtors-team32/pull/51)
+- [combine the HTML and CSS of about us page](https://github.com/zuri-training/my-debtors-team32/pull/25)
+- [Added more content to the readme file](https://github.com/zuri-training/my-debtors-team32/pull/17)
 
-4. Create a new branch for your work
-   `git checkout -b <type_your_new_branch_name_here>`
+## Additional tasks
 
-5. Install all dependencies for the project
-   `yarn install`
+I also performed the below tasks
 
-6. Start the development server
-   `yarn start`
-
-## Contribution🛂
-
-- First create an issue using one of the specified templates. Please describe in clear details what you are doing so that other people can understand. See this [short explanation](https://www.loom.com/share/73aecf29ee8844839824c3b6e2740164) for a brief explanation
-
-- On your laptop stage all your changes and commit them to the zuri repo
-
-```js
-git add .
-git commit -m "A short message here"
-git pull origin main
-/*
-The above step will update your current files and folders
-with any changes that might have been merged on main repo.
-In case you have merge conflicts, see the next step
-on how you can resolve them
-*/
-git push origin <type_your_new_branch_name_here>
-```
-
-- If you have any merge conflict, you can watch this [video](https://screencast-o-matic.com/watch/c3iuloVZ0Wb) on how you can resolve them. Also the same video will show you to make a Pull Request to the repo. Please follow every instruction stated in this [video](https://screencast-o-matic.com/watch/c3iuloVZ0Wb)
+- Created the project structure that the group folllowed
+- Created the issues and pull request template to ensure uniformity when others are wither creating new issues or making a pull request
+- I monitored and approved most pull request made to the repositories from other developers
+- I created a preview [link](https://my-debtors-team32.vercel.app/) for the project
