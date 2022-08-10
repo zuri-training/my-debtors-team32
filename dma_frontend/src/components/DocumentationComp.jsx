@@ -180,5 +180,4 @@ const DocumentationComp = () => {
   );
 };
 
-
 export default DocumentationComp;
