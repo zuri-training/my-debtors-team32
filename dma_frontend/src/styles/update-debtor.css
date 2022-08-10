@@ -1,0 +1,148 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    color: #484747;
+    font-weight: 400;
+    background-color: #ffffff;
+    font-family: 'Space Grotesk', sans-serif;
+}
+.debtor-form {
+    width: 650px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    /* box-sizing: border-box;
+    color: #484747;
+    font-weight: 400;
+    background-color: #ffffff;
+    font-family: 'Space Grotesk', sans-serif; */
+}
+.nav-bar {
+    flex-direction: row;
+}
+.nav-bar ul {
+    margin-right: 150px;
+}
+li:last-child {
+    color: #003865;
+}
+.nav-bar li{
+    display: inline-block;
+    margin-left: 100px;
+}
+.right-nav {
+    display: flex;
+    justify-content: flex-end;
+}
+.debtor-form h1 {
+    color: #003865;
+    text-align: center;
+}
+.debtor-form label {
+    display: block;
+    width: 130px;
+    margin-top: 23px;
+}
+.debtor-form input {
+    display: inline-block;
+    padding: 17px 300px 17px 25px;
+    text-align: left;
+    margin-top: 23px;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px
+}
+input::placeholder {
+    color: #484747;
+    opacity: 1;
+    font-size: 11px;
+}
+#btn {
+    padding: 17px 225px 17px 225px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    border: 1px solid #cbc8c8;
+    border-radius: 4px;
+    background-color: #003865;
+    color: #ffffff;
+    font-weight: 600;
+   }
+@media screen and (max-width: 639px) {
+    .debtor-form {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        margin: 10px auto;
+    }
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+    }
+    #btn {
+        margin-left: 0;
+        padding: 20px 130px 20px 130px;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .debtor-form input {
+        display: inline-block;
+        padding: 10px 130px 10px 25px;
+        text-align: left;
+        margin-top: 23px;
+        border: 1px solid #d9d9d9;
+        border-radius: 4px;
+
+    }
+
+}
+@media screen and (min-width: 640px ) and (max-width: 767px) {
+    .debtor-form {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        margin: 10px auto;
+    }
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+    }
+    #btn {
+        margin-left: 0;
+        padding: 20px 130px 20px 130px;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .debtor-form input {
+        display: inline-block;
+        padding: 10px 130px 10px 25px;
+        text-align: left;
+        margin-top: 23px;
+        border: 1px solid #d9d9d9;
+        border-radius: 4px;
+    }
+
+
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .debtor-form {
+        display: flex;
+        flex-direction: column;
+        margin: 10px auto;
+        width: 700px;
+    }
+
+}
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+    .debtor-form {
+        display: flex;
+        flex-direction: column;
+        margin: 10px auto;
+        width: 700px;
+    }
+
+}
+@media screen and (min-width: 1280px) and (max-width: 1536px) {
+
+}
