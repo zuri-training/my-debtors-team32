@@ -13,7 +13,7 @@ const DebtorContendComp = () => {
           <h2 className='compt--text--3'>See a list of all complaints made to your school, starting from the most recent</h2>
           <table className='compt--table'>
           <thead>
-            <tr>
+            <tr id='compt--white'>
               <th>Student Name</th>
               <th>Date</th>
               <th>Action</th>
