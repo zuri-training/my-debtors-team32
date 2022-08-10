@@ -29,6 +29,8 @@ Below are some of the issues that I created for the project
 - [combine the HTML and CSS of about us page](https://github.com/zuri-training/my-debtors-team32/pull/25)
 - [Added more content to the readme file](https://github.com/zuri-training/my-debtors-team32/pull/17)
 
+## Additional tasks
+
 I also performed the below tasks
 
 - Created the project structure that the group folllowed
