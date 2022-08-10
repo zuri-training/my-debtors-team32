@@ -1,16 +1,4 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Tab } from 'react-bootstrap';
-import { Col } from 'react-bootstrap';
-import { Nav } from 'react-bootstrap';
-import { Container } from 'react-bootstrap';
-import { Row } from 'react-bootstrap';
-import { Button } from 'react-bootstrap';
-import { BsCheckLg } from 'react-icons/bs';
-import 'bootstrap/dist/css/bootstrap.min.css';
-=======
 import React from 'react';
->>>>>>> b5890d768ce0502f0579786b135183916ab772e8
 import '../styles/dashboard-profile.css';
 import { useNavigate } from 'react-router-dom';
 import ProfileInput from './ProfileInput';
