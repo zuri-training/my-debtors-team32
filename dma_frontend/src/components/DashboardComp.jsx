@@ -5,7 +5,8 @@ const DashboardComp = () => {
   return (
     <div className=''>
       {/* main content */}
-      <div>sidebar</div>
+      {/* <div>sidebar</div> */}
+      
     </div>
   );
 };
