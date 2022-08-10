@@ -4,18 +4,21 @@ const SchoolListComp = () => {
   return (
     <div className=''>
       <div className=''>
-      <div>
+      <div className='school'>
 <div className="schdebtorhead">
   <h2>List of Schools</h2>
 </div>
 
 <div className="schmytable">
 <table className='schdeji-table'>
-  <tr>
+  <thead>
+  <tr id='schhead'>
     <th>S/N</th>
     <th>Name of school</th>
   </tr>
-  <tr>
+  </thead>
+ <tbody>
+ <tr className='list-1'>
     <td>1</td>
     <td>Corona secondary school</td>
   </tr>
@@ -75,6 +78,7 @@ const SchoolListComp = () => {
     <td>15</td>
     <td>Chrisland Intl’ school</td>
   </tr>
+ </tbody>
 </table>
 
 </div>
