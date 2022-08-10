@@ -1,4 +1,4 @@
-*,
+/* *,
 *::before,
 *::after {
     box-sizing: border-box;
@@ -6,17 +6,17 @@
     font-weight: 400;
     background-color: #ffffff;
     font-family: 'Space Grotesk', sans-serif;
-}
+} */
 .debtor-form {
     width: 650px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    /* box-sizing: border-box;
+    box-sizing: border-box;
     color: #484747;
     font-weight: 400;
     background-color: #ffffff;
-    font-family: 'Space Grotesk', sans-serif; */
+    font-family: 'Space Grotesk', sans-serif;
 }
 .nav-bar {
     flex-direction: row;
