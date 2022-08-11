@@ -16,13 +16,14 @@ const ForgotPasswordComp = () => {
               <p>Please enter your details</p>
               <form action="" method="post" className="first-form">
                   <label for="email">Email</label>
+                  <label htmlFor="email">Email</label>
                   <input type="email" name="email" id="email" placeholder="Enter Your Email"/>       
               </form>
               <p className="code">A code will be sent to your email</p>
               <button type="submit" className="btn receive-btn">Receive Code</button>
               <form action="" method="post" className="second-form">
                   <div>
-                      <label for="code">Enter code</label>
+                      <label htmlFor="code">Enter code</label>
                       <input type="password" name="code" id="code"/>
                   </div>
                   <div>
@@ -30,7 +31,7 @@ const ForgotPasswordComp = () => {
                       <input type="new-password" name="new-password" id="new-password"/>
                   </div>
                   <div>
-                      <label for="confirm-password">Confirm password</label>
+                      <label htmlFor="confirm-password">Confirm password</label>
                       <input type="confirm-password" name="confirm-password" id="confirm-password"/>
                   </div>
                   <button type="submit" className="btn submit-btn">Submit</button>    
