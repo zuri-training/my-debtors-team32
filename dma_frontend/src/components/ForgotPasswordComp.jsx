@@ -15,7 +15,7 @@ const ForgotPasswordComp = () => {
           <div className="forgot-pwd-form">
               <p>Please enter your details</p>
               <form action="" method="post" className="first-form">
-                  <label for="email">Email</label>
+
                   <label htmlFor="email">Email</label>
                   <input type="email" name="email" id="email" placeholder="Enter Your Email"/>       
               </form>
