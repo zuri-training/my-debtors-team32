@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+.notify {
+    font-family: 'Space Grotesk', sans-serif;
+    padding-left: 15px;
+    padding-top: 50px;
+}
+
+.text--1 {
+    color: #0A5694;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.0;
+    padding-bottom: 50px;
+}
+
+.text--2 {
+    font-size: 30px;
+}
+
+.dashbord--notify {
+    display: flex;
+    align-items: center;
+}
+
+hr {
+    border: 1px solid #B4B1B1;
+    width: 70vw;
+    margin-top: 5px;
+}
+
+.notify--icon {
+    width: 30px;
+    height: 30px;
+}
+
+.notify--text {
+    font-size: 33px;
+    color: #003865;
+    padding: 0 20px 0 10px;
+}
+
+.notify--num {
+    color: #003865;
+    font-weight: 500;
+    font-size: 20px;
+    background-color: #D4F6CC;
+    border-radius: 50%;
+    padding: 3px 10px;
+}
+
+.notify--cards {
+    padding-top: 30px;
+}
+
+.cards {
+    color: #003865;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 20px 50px 0 50px;
+    margin-bottom: 10px;
+}
+
+.bg--gray {
+    background-color: rgba(231, 231, 231, 0.4);
+}
+
+.card--text {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.card--view {
+    text-decoration: none;
+    color: #003865;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.card--view:hover {
+    color: #0A5694;
+}
+
+#view-gray {
+    color: #B4B1B1;
+}
+
+#view-gray:hover {
+    color: #003865;
+}
+
+@media screen and (min-width: 280px) and (max-width: 1020px) {
+    hr {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 280px) and (max-width: 768px) {
+    .notify {
+        padding: 30px 15px 30px 0;
+    }
+
+    .text--1 {
+        font-size: 20px;
+        padding-bottom: 30px;
+    }
+
+    .text--2 {
+        font-size: 15px;
+    }
+
+    .notify--icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .notify--text {
+        font-size: 22px;
+        font-weight: 500;
+    }
+    
+    .notify--num {
+        color: #fff;
+        font-size: 13px;
+        background-color: #003865;
+        padding: 3px 6px;
+    }
+
+    .notify--cards {
+        padding-top: 20px;
+    }
+
+    .cards {
+        padding: 5px 10px 0;
+        font-size: 12px;
+    }
+
+    .card--text {
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    .card--date {
+        color: #B4B1B1;
+    }
+
+    #col-gray {
+        color: #B4B1B1;
+    }
+
+    .card--view {
+        font-size: 12px;
+    }
+}

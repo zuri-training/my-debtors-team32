@@ -1,86 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&family=Ubuntu:wght@400;700&display=swap');
+
+.reg {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
 .first-reg {
   text-align: center;
   color: #0a5694;
 }
 
 .Reg-form {
-  padding-left: 30px;
-  padding-top: 50px;
+  padding: 50px;
+  width: 80%;
 }
 
-.reg-parent,
-.reg-description,
-.reg-schaddress,
-.reg-contact,
-.reg-email,
-.reg-cat {
-  width: 500px;
-  height: 30px;
-  border: 1px solid #484747c4;
-  border-radius: 8px;
+.form-group {
+  margin-bottom: 20px;
+}
+
+.reg-label {
+  width: 23%;
+}
+
+.reg-input {
+  border: 1px solid #5B5959;
+  border-radius: 3px;
+  padding: 10px;
+  width: 70%;
 }
 
 .reg-doc {
   display: flex;
-  gap: 50px;
+  gap: 35px;
 }
 
 .reg-title {
-  padding-left: 190px;
+  margin-left: 190px;
+}
+
+.reg-text {
+  font-size: 16px;
 }
 
 #sch-certificate {
-  width: 300px;
-  height: 30px;
+  width: 90%;
   border: 1px solid #484747c4;
-  border-radius: 8px;
+  border-radius: 3px;
+  padding: 10px;
 }
 
 .reg-btn01 {
   background-color: #0a5694;
   color: white;
-  width: 300px;
-  height: 50px;
-  border-radius: 8px;
-  margin-left: 190px;
   margin-bottom: 30px;
+}
+
+.attact {
+  padding-top: 50px;
+} 
+
+.next-btn {
+  margin-bottom: 40px;
 }
 
 #next-nav {
   color: #0a5694;
   text-decoration: none;
   float: right;
-  padding-right: 40px;
-  padding-bottom: 30px;
+  margin-right: 40px;
+  font-weight: 800;
+  font-size: 20px;
+  border-bottom: 1px solid #0500E5;
 }
 
-@media screen and (min-width: 280px) and (max-width: 800px) {
-  .reg-parent,
-  .reg-description,
-  .reg-schaddress,
-  .reg-contact,
-  .reg-email,
-  .reg-cat {
-    width: 300px;
-    height: 30px;
-    border: 1px solid #484747c4;
-    border-radius: 8px;
+@media screen and (min-width: 280px) and (max-width: 768px) {
+  .Reg-form {
+    padding: 50px 20px 10px
+    ;
+    width: 100%;
   }
 
   #sch-certificate {
-    width: 220px;
-    height: 30px;
-    border: 1px solid #484747c4;
-    border-radius: 8px;
+    width: 100%;
+    font-size: 12px;
   }
 
+  .reg-doc {
+    gap: 7px;
+  }
+
+  .attact {
+    padding-top: 30px;
+  } 
+
+  .reg-label {
+    width: 40%;
+    font-size: 14px;
+  }
+
+  .reg-input {
+    width: 60%;
+    padding: 8px 10px;
+  }
+
+  .reg-title {
+    margin-left: 100px;
+  }
+
+  .reg-text {
+    font-size: 14px;
+  }
+
+  .reg-text--2 {
+    font-size: 13px;
+    line-height: 1.1;
+  }
   .reg-btn01 {
-    background-color: #0a5694;
-    color: white;
-    width: 220px;
-    height: 50px;
-    border-radius: 8px;
-    margin-left: 190px;
-    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  .file {
+    font-size: 13px;
   }
 }
+
+

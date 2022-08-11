@@ -1,0 +1,7 @@
+<body>
+    <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        {{login_form}}
+        <br>
+        <input type="submit" value="Login">
+</body>

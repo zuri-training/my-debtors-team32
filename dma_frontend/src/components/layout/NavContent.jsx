@@ -19,45 +19,6 @@ const NavContentComp = () => {
           Home
         </NavLink>
 
-        {/* <NavLink
-          className='tw-font-fam1 tw-text-black tw-no-underline tw-transition-all hover:tw-text-gray-500'
-          to='/features'
-        >
-          Features
-        </NavLink> */}
-
-        {/* <NavLink
-          className='tw-font-fam1 tw-text-inherit tw-text-black tw-no-underline tw-transition-all hover:tw-text-gray-500 '
-          to='/adddeptor'
-          style={({ isActive }) => (isActive ? activeStyle : undefined)}
-        >
-          Add Deptor
-        </NavLink> */}
-
-        {/* <NavLink
-          className='tw-font-fam1 tw-text-inherit tw-text-black tw-no-underline tw-transition-all hover:tw-text-gray-500'
-          to='/deptorlist'
-          style={({ isActive }) => (isActive ? activeStyle : undefined)}
-        >
-          Deptor List
-        </NavLink> */}
-
-        {/* <NavLink
-          className='tw-font-fam1 tw-text-inherit tw-text-black tw-no-underline tw-transition-all hover:tw-text-gray-500'
-          to='/deptorsearch'
-          style={({ isActive }) => (isActive ? activeStyle : undefined)}
-        >
-          Deptor Search
-        </NavLink> */}
-
-        {/* <NavLink
-          className='tw-font-fam1 tw-text-inherit tw-text-black tw-no-underline tw-transition-all hover:tw-text-gray-500'
-          to='/deptorcontend'
-          style={({ isActive }) => (isActive ? activeStyle : undefined)}
-        >
-          Deptor Contend
-        </NavLink> */}
-
         <NavLink
           className='tw-font-fam1 tw-text-black tw-no-underline tw-transition-all hover:tw-text-gray-500'
           to='/about'
@@ -71,6 +32,13 @@ const NavContentComp = () => {
           style={({ isActive }) => (isActive ? activeStyle : undefined)}
         >
           Contact Us
+        </NavLink>
+        <NavLink
+          className='tw-font-fam1 tw-text-black tw-no-underline tw-transition-all hover:tw-text-gray-500'
+          to='/documentation'
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        >
+          Documentation
         </NavLink>
       </div>
       {/* login | register */}
