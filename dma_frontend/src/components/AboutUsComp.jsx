@@ -27,7 +27,7 @@ const AboutUsComp = () => {
                   operation as <br /> it has fostered credit worthiness <br />{' '}
                   in parents/guardians
                 </p>
-                <a href='SignUpComp.jsx'>
+                <a href='/schoolreg'>
                   <button className='abt-btn01'>Register</button>
                 </a>
               </div>
@@ -85,11 +85,13 @@ const AboutUsComp = () => {
                 <h2>Our Focus</h2>
                 <br />
                 <p>
-                  Our focus is to help you attain financial <br /> freedom by
-                  closing out every financial <br /> gap possible.
+                  Our focus is to help you attain financial <br className='hidden' /> freedom by
+                  closing out every financial <br className='hidden' /> gap possible.
                 </p>
                 <br />
+                <a href="/signin">
                 <button className='foc-btn02'>Login</button>
+                </a>               
               </div>
               <div className='focus-img'>
                 <div className='img04'>
@@ -156,14 +158,16 @@ const AboutUsComp = () => {
                 </h2>
                 <br />
                 <p>
-                  DMA ensures minimial financial loss of these schools by <br />{' '}
+                  DMA ensures minimial financial loss of these schools by <br className='hidden' />{' '}
                   allowing schools within a given region to list a directory of{' '}
-                  <br /> wards of parents or guardians who owe, which in turn{' '}
-                  <br /> prevent them from admitting wards of these parents or{' '}
-                  <br /> guardians{' '}
+                  <br className='hidden' /> wards of parents or guardians who owe, which in turn{' '}
+                  <br className='hidden' /> prevent them from admitting wards of these parents or{' '}
+                  <br className='hidden' /> guardians{' '}
                 </p>
                 <br />
+                <a href="/schoolreg">
                 <button className='abt-btn01'>Register</button>
+                </a>
               </div>
 
               <div className='reg-img'>

@@ -46,17 +46,17 @@ function DashboardProfileComp() {
       >
         <Row>
           <Nav variant='default' className='tab-row'>
-            <Col sm={3} bsPrefix='uche col'>
+            <Col sm={3} bsPrefix='uche col' className='abt'>
               <Nav.Item bsPrefix={styleNav('first')}>
                 <Nav.Link className='navoo-link' eventKey='first'>
-                  <b>About</b>
+                  <b className='abpt'>About</b>
                 </Nav.Link>
               </Nav.Item>
             </Col>
             <Col sm={3} bsPrefix='uche col'>
               <Nav.Item bsPrefix={styleNav('second')}>
                 <Nav.Link className='navoo-link' eventKey='second'>
-                  <b>Administration</b>
+                  <b className='abpt'>Administration</b>
                 </Nav.Link>
               </Nav.Item>
             </Col>

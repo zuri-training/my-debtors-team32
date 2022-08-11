@@ -139,3 +139,69 @@
     padding: 20px 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
+
+
+  @media screen and (min-width: 280px) and (max-width: 768px) {
+    .user-details {
+      flex-direction: column;
+    }
+
+    .each-user {
+      width: 100%;
+      margin: 20px 20px 20px 0;
+    }
+
+    .active {
+      background-color: #fff;
+      color: #5B5959
+    }
+
+    .abt {
+      margin-right: 20px;
+    }  
+
+    b {
+      font-size: 12px;
+    }
+
+    .abpt {
+      font-size: 16px;
+    }
+
+    .profile-header {
+      padding: 15px 0;
+    }
+
+    .detail-title {
+      width: 100%;
+    }
+
+    .update-button {
+      padding: 12px;
+      margin-right: 10px;
+    }
+
+    .p-header .update-button {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 12px;
+    }
+
+   .p-header-title h2 {
+    font-size: 16px;
+   }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 855px)  {
+    .active {
+      background-color: #fff;
+      color: #5B5959
+    }
+
+    .user-details {
+      justify-content: center;
+    }
+
+    .detail-title {
+      width: 100%;
+    }
+  }
