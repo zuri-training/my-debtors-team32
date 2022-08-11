@@ -1,18 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+.debtor {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
 .debtorhead {
   text-align: center;
   padding-bottom: 30px;
+  padding-top: 50px;
   color: #003865;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
 }
 
 .inputsearch {
   display: flex;
   align-items: center;
+  justify-content: center;
   border: 1px solid black;
   background-color: rgb(255, 255, 255);
   padding: 8px;
   color: rgba(6, 0, 0, 0.465);
   width: 70%;
-  margin-left: 200px;
 }
 .input-search {
   width: 95%;
@@ -23,22 +35,36 @@
   color: rgba(6, 0, 0, 0.465);
 }
 
+.mytable {
+  margin-right: 50px;
+  margin-left: 20px;
+}
+
 .deji-table {
-  font-family: arial, sans-serif;
-  width: 60%;
   margin-top: 30px;
-  margin-left: 250px;
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px dotted #d4f6cc;
+}
+
+.list-1 {
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .deji-table td,
 .deji-table th {
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   text-align: left;
   padding: 8px;
 }
 
-.deji-table tr:nth-child(even) {
+.deji-table tr:nth-child(odd) {
   background-color: #d4f6cc;
+}
+
+#debt {
+  background-color: #fff;
 }
 
 @media screen and (min-width: 280px) and (max-width: 600px) {
@@ -53,10 +79,8 @@
     margin: auto;
   }
 
-  .deji-table {
-    font-family: arial, sans-serif;
-    width: 60%;
-    margin-top: 30px;
-    margin-left: 5%;
+  .mytable {
+    margin-right: 15px;
+    margin-left: 0;
   }
 }

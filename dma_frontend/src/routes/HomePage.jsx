@@ -4,8 +4,6 @@ import '../styles/homepage.css';
 import ProjectLayoutComp from '../components/layout/ProjectLayout';
 import HeaderLayoutComp from '../components/layout/HeaderLayout';
 import { Link } from 'react-router-dom';
-import {Swiper, SwiperSlide} from 'swiper/react';
-
 
 const HomePageComp = () => {
   
@@ -189,6 +187,7 @@ const HomePageComp = () => {
                   </Swiper>
                 </div>
               </section> */}
+              {/* <SwiperComp /> */}
               {/* bottom content section */}
               <section className='bottom_content'>
                 <div className='bt_wrapper'>

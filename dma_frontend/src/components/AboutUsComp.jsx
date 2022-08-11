@@ -14,9 +14,9 @@ import HeaderLayoutComp from './layout/HeaderLayout';
 
 const AboutUsComp = () => {
   return (
-    <div className='about-body tw-mx-auto tw-min-h-screen tw-max-w-screen-xl tw-pt-6'>
+    <div className=''>
       <HeaderLayoutComp />
-      <div className=''>
+      <div className='about-body tw-mx-auto tw-min-h-screen tw-max-w-screen-xl tw-pt-6'>
         {
           <div>
             <div className='heading'>
@@ -27,7 +27,7 @@ const AboutUsComp = () => {
                   operation as <br /> it has fostered credit worthiness <br />{' '}
                   in parents/guardians
                 </p>
-                <a href='SignUpComp.jsx'>
+                <a href='/schoolreg'>
                   <button className='abt-btn01'>Register</button>
                 </a>
               </div>
@@ -149,7 +149,7 @@ const AboutUsComp = () => {
               <div className='reg01'>
                 <h2>
                   Register Your{' '}
-                  <a id='blueschool' href='AboutUsComp.jsx'>
+                  <a id='blueschool' href='/'>
                     School
                   </a>{' '}
                   with Us Today
@@ -163,7 +163,7 @@ const AboutUsComp = () => {
                   <br /> guardians{' '}
                 </p>
                 <br />
-                <button className='abt-btn01'>Register</button>
+                <button className='abt-btn01' href="/schoolreg">Register</button>
               </div>
 
               <div className='reg-img'>

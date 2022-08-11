@@ -1,18 +1,13 @@
 import React from 'react';
 import DocumentationComp from '../components/DocumentationComp';
-import DashboardSideNav from '../components/layout/DashboardSideNav';
+import ProjectLayoutComp from '../components/layout/ProjectLayout';
+
 
 const Documentation = () => {
   return (
-    <div>
-      <div className='tw-flex tw-flex-col tw-space-x-4 lg:tw-flex-row'>
-        {/* sidebar */}
-        <div className=''>
-          <DashboardSideNav />
-        </div>
+      <ProjectLayoutComp>
         <DocumentationComp />
-      </div>
-    </div>
+      </ProjectLayoutComp>
   );
 };
 
