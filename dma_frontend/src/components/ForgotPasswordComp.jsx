@@ -1,4 +1,5 @@
 import React from 'react';
+import Forgotimage from '../images/Forgotimage.jpg';
 import HeaderLayoutComp from './layout/HeaderLayout';
 import '../styles/forgot-password.css';
 
@@ -8,11 +9,11 @@ const ForgotPasswordComp = () => {
         <HeaderLayoutComp />
         {
           <div className="form-container">
-          <div className="image">
-              <img src="./forgotPass.jpg" alt="forgot-password"/>
+          <div className="cath-image">
+              <img src={Forgotimage} alt="forgot-password"/>
           </div>
-          <h2>Don't panic, Recover your account with ease!</h2>
           <div className="forgot-pwd-form">
+          <h2>Don't panic, Recover your account with ease!</h2>
               <p>Please enter your details</p>
               <form action="" method="post" className="first-form">
 
@@ -34,7 +35,7 @@ const ForgotPasswordComp = () => {
                       <label htmlFor="confirm-password">Confirm password</label>
                       <input type="confirm-password" name="confirm-password" id="confirm-password"/>
                   </div>
-                  <button type="submit" className="btn submit-btn">Submit</button>    
+                  <button type="submit" className="cath-submit-btn">Submit</button>    
               </form>    
           </div>    
     </div>    
