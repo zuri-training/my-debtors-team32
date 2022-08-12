@@ -2,10 +2,15 @@
   margin: 5%;
 }
 
+.form {
+  width: 80%;
+}
+
 #Sch-admin {
   padding-left: 30%;
   margin-bottom: 5%;
-  font-weight: 20;
+  font-weight: 500;
+  color: #0A5694;
 }
 
 .proname,
@@ -15,15 +20,15 @@
 .prinemail,
 .burname,
 .buremail {
-  width: 300px;
-  height: 30px;
-  border: 2px solid black;
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #5B5959;
   margin-left: -5px;
 }
 
 #lab {
   display: inline-block;
-  width: 250px;
+  width: 25%;
   padding-left: 20px;
 }
 
@@ -33,4 +38,31 @@
   margin-top: 3%;
   height: 50px;
   background-color: #d9d9d9;
+}
+
+@media screen and (min-width: 200px) and (max-width: 768px)  {
+
+  .form {
+    width: 100%;
+  }
+
+  #lab {
+    padding-left: 10px;
+    margin-right: 23px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .proname,
+.proemail,
+.pronumber,
+.prinname,
+.prinemail,
+.burname,
+.buremail {
+  width: 60%;
+  padding: 10px;
+  border: 2px solid #5B5959;
+  margin-left: -5px;
+}
 }
