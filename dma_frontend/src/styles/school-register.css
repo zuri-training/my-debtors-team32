@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&family=Ubuntu:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&family=Ubuntu:wght@400;700&display=swap");
 
 .reg {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 .first-reg {
@@ -23,7 +23,7 @@
 }
 
 .reg-input {
-  border: 1px solid #5B5959;
+  border: 1px solid #5b5959;
   border-radius: 3px;
   padding: 10px;
   width: 70%;
@@ -57,7 +57,7 @@
 
 .attact {
   padding-top: 50px;
-} 
+}
 
 .next-btn {
   margin-bottom: 40px;
@@ -70,14 +70,30 @@
   margin-right: 40px;
   font-weight: 800;
   font-size: 20px;
-  border-bottom: 1px solid #0500E5;
+  border-bottom: 1px solid #0500e5;
+}
+
+.file-lab {
+  width: 400px;
+  height: 30px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.file-lab:hover {
+  box-shadow: 2px 2px 5px 5px #888888;
 }
 
 @media screen and (min-width: 280px) and (max-width: 768px) {
   .Reg-form {
-    padding: 50px 20px 10px
-    ;
+    padding: 50px 20px 10px;
     width: 100%;
+  }
+  .file-lab {
+    width: 320px;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 5px;
   }
 
   #sch-certificate {
@@ -91,7 +107,7 @@
 
   .attact {
     padding-top: 30px;
-  } 
+  }
 
   .reg-label {
     width: 40%;
@@ -104,7 +120,7 @@
   }
 
   .reg-title {
-    margin-left: 100px;
+    margin-left: 10px;
   }
 
   .reg-text {
@@ -123,5 +139,3 @@
     font-size: 13px;
   }
 }
-
-

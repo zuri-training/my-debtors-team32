@@ -85,40 +85,31 @@ const SchoolRegistrationComp = () => {
                     <br />
                     School registration certificate <br />
                     <br />
-                    Approval by ministry of education
+                    Approval by ministry of Education
                   </p>
                 </div>
               </div>
               <br />
               <br />
               <div className='reg-title'>
-                <label htmlFor='sel-doc'>Title</label>
-                <br />
-                <select name='sch-cert' id='sch-certificate'>
-                  <option value='The certificate for schools'>
-                    The certificate for schools
-                  </option>
-                  <option value='School registration certificate'>
-                    School registration certificate
-                  </option>
-                  <option value='Approval by ministry of education'>
-                    Approval by ministry of education
-                  </option>
-                </select>
-                <label htmlFor='myregdoc' className='attact'>
-                  Attact Document
-                </label>
-                <br />
-                <input
-                  type='file'
-                  id='myregdoc'
-                  name='myfile'
-                  multiple
-                  className='file'
-                />
-                <br />
-                <br />
+             <form action="">
+              <div>
+                <label htmlFor="file1">The certificate for schools:</label><br /><br />
+                <div className="file-lab">
+                <input type="file" id="myFile" name="filename"/>
+                </div><br />
+                <label htmlFor="file1">School registration certificate:</label><br /><br />
+                <div className="file-lab">
+                <input type="file" id="myFile" name="filename"/>
+                </div><br />
+                <label htmlFor="file1">Approval by ministry of Education:</label><br /><br />
+                <div className="file-lab">
+                <input type="file" id="myFile" name="filename"/>
+                </div>
               </div>
+             </form>
+
+              </div> <br /><br />
               <label htmlFor='' className='reg-label'></label>
               <input
                 type='submit'
