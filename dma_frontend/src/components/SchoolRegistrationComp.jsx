@@ -201,9 +201,12 @@ const SchoolRegistrationComp = () => {
             <input type='number' class='pronumber' id='number' />
             <br />
             <br />
-            <button class='btn-b' value='Submit'>
+            <Link
+              to='/dashboard'
+              class='tw-w-full tw-rounded-lg tw-bg-blue-800 tw-px-8 tw-py-2 tw-text-white tw-no-underline tw-shadow-lg tw-transition-all tw-duration-500 tw-ease-in-out hover:tw-bg-blue-700 hover:tw-text-white'
+            >
               Submit
-            </button>
+            </Link>
           </form>
         </div>
       )}
