@@ -55,12 +55,11 @@ const SchoolRegistrationComp = () => {
                 <label htmlFor='reg-category' className='reg-label'>
                   School Category
                 </label>
-                <input
-                  type='text'
-                  className='reg-input'
-                  id='reg-category'
-                  required
-                />
+                <select name="schselect" className='reg-input' required id="reg-input">
+                <option selected value="Public">Select School Category</option>
+                  <option value="Public">Public School</option>
+                  <option value="Private">Private School</option>
+                </select>
               </div>
               <div className='form-group'>
                 <label htmlFor='reg-contact' className='reg-label'>
