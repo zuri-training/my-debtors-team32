@@ -5,7 +5,7 @@
 }
 
 .my-container {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Space Grotesk', sans-serif !important;
 }
 
 .contact-list {
@@ -40,6 +40,7 @@
 .contact-detail {
     margin: 30px 0;
     display: flex;
+    font-family: 'Space Grotesk', sans-serif !important;
 }
 
 .contact-detail p{
@@ -57,6 +58,7 @@
 
 .input-entry {
     padding-bottom: 20px;
+    font-family: 'Space Grotesk', sans-serif !important;
 }
 
 .submit-btn {
@@ -70,6 +72,10 @@
 
 .btn-div {
     height: 60px;
+}
+
+.input-entry input {
+    font-family: 'Space Grotesk', sans-serif !important;
 }
 
 @media only screen and (max-width: 768px) {

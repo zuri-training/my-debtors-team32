@@ -1,11 +1,12 @@
 import React from 'react';
 import '../styles/documentation.css';
 import docimg from '../images/docimg.png';
+import HeaderLayoutComp from './layout/HeaderLayout';
 
 const DocumentationPlainComp = () => {
   return (
-    <div className=''>
-      <div className=''>
+    <div className='tw-mx-auto tw-min-h-screen tw-max-w-screen-xl tw-pt-6'>
+        <HeaderLayoutComp />
         <header>
           <div className='doc-heading'>
             <h2>
@@ -179,7 +180,6 @@ const DocumentationPlainComp = () => {
             </div>
           </div>
         </footer>
-      </div>
     </div>
   );
 };

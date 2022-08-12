@@ -9,7 +9,7 @@ import SwiperComp from '../components/SwiperComp';
 const HomePageComp = () => {
   
   return (
-    <div>
+    <div className='tw-mx-auto tw-min-h-screen tw-max-w-screen-xl tw-pt-6'>
       <ProjectLayoutComp>
         <HeaderLayoutComp />
 
@@ -34,6 +34,93 @@ const HomePageComp = () => {
                 </Link>
               </section>
               {/* Who we are section */}
+              <section className='wwa_container'>
+                <div className='wwa_wrapper'>
+                  <div className='wwa_top_deco'></div>
+                  <h2 className='wwa_title'>Who Are We?</h2>
+                  <p className='wwa_paragraph'>
+                    Debt Monitoring agency (DMA) is a platform that allows
+                    school owners manage debt crisis by checkmating the student
+                    debtors, and centrally co-ordinate debt management, its a
+                    debt management and collections system that eliminates
+                    manual effort, reduces errors, and improves your ability to
+                    collect unpaid debts, such that school owners minimize the
+                    risk of admitting wards previously owing in their former
+                    schools, and want to ward off payment, with DMA, school
+                    managers increase their chances of admitting credit worthy
+                    wards, whose guardians take complete responsibility for
+                    their tuition.
+                  </p>
+                </div>
+              </section>
+              {/* Our impact and contribution section */}
+              <section className='impact_container'>
+                <div className='impact_wrapper'>
+                  <div className='i-c_row row_001'>
+                    <h2 className='impact_title'>
+                      Our Impacts And Contributions
+                    </h2>
+                    <div className='impact_grid_block'>
+                      <div className='impact_col'>
+                        <div className='ic_row'>
+                          <div className='ic_icon_1'></div>
+                          <p className='ic_para'>
+                            We have assisted these wards to be focused in their
+                            learning, because switching schools hinders fast
+                            learning, when wards change schools, they take time
+                            to adjust to the new learning environment.
+                          </p>
+                        </div>
+                        <div className='ic_row'>
+                          <div className='ic_icon_3'></div>
+                          <p className='ic_para'>
+                            DMA has contributed to the economy at large by
+                            playing a huge part domain debt recovery sector.,
+                            reducing financial conflicts.
+                          </p>
+                        </div>
+                      </div>
+                      <div className='impact_col col_2'>
+                        <div className='ic_row'>
+                          <div className='ic_icon_2'></div>
+                          <p className='ic_para'>
+                            We have raised the consciousness in
+                            parents/guardians about taking responsibility for
+                            their wards tuition, knowing fully well that with
+                            DMA, the fictitious practice of switching schools to
+                            evade debt has been defeated.
+                          </p>
+                        </div>
+                        <div className='ic_row'>
+                          <div className='ic_icon_4'></div>
+                          <p className='ic_para'>
+                            We have succeeded in assisting schools maximize
+                            their profit. This, in turn, helps these schools to
+                            maintain, even grow, their workforce, seeding
+                            economic growth.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='i-c_row'>
+                    <div className='impact_image_container'>
+                      <div className='impact_image'></div>
+                    </div>
+                    <div className='wwd'>
+                      <h3 className='wwd_title'>What We Do?</h3>
+                      <p className='wwd_para'>
+                        Our team is dedicated to providing up-to-date debt
+                        information to help Schools make compromisable decision
+                        as regard debt situations from parents.
+                      </p>
+                      <Link to='/about' className='wwd_btn'>
+                        About Us
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </section>
               {/* <SwiperComp /> */}
               {/* bottom content section */}
               <section className='bottom_content'>
