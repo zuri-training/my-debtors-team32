@@ -131,57 +131,6 @@ const SchoolRegistrationComp = () => {
                 Next
               </button>
             </div>
-          </div>
-          <br />
-          <br />
-          <div className='reg-title'>
-          <div className="input">
-<label htmlFor="myregdoc" className="attact"
->The Certificate for schools:</label
-><br /><br />
-<div className="sub-reg-input01">
-<input
-  type="file"
-  id="myregdoc"
-  name="myfile"
-  multiple
-  className="file"
-/> </div
-><br />
-<label htmlFor="myregdoc" class="attact"
->School Registration certificate:</label
-><br /><br />
-<div className="sub-reg-input02">
-<input
-  type="file"
-  id="myregdoc"
-  name="myfile"
-  multiple
-  className="file"
-/> </div
-><br />
-<label htmlFor="myregdoc" className="attact"
->Approval by ministry of Education:</label
-><br /><br />
-<div className="sub-reg-input03">
-<input
-  type="file"
-  id="myregdoc"
-  name="myfile"
-  multiple
-  className="file"
-/>
-</div>
-</div>
-          <br />
-          <br />
-          </div>
-          <label htmlFor="" className='reg-label'></label>
-          <input type="submit" value='Upload Document' className='reg-input reg-btn01' />
-        </form>
-        <div className='next-btn'>
-          <Link to='./schooladmin.html' id="next-nav">Next</Link>
-
           </main>
         </div>
       )}
@@ -259,7 +208,6 @@ const SchoolRegistrationComp = () => {
               Submit
             </Link>
           </form>
-
         </div>
       )}
     </div>
