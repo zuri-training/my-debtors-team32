@@ -137,7 +137,7 @@ const AddDeptorComp = () => {
               type='text'
               hidden
               placeholder='Contend Link'
-              value={process.env.REACT_APP_CONTEND_URL}
+              value='https://my-debtors-team32.vercel.app/contend'
               name='link'
               onChange={(e) => handleForm(e)}
             />
