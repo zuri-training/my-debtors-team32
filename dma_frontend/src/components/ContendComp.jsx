@@ -66,10 +66,10 @@ const ContendComp = () => {
           </div>
         </form>
         <div className='contend--previous'>
-          <Link to='/login' className='previous'>
+          <Link to='/signin' className='previous'>
             Previous Complaints
           </Link>
-          <Link to='/login' className='lists'>
+          <Link to='/signin' className='lists'>
             See All Your List Of Contends Starting From The Most Recent
           </Link>
         </div>

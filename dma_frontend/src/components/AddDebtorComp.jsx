@@ -37,15 +37,15 @@ const AddDeptorComp = () => {
 
   const handleSubmit = (e) => {
     console.log('this is formValue', formRef.current);
-    formValue['link'] = process.env.REACT_APP_CONTEND_URL;
+    formValue['link'] = 'https://my-debtors-team32.vercel.app/contend';
     e.preventDefault();
     setBtnLoad(true);
     emailjs
       .sendForm(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
+        'service_v3hk5ps',
+        'template_tpoab74',
         formRef.current,
-        process.env.REACT_APP_PUBLIC_KEY
+        'user_yKG0o8oFE1edTjUtFO2Dh'
       )
       .then(
         (result) => {
