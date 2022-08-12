@@ -1,141 +1,158 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&family=Ubuntu:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&family=Ubuntu:wght@400;700&display=swap");
 
 .documentation {
   margin: 30px;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 #docimg {
-    width: 200px;
-    height: 100px;
-  }
+  width: 200px;
+  height: 100px;
+}
 
-  .doc-heading {
-    background: #f16855;
-  }
+.doc-heading {
+  background: #f16855;
+}
 
-  .doc-heading {
-    color: white;
-    padding-left: 70px;
-    padding-top: 60px;
-    padding-bottom: 80px;
-  }
+.doc-heading {
+  color: white;
+  padding-left: 70px;
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
 
-  .doc-email {
-    background: rgba(174, 102, 92, 0.62);
-    color: white;
-    padding-left: 50px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
+.doc-email {
+  background: rgba(174, 102, 92, 0.62);
+  color: white;
+  padding-left: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 
-  .doc-blue {
-    color: blue;
-    font-size: 30px;
-    font-weight: 500;
-  }
+.doc-blue {
+  color: blue;
+  font-size: 30px;
+  font-weight: 500;
+}
 
-  .doc-prob {
-    background-color: black;
-    color: white;
-  }
-  .doc-prob1 {
-    padding: 30px 50px;
-  }
+.doc-prob {
+  background-color: black;
+  color: white;
+}
+.doc-prob1 {
+  padding: 30px 50px;
+}
 
-  .doc-prob2 {
-    padding: 30px 80px;
-  }
+.doc-prob2 {
+  padding: 30px 80px;
+}
 
-  .doc-prob3 {
-    padding: 0 60px 30px;
-  }
+.doc-prob3 {
+  padding: 0 60px 30px;
+}
 
-  .doc-prob4 {
-    padding-left: 60px;
-    padding-bottom: 20px;
-  }
+.doc-prob4 {
+  padding-left: 60px;
+  padding-bottom: 20px;
+}
 
-  .doc-prob5 {
-    padding: 0 50px 30px;
-  }
+.doc-prob5 {
+  padding: 0 50px 30px;
+}
 
-  .foot-doc01 {
-    padding: 50px 50px 20px;
-    background: #f16855;
-    color: #fff;
-    font-weight: 700;
-  }
+.foot-doc01 {
+  padding: 50px 50px 20px;
+  background: #f16855;
+  color: #fff;
+  font-weight: 700;
+}
 
-  #admin {
-    color: #fff;
-  }
+#admin {
+  color: #fff;
+}
 
-  .foot-doc02 {
-    background-color: black;
-    padding-left: 60px;
-    color: white;
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-  .foot-doc02 h1 {
-    padding-left: 2px;
-  }
-  .foot-doc02 ol {
-    line-height: 30px;
-    font-size: 20px;
-  }
-  .foot-doc03 {
-    background-color: black;
-    color: white;
-    padding: 0 50px;
-  }
-  .doc-red {
-    color: #f16855;
-    padding-bottom: 30px;
-  }
+.foot-doc02 {
+  background-color: black;
+  padding-left: 60px;
+  color: white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.foot-doc02 h1 {
+  padding-left: 2px;
+}
+.foot-doc02 ol {
+  line-height: 30px;
+  font-size: 20px;
+}
+.foot-doc03 {
+  background-color: black;
+  color: white;
+  padding: 0 50px;
+}
+.doc-red {
+  color: #f16855;
+  padding-bottom: 30px;
+}
 
-  .foot-doc04 {
-    background: #f5f5f5;
-    margin-top: -20px;
-  }
+.foot-doc04 {
+  background: #f5f5f5;
+  margin-top: -20px;
+}
 
-  .head-needs {
-    padding-top: 50px;
-    padding-left: 30px;
-  }
+.head-needs {
+  padding-top: 50px;
+  padding-left: 30px;
+}
 
-  .head-needs small {
-    font-size: 17px;
-    color: #A3A3A3;
-    font-weight: 700;
+.head-needs small {
+  font-size: 17px;
+  color: #a3a3a3;
+  font-weight: 700;
+}
+
+.doc-flexneeds {
+  display: flex;
+  gap: 30px;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  padding-left: 10px;
+}
+.doc-flexneeds h4 {
+  color: #f16855;
+}
+
+.one-foot {
+  background-color: black;
+}
+
+.might {
+  font-size: 18px;
+}
+
+@media screen and (min-width: 280px) and (max-width: 600px) {
+  .documentation {
+    margin: 30px 10px;
   }
 
   .doc-flexneeds {
-    display: flex;
-    gap: 30px;
-    padding-top: 30px;
-    padding-bottom: 40px;
-    padding-left: 10px;
-  }
-  .doc-flexneeds h4 {
-    color: #f16855;
+    gap: 10px;
+    font-size: 12px;
   }
 
-  .one-foot {
-    background-color: black;
-  } 
-
-  .might {
-    font-size: 18px;
+  .doc-prob2,
+  .foot-doc03,
+  .doc-prob3,
+  .doc-prob5,
+  .doc-prob1 {
+    padding: 0 30px 30px;
   }
 
-  @media screen and (min-width: 280px) and (max-width: 600px) {
-.documentation {
-  margin: 30px 10px;
+  .foot-doc01 {
+    padding: 50px 30px 30px;
+  }
+  .foot-doc02,
+  .doc-heading {
+    padding-left: 30px;
+  }
 }
-
-    .doc-flexneeds {
-      gap: 10px;
-    }
-  }
