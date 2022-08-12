@@ -1,3 +1,4 @@
+import React from 'react';
 import HomePageComp from './routes/HomePage';
 
 function App() {

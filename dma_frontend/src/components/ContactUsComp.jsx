@@ -7,9 +7,9 @@ import HeaderLayoutComp from './layout/HeaderLayout';
 
 const ContactUsComp = () => {
   return (
-    <div className='tw-mx-auto tw-min-h-screen tw-max-w-screen-xl tw-pt-6'>
+    <div className=' '>
       <HeaderLayoutComp />
-      <div className='my-container tw-container tw-mx-auto'>
+      <div className='my-container tw-container tw-mx-auto tw-min-h-screen tw-max-w-screen-xl tw-pt-6'>
         <div className='banner tw-grid tw-grid-cols-1 md:tw-grid-cols-2'>
           <div className='left md:tw-w-5/6'>
             <h5 className='explore tw-text-left tw-text-lg tw-font-bold'>
