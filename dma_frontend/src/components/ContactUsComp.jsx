@@ -100,7 +100,7 @@ const ContactUsComp = () => {
                   placeholder='Enter Your Message'
                 ></textarea>
               </div>
-              <div className='btn-div tw-flex'>
+              <div className='btn-div tw-flex tw-mb-5'>
                 <button className='submit-btn' type='button'>
                   <strong>Submit</strong>
                 </button>

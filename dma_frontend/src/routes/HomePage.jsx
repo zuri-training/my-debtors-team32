@@ -6,7 +6,6 @@ import HeaderLayoutComp from '../components/layout/HeaderLayout';
 import { Link } from 'react-router-dom';
 
 const HomePageComp = () => {
-  
   return (
     <div>
       <ProjectLayoutComp >
@@ -189,7 +188,7 @@ const HomePageComp = () => {
               </section> */}
               {/* <SwiperComp /> */}
               {/* bottom content section */}
-              <section className='bottom_content'>
+              <section className='bottom_content tw-pt-12'>
                 <div className='bt_wrapper'>
                   <div className='bt_img_container'>
                     <div className='bt_img'></div>
@@ -206,7 +205,7 @@ const HomePageComp = () => {
                       guardians
                     </p>
                     <Link to='/schoolreg' className='bt_reg'>
-                      [] Register
+                      Register
                     </Link>
                   </div>
                 </div>

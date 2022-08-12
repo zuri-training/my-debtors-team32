@@ -2,8 +2,9 @@ import React from 'react';
 import '../styles/signup.css';
 import signup from '../images/signup.png';
 import HeaderLayoutComp from './layout/HeaderLayout';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 const SignUpComp = () => {
+  let navigate = useNavigate();
   return (
     <div className='tw-mx-auto tw-min-h-screen tw-max-w-screen-xl tw-pt-6'>
       <HeaderLayoutComp />
@@ -66,7 +67,9 @@ const SignUpComp = () => {
               </small>
             </p>
             <br />
-            <button className='btn-a'>Sign Up</button>
+            <button onClick={() => navigate('/contend')} className='btn-a'>
+              Sign Up
+            </button>
             <br />
             <small id='small2'>
               Already have an account?{' '}

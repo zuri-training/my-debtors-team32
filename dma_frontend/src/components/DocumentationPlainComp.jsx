@@ -5,7 +5,7 @@ import docimg from '../images/docimg.png';
 const DocumentationPlainComp = () => {
   return (
     <div className=''>
-      <div className=''>
+      <div className='documentation'>
         <header>
           <div className='doc-heading'>
             <h2>
@@ -109,7 +109,7 @@ const DocumentationPlainComp = () => {
             <p>How might we...</p>
             <br />
             <br />
-            <p>
+            <p className='might'>
               The key of this project is to checkmate wards who are owing in
               their previous school of attendance to clear off outstanding debts
               before changing schools.
@@ -122,7 +122,7 @@ const DocumentationPlainComp = () => {
                 <li>Landing Page</li>
                 <li>Sign Up/Sign In</li>
                 <li>Registration Page</li>
-                <li>Admin Dashboard</li>
+                <li id='admin'>Admin Dashboard</li>
               </ol>
             </div>
 
