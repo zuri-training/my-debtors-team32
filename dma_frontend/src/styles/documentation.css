@@ -131,11 +131,23 @@
   }
 
   @media screen and (min-width: 280px) and (max-width: 600px) {
-.documentation {
-  margin: 30px 10px;
-}
-
-    .doc-flexneeds {
-      gap: 10px;
+    .documentation {
+      margin: 30px 10px;
     }
-  }
+  
+      .doc-flexneeds {
+        gap: 10px;
+        font-size: 12px;
+      }
+  
+      .doc-prob2, .foot-doc03, .doc-prob3, .doc-prob5, .doc-prob1{
+        padding: 0 30px 30px;
+      }
+  
+      .foot-doc01  {
+        padding: 50px 30px 30px;
+      }
+      .foot-doc02, .doc-heading {
+        padding-left: 30px;
+      }
+    }
