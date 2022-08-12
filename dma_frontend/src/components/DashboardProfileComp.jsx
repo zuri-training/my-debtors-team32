@@ -23,7 +23,7 @@ function DashboardProfileComp() {
   }
 
   return (
-    <div className='profile-all'>
+    <div className='profile-all dashboardInfo'>
       <div className='profile-header'>
         <div className='p-header-title p-header'>
           <h2>Apata Memorial High School</h2>

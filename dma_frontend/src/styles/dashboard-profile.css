@@ -1,207 +1,222 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&family=Montserrat:wght@400;700;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Ubuntu:wght@400;700&display=swap');
 .profile-all {
-    font-family: 'Space Grotesk', sans-serif;
-    width: 100%;
+  font-family: 'Space Grotesk', sans-serif;
+  width: 100%;
 }
 
 .profile-header {
-    display: flex;
-    padding: 15px 25px;
-  }
-  
-  .p-header {
-    width: 45%;
-    margin: 5px 20px;
-  }
+  display: flex;
+  padding: 15px 25px;
+}
 
-  .p-header-title h2 {
-    color: #0A5694;
-  }
-  
-  .p-header-button Button {
-    float: right;
-  }
+.p-header {
+  width: 45%;
+  margin: 5px 20px;
+}
 
-  .update-button {
-    font-weight: 700;
-    background-color: #0A5694;
-    color: #fff;
-    padding: 10px 38px;
-  }
-  
-  .navoo {
-    background-color: transparent;
-  }
-  
-  .navoo-link {
-    text-decoration: none !important;
-    color: #2B597FB2;
-  }
-  
-  .navoo::after {
-    content: "";
-    display: block;
-    position: relative;
-    top: 4px;
-    width: 100%;
-    height: 5.5px;
-    background-color: #888282;
-    border-radius: 50px;
-    background-color: #2B597F;
-  }
-  
-  .uche {
-    width: 17%;
-  }
+.p-header-title h2 {
+  color: #0a5694;
+}
 
-  .row {
-    width: 96%;
-  }
-  
-  .tab-row {
-    display: flex;
-    flex-direction: row;
-    border-width: 2px;
-    border-color: #B4B1B1;
-    border-style: none none solid;
-    height: fit-content;
-  }
-  
+.p-header-button Button {
+  float: right;
+}
+
+.update-button {
+  font-weight: 700;
+  background-color: #0a5694;
+  color: #fff;
+  padding: 10px 38px;
+}
+
+.navoo {
+  background-color: transparent;
+}
+
+.navoo-link {
+  text-decoration: none !important;
+  color: #2b597fb2;
+}
+
+.navoo::after {
+  content: '';
+  display: block;
+  position: relative;
+  top: 4px;
+  width: 100%;
+  height: 5.5px;
+  background-color: #888282;
+  border-radius: 50px;
+  background-color: #2b597f;
+}
+
+.uche {
+  width: 17%;
+}
+
+.row {
+  width: 96%;
+}
+
+.tab-row {
+  display: flex;
+  flex-direction: row;
+  border-width: 2px;
+  border-color: #b4b1b1;
+  border-style: none none solid;
+  height: fit-content;
+}
+
+.user-details {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0;
+  width: 100%;
+}
+
+.each-user {
+  width: 45%;
+  margin: 20px 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 15px 10px 20px;
+}
+
+.detail-title {
+  width: 25%;
+}
+
+.final-detail {
+  border: 2px solid #b2beb5;
+  padding: 6px;
+}
+
+.row-entry {
+  margin: 50px 0;
+}
+
+.docs-list {
+  margin: 50px 0 0 37px;
+}
+
+.update-docs {
+  margin: 20px 0 0 17px;
+}
+
+.update-docs label {
+  margin-top: 20px;
+}
+
+.req-list {
+  margin: 10px 0;
+}
+
+.req-list svg {
+  display: inline;
+}
+
+.final-update {
+  border: none;
+  box-shadow: none;
+}
+
+.update-all-button {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin: 20px auto;
+}
+
+.update-all-button Button {
+  width: 40%;
+  height: 60px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.each-password {
+  width: 50%;
+  margin: 30px auto;
+  padding: 20px 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@media screen and (min-width: 280px) and (max-width: 768px) {
   .user-details {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 0;
-    width: 100%;
+    flex-direction: column;
   }
-  
+
   .each-user {
-    width: 45%;
-    margin: 20px 20px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    padding: 15px 10px 20px;
+    width: 100%;
+    margin: 20px 20px 20px 0;
+  }
+
+  .active {
+    background-color: #fff;
+    color: #5b5959;
+  }
+
+  .abt {
+    margin-right: 20px;
+  }
+
+  b {
+    font-size: 12px;
+  }
+
+  .abpt {
+    font-size: 16px;
+  }
+
+  .profile-header {
+    padding: 15px 0;
   }
 
   .detail-title {
-    width: 25%;
-  }
-  
-  .final-detail {
-    border: 2px solid #b2beb5;
-    padding: 6px;
-  }
-  
-  .row-entry {
-    margin: 50px 0;
-  }
-  
-  .docs-list {
-    margin: 50px 0 0 37px;
+    width: 100%;
   }
 
-  .update-docs {
-    margin: 20px 0 0 17px;
+  .update-button {
+    padding: 12px;
+    margin-right: 10px;
   }
 
-  .update-docs label{
-    margin-top: 20px;
-  }
-  
-  .req-list {
-    margin: 10px 0;
+  .p-header .update-button {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12px;
   }
 
-  .req-list svg{
-    display: inline;
-  }
-
-  .final-update {
-    border: none;
-    box-shadow: none;
-  }
-
-  .update-all-button {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    margin: 20px auto;
-  }
-
-  .update-all-button Button {
-    width: 40%;
-    height: 60px;
-    font-size: 1.5rem;
-    font-weight: 700;
-  }
-
-  .each-password {
-    width: 50%;
-    margin: 30px auto;
-    padding: 20px 20px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  }
-
-
-  @media screen and (min-width: 280px) and (max-width: 768px) {
-    .user-details {
-      flex-direction: column;
-    }
-
-    .each-user {
-      width: 100%;
-      margin: 20px 20px 20px 0;
-    }
-
-    .active {
-      background-color: #fff;
-      color: #5B5959
-    }
-
-    .abt {
-      margin-right: 20px;
-    }  
-
-    b {
-      font-size: 12px;
-    }
-
-    .abpt {
-      font-size: 16px;
-    }
-
-    .profile-header {
-      padding: 15px 0;
-    }
-
-    .detail-title {
-      width: 100%;
-    }
-
-    .update-button {
-      padding: 12px;
-      margin-right: 10px;
-    }
-
-    .p-header .update-button {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 12px;
-    }
-
-   .p-header-title h2 {
+  .p-header-title h2 {
     font-size: 16px;
-   }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 855px) {
+  .active {
+    background-color: #fff;
+    color: #5b5959;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 855px)  {
-    .active {
-      background-color: #fff;
-      color: #5B5959
-    }
-
-    .user-details {
-      justify-content: center;
-    }
-
-    .detail-title {
-      width: 100%;
-    }
+  .user-details {
+    justify-content: center;
   }
+
+  .detail-title {
+    width: 100%;
+  }
+}
+
+.dashboardInfo {
+  overflow-y: scroll;
+  max-height: 90vh;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.dashboardInfo::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.dashboardInfo {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

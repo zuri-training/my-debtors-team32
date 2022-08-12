@@ -10,7 +10,9 @@ const Dashboard = () => {
       <div className=''>
         <DashboardSideNav />
       </div>
-      <DashboardComp />
+      <div className='tw-pt-4'>
+        <DashboardComp />
+      </div>
     </div>
   );
 };

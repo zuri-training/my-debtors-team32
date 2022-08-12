@@ -28,13 +28,15 @@ import DashboardProfileUpdate from './routes/DashboardProfileUpdate';
 import ContendForm from './routes/ContendForm';
 import ForgotPassword from './routes/ForgotPassword';
 import UpdateDebtor from './routes/UpdateDebtor';
-import HomePageComp from './routes/HomePage';
+// import HomePageComp from './routes/HomePage';
 import DocumentationPlain from './routes/DocumentationPlain';
+import ScrollToTop from './ScrolltoTop';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path='/' element={<App />} />
         <Route path='/about' element={<AboutPage />} />

@@ -10,7 +10,9 @@ const AddDeptor = () => {
         <div className=''>
           <DashboardSideNav />
         </div>
-        <AddDebtorComp />
+        <div className='tw-mx-auto tw-flex tw-h-screen tw-w-screen tw-max-w-screen-lg tw-items-center tw-justify-center'>
+          <AddDebtorComp />
+        </div>
       </div>
     </div>
   );

@@ -55,7 +55,7 @@ const SignInComp = () => {
                   <label htmlFor='remember'>Remember Me</label>
                 </div>
                 <div className='For'>
-                  <a href='/forgot-password'>Forgot Password?</a>
+                  <Link to='/forgot-password'>Forgot Password?</Link>
                 </div>
               </div>
 

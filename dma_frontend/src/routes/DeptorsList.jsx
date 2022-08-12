@@ -10,7 +10,9 @@ const DeptorsList = () => {
         <div className=''>
           <DashboardSideNav />
         </div>
-        <DeptorListComp />
+        <div className='tw-pt-4'>
+          <DeptorListComp />
+        </div>
       </div>
     </div>
   );

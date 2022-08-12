@@ -9,7 +9,9 @@ const DashboardProfileUpdate = () => {
       <div className=''>
         <DashboardSideNav />
       </div>
-      <DashboardProfileUpdateComp />
+      <div className='tw-pt-4'>
+        <DashboardProfileUpdateComp />
+      </div>
     </div>
   );
 };

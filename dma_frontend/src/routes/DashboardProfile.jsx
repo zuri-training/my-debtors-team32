@@ -9,7 +9,9 @@ const DashboardProfile = () => {
       <div className=''>
         <DashboardSideNav />
       </div>
-      <DashboardProfileComp />
+      <div className='tw-pt-4'>
+        <DashboardProfileComp />
+      </div>
     </div>
   );
 };

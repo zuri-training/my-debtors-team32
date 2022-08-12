@@ -9,7 +9,9 @@ const Notifications = () => {
       <div className=''>
         <DashboardSideNav />
       </div>
-      <NotificationComp />
+      <div className='tw-pt-4'>
+        <NotificationComp />
+      </div>
     </div>
   );
 };
