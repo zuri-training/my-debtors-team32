@@ -84,3 +84,35 @@
     margin-left: 0;
   }
 }
+
+.dashboardInfo {
+  overflow-y: scroll;
+  max-height: 90vh;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.dashboardInfo::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.dashboardInfo {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.dashboardInfo {
+  overflow-y: scroll;
+  max-height: 90vh;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.dashboardInfo::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.dashboardInfo {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

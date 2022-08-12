@@ -10,7 +10,9 @@ const SchoolList = () => {
         <div className=''>
           <DashboardSideNav />
         </div>
-        <SchoolListComp />
+        <div className='tw-pt-4'>
+          <SchoolListComp />
+        </div>
       </div>
     </div>
   );

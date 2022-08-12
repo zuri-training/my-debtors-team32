@@ -60,7 +60,7 @@ const AddDeptorComp = () => {
   };
 
   return (
-    <div className=' tw-rounded-lg tw-p-4'>
+    <div className='tw-flex tw-flex-col tw-rounded-lg tw-p-4 '>
       {/* heading */}
       <div>
         <h1 className='tw-mb-4 tw-font-fam1 tw-text-2xl tw-font-semibold tw-text-blue-900'>
@@ -137,7 +137,7 @@ const AddDeptorComp = () => {
               type='text'
               hidden
               placeholder='Contend Link'
-              value='https://my-debtors-team32.vercel.app/contend'
+              value='https://my-debtors-team32.vercel.app/signup'
               name='link'
               onChange={(e) => handleForm(e)}
             />

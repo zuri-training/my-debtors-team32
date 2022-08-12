@@ -11,7 +11,9 @@ const DeptorsContend = () => {
           <DashboardSideNav />
         </div>
 
-        <DebtorContendComp />
+        <div className='tw-pt-4'>
+          <DebtorContendComp />
+        </div>
       </div>
     </div>
   );

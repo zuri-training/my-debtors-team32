@@ -1,11 +1,11 @@
-import React from "react";
-import "../styles/documentation.css";
-import docimg from "../images/docimg.png";
+import React from 'react';
+import '../styles/documentation.css';
+import docimg from '../images/docimg.png';
 const DocumentationComp = () => {
   return (
-    <div className="">
+    <div className='dashboardInfo'>
       <header>
-        <div className="doc-heading">
+        <div className='doc-heading'>
           <h2>
             Debtor Monitoring Agency <br />
             <br />
@@ -14,10 +14,10 @@ const DocumentationComp = () => {
         </div>
       </header>
       <main>
-        <div className="doc-email">
+        <div className='doc-email'>
           <p>
             [Debtor Monitoring Agency] <br />
-            Design Desk{" "}
+            Design Desk{' '}
           </p>
           <br />
           <br />
@@ -25,11 +25,11 @@ const DocumentationComp = () => {
           <br />
           <br />
           <br />
-          <p className="doc-blue">August 2022</p>
+          <p className='doc-blue'>August 2022</p>
         </div>
 
-        <div className="doc-prob">
-          <div className="doc-prob1">
+        <div className='doc-prob'>
+          <div className='doc-prob1'>
             <h3>Problem & Opportunities</h3>
             <br />
             <br />
@@ -55,7 +55,7 @@ const DocumentationComp = () => {
               submission documents.
             </p>
           </div>
-          <div className="doc-prob2">
+          <div className='doc-prob2'>
             <h3>Product & Design Decisions</h3> <br />
             <br />
             <br />
@@ -65,7 +65,7 @@ const DocumentationComp = () => {
               aesthetically pleasing colours.
             </p>
           </div>
-          <div className="doc-prob3">
+          <div className='doc-prob3'>
             <h3> Research & Discovery </h3>
             <br />
             <br />
@@ -85,11 +85,11 @@ const DocumentationComp = () => {
               parents are free to contend claims of their debt status.
             </p>
           </div>
-          <div className="doc-prob4">
+          <div className='doc-prob4'>
             <h2>Designs</h2> <br />
-            <img id="docimg" src={docimg} alt="doc-img" />
+            <img id='docimg' src={docimg} alt='doc-img' />
           </div>
-          <div className="doc-prob5">
+          <div className='doc-prob5'>
             <h3>Project Summary</h3>
             <p>
               A platform that allow schools within a given region to list a
@@ -102,7 +102,7 @@ const DocumentationComp = () => {
         </div>
       </main>
       <footer>
-        <div className="foot-doc01">
+        <div className='foot-doc01'>
           <p>How might we...</p>
           <br />
           <br />
@@ -112,8 +112,8 @@ const DocumentationComp = () => {
             changing schools.
           </p>
         </div>
-        <div className="one-foot">
-          <div className="foot-doc02">
+        <div className='one-foot'>
+          <div className='foot-doc02'>
             <h1>Table of Contents</h1> <br />
             <ol>
               <li>Landing Page</li>
@@ -123,7 +123,7 @@ const DocumentationComp = () => {
             </ol>
           </div>
 
-          <div className="foot-doc03">
+          <div className='foot-doc03'>
             <h4>What is the business impact?</h4>
             <br />
             <p>
@@ -135,21 +135,21 @@ const DocumentationComp = () => {
               institutions.
             </p>
             <br />
-            <p className="doc-red">
+            <p className='doc-red'>
               With DMA, Parents are also free to contend such claims with
               evidence by submitting supporting documents
             </p>
           </div>
         </div>
-        <div className="foot-doc04">
-          <div className="head-needs">
+        <div className='foot-doc04'>
+          <div className='head-needs'>
             <small>Research</small>
             <br />
             <br />
             <h2>Core user needs</h2>
           </div>
-          <div className="doc-flexneeds">
-            <div className="needs1">
+          <div className='doc-flexneeds'>
+            <div className='needs1'>
               <h4>Need</h4>
               <br />
               <p>
@@ -157,7 +157,7 @@ const DocumentationComp = () => {
                 has outstanding fees to pay in previous schools.
               </p>
             </div>
-            <div className="needs2">
+            <div className='needs2'>
               <h4>Need</h4>
               <br />
               <p>
@@ -165,7 +165,7 @@ const DocumentationComp = () => {
                 wards.
               </p>
             </div>
-            <div className="needs3">
+            <div className='needs3'>
               <h4>Need</h4>
               <br />
               <p>
