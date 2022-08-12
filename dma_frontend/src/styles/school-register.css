@@ -73,21 +73,6 @@
   border-bottom: 1px solid #0500E5;
 }
 
-.sub-reg-input01,
-.sub-reg-input02,
-.sub-reg-input03 {
-  width: 400px;
-  height: 20px;
-  border: 1px solid;
-  border-radius: 5px;
-}
-
-.sub-reg-input01:hover,
-.sub-reg-input02:hover,
-.sub-reg-input03:hover {
-  box-shadow: 2px 2px 5px 5px #888888;
-}
-
 @media screen and (min-width: 280px) and (max-width: 768px) {
   .Reg-form {
     padding: 50px 20px 10px
@@ -119,7 +104,7 @@
   }
 
   .reg-title {
-    margin-left: 10px;
+    margin-left: 100px;
   }
 
   .reg-text {
@@ -138,3 +123,5 @@
     font-size: 13px;
   }
 }
+
+
