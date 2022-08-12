@@ -64,7 +64,7 @@ const AddDeptorComp = () => {
       {/* heading */}
       <div>
         <h1 className='tw-mb-4 tw-font-fam1 tw-text-2xl tw-font-semibold tw-text-blue-900'>
-          Add A Deptor
+          Add A Debtor
         </h1>
       </div>
 
