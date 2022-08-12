@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&family=Montserrat:wght@400;700;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Ubuntu:wght@400;700&display=swap');
+.profile-all {
+    font-family: 'Space Grotesk', sans-serif;
+    width: 100%;
+}
+
 .profile-header {
     display: flex;
     padding: 15px 25px;
@@ -7,9 +13,20 @@
     width: 45%;
     margin: 5px 20px;
   }
+
+  .p-header-title h2 {
+    color: #0A5694;
+  }
   
   .p-header-button Button {
     float: right;
+  }
+
+  .update-button {
+    font-weight: 700;
+    background-color: #0A5694;
+    color: #fff;
+    padding: 10px 38px;
   }
   
   .navoo {
@@ -18,7 +35,7 @@
   
   .navoo-link {
     text-decoration: none !important;
-    color: #5b5959b2;
+    color: #2B597FB2;
   }
   
   .navoo::after {
@@ -30,17 +47,22 @@
     height: 5.5px;
     background-color: #888282;
     border-radius: 50px;
+    background-color: #2B597F;
   }
   
   .uche {
     width: 17%;
   }
+
+  .row {
+    width: 96%;
+  }
   
   .tab-row {
     display: flex;
     flex-direction: row;
-    border-width: 1.3px;
-    border-color: #b4b1b1;
+    border-width: 2px;
+    border-color: #B4B1B1;
     border-style: none none solid;
     height: fit-content;
   }
@@ -56,7 +78,11 @@
     width: 45%;
     margin: 20px 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    padding: 0 10px;
+    padding: 15px 10px 20px;
+  }
+
+  .detail-title {
+    width: 25%;
   }
   
   .final-detail {
@@ -71,7 +97,45 @@
   .docs-list {
     margin: 50px 0 0 37px;
   }
+
+  .update-docs {
+    margin: 20px 0 0 17px;
+  }
+
+  .update-docs label{
+    margin-top: 20px;
+  }
   
   .req-list {
     margin: 10px 0;
+  }
+
+  .req-list svg{
+    display: inline;
+  }
+
+  .final-update {
+    border: none;
+    box-shadow: none;
+  }
+
+  .update-all-button {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  .update-all-button Button {
+    width: 40%;
+    height: 60px;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .each-password {
+    width: 50%;
+    margin: 30px auto;
+    padding: 20px 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }

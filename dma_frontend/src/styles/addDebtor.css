@@ -38,13 +38,15 @@ li:last-child {
 .debtor-form h1 {
     color: #003865;
     text-align: center;
+
 }
 .debtor-form label {
-    display: block;
-    width: 130px;
-    margin-top: 23px;
+  display: block;
+  width: 130px;
+  margin-top: 23px;
 }
 .debtor-form input {
+
     display: inline-block;
     padding: 17px 300px 17px 25px;
     text-align: left;
@@ -52,10 +54,11 @@ li:last-child {
     border: 1px solid #d9d9d9;
     border-radius: 4px
 }
+
 input::placeholder {
-    color: #484747;
-    opacity: 1;
-    font-size: 11px;
+  color: #484747;
+  opacity: 1;
+  font-size: 11px;
 }
 #btn {
     padding: 17px 225px 17px 225px;
@@ -144,5 +147,4 @@ input::placeholder {
 
 }
 @media screen and (min-width: 1280px) and (max-width: 1536px) {
-
 }

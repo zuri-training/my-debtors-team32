@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 import { RiMenu5Fill } from 'react-icons/ri';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import NavContentComp from './NavContent';
-import { NavDropdown } from 'react-bootstrap';
+// import { NavDropdown } from 'react-bootstrap';
 
 const HeaderLayoutComp = () => {
   const [show, setShow] = useState(false);
@@ -57,7 +57,7 @@ const HeaderLayoutComp = () => {
             >
               Features
             </NavLink> */}
-            <NavDropdown title='Deptors' id='basic-nav-dropdown'>
+            {/* <NavDropdown title='Deptors' id='basic-nav-dropdown'>
               <NavDropdown.Item href='/adddeptor'>
                 <NavLink
                   className='tw-font-fam1 tw-text-inherit tw-text-black tw-no-underline tw-transition-all hover:tw-text-gray-500 '
@@ -101,7 +101,7 @@ const HeaderLayoutComp = () => {
                   Deptor Contend
                 </NavLink>
               </NavDropdown.Item>
-            </NavDropdown>
+            </NavDropdown> */}
             <NavLink
               className='tw-font-fam1 tw-text-inherit tw-text-black tw-no-underline tw-transition-all hover:tw-text-gray-500'
               to='/about'
@@ -111,18 +111,26 @@ const HeaderLayoutComp = () => {
             </NavLink>
             <NavLink
               className='tw-font-fam1 tw-text-inherit tw-text-black tw-no-underline tw-transition-all hover:tw-text-gray-500'
+              to='/documentation'
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
+              Documentation
+            </NavLink>
+            <NavLink
+              className='tw-font-fam1 tw-text-inherit tw-text-black tw-no-underline tw-transition-all hover:tw-text-gray-500'
               to='/contact'
               style={({ isActive }) => (isActive ? activeStyle : undefined)}
             >
               Contact Us
             </NavLink>
+          
           </div>
 
           {/* login | register */}
           <div className='tw-hidden tw-items-center tw-justify-center tw-space-x-4 tw-font-fam1 lg:tw-flex '>
             <NavLink
               className='tw-w-fit tw-rounded-lg tw-border tw-border-blue-900 tw-bg-transparent tw-py-2 tw-px-10 tw-text-black tw-no-underline tw-transition-all tw-duration-300 tw-ease-in-out hover:tw-bg-blue-100'
-              to='/login'
+              to='/signin'
               // style={({ isActive }) => (isActive ? activeStyle : undefined)}
             >
               Login
@@ -130,7 +138,7 @@ const HeaderLayoutComp = () => {
             {/* <Button className=' '>Login</Button> */}
             <NavLink
               className=' tw-w-fit tw-rounded-lg  tw-bg-blue-900 tw-py-2 tw-px-10  tw-text-white tw-no-underline tw-transition-all  tw-duration-300 tw-ease-in-out hover:tw-bg-blue-700 hover:tw-text-white'
-              to='/signup'
+              to='/schoolreg'
               // style={({ isActive }) => (isActive ? activeStyle : undefined)}
             >
               Register

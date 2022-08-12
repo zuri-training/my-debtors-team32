@@ -15,12 +15,20 @@ import ErrorPage from './routes/Error';
 import SignupComp from './routes/SignUp';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import DeptorsList from './routes/DeptorsList';
-import DeptorsSearch from './routes/DeptorsSearch';
+// import DeptorsSearch from './routes/DeptorsSearch';
 import DebtorsContend from './routes/DebtorsContend';
 import AddDebtor from './routes/AddDebtor';
 import Dashboard from './routes/Dashboard';
 import DashboardProfile from './routes/DashboardProfile';
 import SchoolRegistration from './routes/SchoolRegistration';
+import SchoolList from './routes/SchoolList';
+import Documentation from './routes/Documentation';
+import Notifications from './routes/Notifications';
+import DashboardProfileUpdate from './routes/DashboardProfileUpdate';
+import ContendForm from './routes/ContendForm';
+import ForgotPassword from './routes/ForgotPassword';
+import UpdateDebtor from './routes/UpdateDebtor';
+import DocumentationPlain from './routes/DocumentationPlain';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -32,16 +40,28 @@ root.render(
         <Route path='/features' element={<FeaturesPage />} />
         <Route path='contact' element={<ContactPage />} />
         <Route path='register' element={<SignupPage />} />
-        <Route path='login' element={<LoginPage />} />
+        <Route path='signin' element={<LoginPage />} />
         <Route path='school' element={<SchoolPage />} />
         <Route path='student' element={<StudentPage />} />
         <Route path='signup' element={<SignupComp />} />
+        <Route path='forgot-password' element={<ForgotPassword />} />
+        <Route path='update-debtor' element={<UpdateDebtor />} />
         <Route path='dashboard' element={<Dashboard />} />
-        <Route path='adddeptor' element={<AddDebtor />} />
-        <Route path='deptorlist' element={<DeptorsList />} />
-        <Route path='deptorsearch' element={<DeptorsSearch />} />
-        <Route path='deptorcontend' element={<DebtorsContend />} />
-        <Route path='dashboardprofile' element={<DashboardProfile />} />
+
+        <Route path='/admin/adddebtor' element={<AddDebtor />} />
+        <Route path='/admin/contend' element={<DebtorsContend />} />
+        <Route path='/contend' element={<ContendForm />} />
+        <Route path='/admin/listdebtors' element={<DeptorsList />} />
+        <Route path='/admin/listschools' element={<SchoolList />} />
+        <Route path='/admin/notifications' element={<Notifications />} />
+        <Route path='/admin/profile' element={<DashboardProfile />} />
+        <Route
+          path='/admin/profile/update'
+          element={<DashboardProfileUpdate />}
+        />
+        <Route path='admin/documentation' element={<Documentation />} />
+        <Route path='documentation' element={<DocumentationPlain />} />
+
         <Route path='schoolreg' element={<SchoolRegistration />} />
         <Route path='*' element={<ErrorPage />} />
       </Routes>

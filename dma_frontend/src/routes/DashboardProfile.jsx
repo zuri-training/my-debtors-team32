@@ -1,12 +1,16 @@
 import React from 'react';
 import DashboardProfileComp from '../components/DashboardProfileComp';
-import ProjectLayoutComp from '../components/layout/ProjectLayout';
+import DashboardSideNav from '../components/layout/DashboardSideNav';
 
 const DashboardProfile = () => {
   return (
-    <ProjectLayoutComp>
+    <div className='tw-flex tw-flex-col tw-space-x-6 lg:tw-flex-row '>
+      {/* sidebar */}
+      <div className=''>
+        <DashboardSideNav />
+      </div>
       <DashboardProfileComp />
-    </ProjectLayoutComp>
+    </div>
   );
 };
 

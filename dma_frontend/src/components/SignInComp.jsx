@@ -1,9 +1,13 @@
 import React from 'react';
 import '../styles/signin.css';
 import signin from '../images/signin.jpg';
+import HeaderLayoutComp from './layout/HeaderLayout';
+import { Link, useNavigate } from 'react-router-dom';
 const SignInComp = () => {
+  let navigate = useNavigate();
   return (
-    <div className=''>
+    <div className=' tw-mx-auto tw-min-h-screen tw-max-w-screen-xl tw-pt-6'>
+      <HeaderLayoutComp />
       <div className=''>
         <div className='in-container'>
           <div className='in-item-2'>
@@ -57,14 +61,19 @@ const SignInComp = () => {
 
               <br />
               <br />
-              <button className='btn-a-in'>Sign In</button>
+              <button
+                onClick={() => navigate('/dashboard')}
+                className='btn-a-in'
+              >
+                Sign In
+              </button>
               <br />
               <br />
               <small id='small2-in'>
                 Don't have an account?{' '}
-                <a href='SignInComp.jsx' className='bolde-2'>
+                <Link to='/signup' className='bolde-2'>
                   <strong>Sign up</strong>
-                </a>
+                </Link>
               </small>
             </form>
           </div>
