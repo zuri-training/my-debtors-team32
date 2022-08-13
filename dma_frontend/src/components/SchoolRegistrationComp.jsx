@@ -5,10 +5,17 @@ import '../styles/schoolsadmin.css';
 // import Toast from 'react-bootstrap/Toast';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Form from 'react-bootstrap/Form';
 
 const SchoolRegistrationComp = () => {
   const navigate = useNavigate();
   const [showNext, setShowNext] = useState(false);
+  const [showPass, setShowPass] = useState(false);
+
+  const handleShow = (e) => {
+    e.preventDefault();
+    setShowPass(!showPass);
+  };
 
   const showToast = () => {
     toast.success(
@@ -44,60 +51,73 @@ const SchoolRegistrationComp = () => {
                 <label htmlFor='reg-parent' className='reg-label'>
                   Name of School
                 </label>
-                <input
-                  type='text'
-                  className='reg-input'
-                  id='reg-parent'
-                  required
-                />
+                <input type='text' className='reg-input' id='reg-parent' />
               </div>
               <div className='form-group'>
                 <label htmlFor='reg-category' className='reg-label'>
                   School Category
                 </label>
-                <select name="schselect" className='reg-input' required id="reg-input">
-                <option selected value="Public">Select School Category</option>
-                  <option value="Public">Public School</option>
-                  <option value="Private">Private School</option>
+                <select name='schselect' className='reg-input' id='reg-input'>
+                  <option selected value='Public'>
+                    Select School Category
+                  </option>
+                  <option value='Public'>Public School</option>
+                  <option value='Private'>Private School</option>
                 </select>
               </div>
               <div className='form-group'>
                 <label htmlFor='reg-contact' className='reg-label'>
                   Description
                 </label>
-                <input
-                  type='text'
-                  className='reg-input'
-                  id='reg-contact'
-                  required
-                />
+                <input type='text' className='reg-input' id='reg-contact' />
               </div>
               <div className='form-group'>
                 <label htmlFor='reg-schaddress' className='reg-label'>
                   School Address
                 </label>
-                <input
-                  type='text'
-                  className='reg-input'
-                  id='reg-schaddress'
-                  required
-                />
+                <input type='text' className='reg-input' id='reg-schaddress' />
               </div>
               <div className='form-group'>
                 <label htmlFor='reg-num' className='reg-label'>
                   Contact Number
                 </label>
-                <input type='tel' className='reg-input' id='reg-num' required />
+                <input type='tel' className='reg-input' id='reg-num' />
+              </div>
+              <div className='form-group'>
+                <label htmlFor='reg-num' className='reg-label'>
+                  User Name
+                </label>
+                <input type='text' className='reg-input' id='reg-num' />
               </div>
               <div className='form-group'>
                 <label htmlFor='reg-email' className='reg-label'>
                   Email address
                 </label>
+                <input type='email' className='reg-input' id='reg-parent' />
+              </div>
+              <div className='form-group'>
+                <label htmlFor='pswd' className='reg-label'>
+                  Password*
+                </label>
+
                 <input
-                  type='email'
+                  type={`${showPass ? 'text' : 'password'}`}
                   className='reg-input'
                   id='reg-parent'
-                  required
+                />
+                <button onClick={(e) => handleShow(e)} className='tw-ml-2'>
+                  Show
+                </button>
+              </div>
+              <div className='form-group'>
+                <label htmlFor='pswd' className='reg-label'>
+                  Confirm Password
+                </label>
+
+                <input
+                  type={`${showPass ? 'text' : 'password'}`}
+                  className='reg-input'
+                  id='reg-parent'
                 />
               </div>
               <div className='reg-doc'>

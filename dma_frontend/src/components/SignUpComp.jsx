@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/signup.css';
 import signup from '../images/signup.png';
 import HeaderLayoutComp from './layout/HeaderLayout';
 import { Link, useNavigate } from 'react-router-dom';
 const SignUpComp = () => {
+  const [showPass, setShowPass] = useState(false);
+
   let navigate = useNavigate();
+
+  const handleShow = (e) => {
+    e.preventDefault();
+    setShowPass(!showPass);
+  };
   return (
     <div className='tw-mx-auto tw-min-h-screen tw-max-w-screen-xl tw-pt-6'>
       <HeaderLayoutComp />
@@ -43,16 +50,32 @@ const SignUpComp = () => {
             <br />
             <br />
 
-            <label htmlFor='pswd'>Password*</label>
-            <br />
+            <div className='tw-flex tw-items-center tw-justify-between'>
+              <label htmlFor='pswd'>Password*</label>
+              <button onClick={(e) => handleShow(e)}>Show</button>
+            </div>
             <br />
             <input
-              type='password'
+              type={`${showPass ? 'text' : 'password'}`}
               name='password'
               placeholder='******************'
               className='pswd01'
-              autocomplete='current-password'
-              required=''
+              autoComplete
+              required
+              id='id_password'
+            />
+            <br />
+            <br />
+            <label htmlFor='pswd'>Confirm Password*</label>
+            <br />
+            <br />
+            <input
+              type={`${showPass ? 'text' : 'password'}`}
+              name='password'
+              placeholder='******************'
+              className='pswd01'
+              autoComplete
+              required
               id='id_password'
             />
             <i className='far fa-eye' id='togglePassword'></i>
