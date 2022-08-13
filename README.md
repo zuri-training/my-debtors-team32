@@ -46,15 +46,16 @@ git push origin <type_your_new_branch_name_here>
 ## Backend WorkFlow
 1. Clone the repo with this link `https://github.com/zuri-training/my-debtors-team32.git` and open in a code editor.
 
-2. Change directory to the frontend directory
+2. Change directory to the backend directory
    `cd DMA_backend`
 
 3. Create a virtual environment and type
    `python -m pip install -r requirements.txt`
 
 4. Set up database with PostgreSQL or Sqlite3. Change the database in DMA/settings to run data base of your choice. 
-   For production PostgreSQL is preferred.
+   For production, **PostgreSQL** is preferred.
 
 5. Start development server
    `python manage.py runserver`
 
+To view API Endpoints type `127.0.0.1:800/docs/` 
