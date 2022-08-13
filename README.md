@@ -1,6 +1,8 @@
 # DMA Project Team 32
 
-This is the Github repo for Team 32 on the debtors web application. This project is a platform that allows schools in a certain locality list directory of people owing them - to help them avoid going to other schools.
+
+
+This is the Github repo for Team 32 on the debtors web application. This project is a platform that allows schools in a certain locality list directory of people owing them - to help them avoid going to other schools. This service is a **Microservice web application**. The frontend was developed with **React.js** and Backend was developed developed using **Django**.
 
 ## Frontend Workflow 🍃
 
