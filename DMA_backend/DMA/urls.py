@@ -1,7 +1,7 @@
 """DMA URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.0/topics/http/urls/
+    https://docs.djangoproject.com/en/4.1/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -20,13 +20,14 @@ from rest_framework.documentation import include_docs_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('recordsb.urls', namespace="recordsb")),
-    path('recordsbapi/', include('recordsb_api.urls', namespace="recordsb_api")),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    path('docs/', include_docs_urls(title='RecordsAPI')),
-    path('schema', get_schema_view(
-        title="RecordsAPI",
-        description="API for the Records",
-        version="1.0.0",
-    ), name='openapi-schema')
+    path('api/r/', include('records.urls')),
+    path('api-auth/', include('rest_framework.urls')),
+    path('api/r/dj-rest-auth/', include('dj_rest_auth.urls')),
+    path('api/r/dj-rest-auth/registration/', include('dj_rest_auth.registration.urls')),
+    path('openapi/', get_schema_view(
+            title="DMA Project",
+            description="API the records and users",
+            version="1"
+        ), name='openapi-schema'),
+    path('docs/', include_docs_urls(title='DMA Project'))
 ]
