@@ -45,7 +45,7 @@ const NavContentComp = () => {
         </NavLink>
       </div>
       {/* login | register */}
-      {!cookies['dma-cookies'] ? (
+      {cookies['dma-cookies'] === 'null' ? (
         <div className='tw-absolute tw-inset-x-0 tw-bottom-3 tw-flex tw-flex-col tw-items-center tw-justify-center tw-space-y-4 tw-font-fam1'>
           <NavLink
             className='tw-w-full tw-rounded-lg tw-border tw-border-blue-900 tw-bg-transparent tw-py-2 tw-px-10 tw-text-center tw-text-black tw-no-underline tw-transition-all tw-duration-300 tw-ease-in-out hover:tw-bg-blue-100'

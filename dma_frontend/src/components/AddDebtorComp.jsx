@@ -4,11 +4,14 @@ import emailjs from '@emailjs/browser';
 // import { Button } from 'react-bootstrap';
 import Modal from 'react-bootstrap/Modal';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { useContextData } from '../lib/GlobalContext';
 // import useWindowSize from 'react-use/lib/useWindowSize';
 // import Confetti from 'react-confetti';
 // import { useWindowSize } from 'rooks';
 // import { useMount, useCookie } from 'react-use';
-
+import { useCookies } from 'react-cookie';
+import slugify from 'react-slugify';
 const AddDeptorComp = () => {
   const formRef = useRef();
   let navigate = useNavigate();
@@ -18,13 +21,15 @@ const AddDeptorComp = () => {
   // let navigate = useNavigate();
 
   const [formValue, setformValue] = useState({});
+  // const [backendForm, setBackendForm] = useState(formValue)
   const [modalShow, setModalShow] = useState(false);
   const [btnLoad, setBtnLoad] = useState(false);
 
   console.log('formValue', formValue);
+  const { schoolInfo } = useContextData();
 
   const handleClose = () => {
-    navigate('/admin/listdebtors', { replace: true });
+    navigate('/dashboard');
     setModalShow(false);
     setBtnLoad(false);
   };
@@ -39,11 +44,33 @@ const AddDeptorComp = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const [cookies] = useCookies(['dma-cookies']);
+  const token = cookies['dma-cookies'];
+
+  const backendSubmit = async () => {
+    formValue['school_owed'] = schoolInfo?.school_name;
+    formValue['author'] = schoolInfo?.author;
+    formValue['status'] = 'Abandoned payment';
+    formValue['slug'] = slugify(schoolInfo?.school_name);
+    const result = await axios.post(
+      `${process.env.REACT_APP_BACKEND_URL}/api/r/dashboard/`,
+      {
+        ...formValue,
+      },
+      {
+        headers: { Authorization: `Token ${token}` },
+      }
+    );
+    console.log('result', result);
+  };
+
+  const handleSubmit = async (e) => {
     console.log('this is formValue', formRef.current);
-    formValue['link'] = 'https://my-debtors-team32.vercel.app/contend';
+    // formValue['link'] = 'https://my-debtors-team32.vercel.app/contend';
     e.preventDefault();
     setBtnLoad(true);
+    // await backendSubmit();
+
     emailjs
       .sendForm(
         'service_v3hk5ps',
@@ -54,6 +81,7 @@ const AddDeptorComp = () => {
       .then(
         (result) => {
           console.log(result);
+          backendSubmit();
           handleShow();
         },
         (error) => {
@@ -78,54 +106,54 @@ const AddDeptorComp = () => {
         onSubmit={handleSubmit}
       >
         <div className='tw-flex tw-flex-col tw-items-center tw-space-y-3 lg:tw-flex-row lg:tw-space-y-0 lg:tw-space-x-4'>
-          <Form.Group className='mb-3 tw-w-full' controlId='studentName'>
+          <Form.Group className='mb-3 tw-w-full' controlId='name_of_student'>
             <Form.Label className='tw-font-semibold'>Student Name</Form.Label>
             <Form.Control
               type='text'
               placeholder="Enter Student's Name"
-              name='studentName'
+              name='name_of_student'
               onChange={(e) => handleForm(e)}
             />
           </Form.Group>
-          <Form.Group className='mb-3 tw-w-full' controlId='parentName'>
+          <Form.Group className='mb-3 tw-w-full' controlId='name_of_parent'>
             <Form.Label className='tw-font-semibold'>Parent Name</Form.Label>
             <Form.Control
               type='text'
               placeholder="Enter Parent's Name"
-              name='parentName'
+              name='name_of_parent'
               onChange={(e) => handleForm(e)}
             />
           </Form.Group>
         </div>
         <div className='tw-flex tw-flex-col tw-items-center tw-space-y-3 lg:tw-flex-row lg:tw-space-y-0 lg:tw-space-x-4'>
-          <Form.Group className='mb-3 tw-w-full' controlId='parentEmail'>
+          <Form.Group className='mb-3 tw-w-full' controlId='email'>
             <Form.Label className='tw-font-semibold'>Parent Email</Form.Label>
             <Form.Control
               type='email'
               placeholder="Enter Parent's Name"
-              name='parentEmail'
+              name='email'
               onChange={(e) => handleForm(e)}
             />
           </Form.Group>
-          <Form.Group className='mb-3 tw-w-full' controlId='parentNumber'>
+          <Form.Group className='mb-3 tw-w-full' controlId='phone_number'>
             <Form.Label className='tw-font-semibold'>
               Parent Phone Number
             </Form.Label>
             <Form.Control
               type='tel'
               placeholder="Enter Parent's Number"
-              name='parentNumber'
+              name='phone_number'
               onChange={(e) => handleForm(e)}
             />
           </Form.Group>
         </div>
         <div className='tw-flex tw-flex-col tw-items-center tw-space-y-3 lg:tw-flex-row lg:tw-space-y-0 lg:tw-space-x-4'>
-          <Form.Group className='mb-3 tw-w-full' controlId='amount'>
+          <Form.Group className='mb-3 tw-w-full' controlId='amount_owed'>
             <Form.Label className='tw-font-semibold'>Amount</Form.Label>
             <Form.Control
               type='number'
               placeholder='Enter Amount'
-              name='amount'
+              name='amount_owed'
               onChange={(e) => handleForm(e)}
             />
           </Form.Group>
@@ -140,7 +168,7 @@ const AddDeptorComp = () => {
             <Form.Control
               type='text'
               hidden
-              placeholder='Contend Link'
+              // placeholder='Contend Link'
               value='https://my-debtors-team32.vercel.app/signup'
               name='link'
               onChange={(e) => handleForm(e)}
