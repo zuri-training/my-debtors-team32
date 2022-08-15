@@ -11,7 +11,7 @@ const ContendComp = () => {
   const navigate = useNavigate();
   const [cookies] = useCookies(['dma-cookies']);
   useMount(() => {
-    if (!cookies['dma-cookies']) {
+    if (cookies['dma-cookies'] === 'null') {
       navigate('/signin');
     }
   });

@@ -62,7 +62,10 @@ root.render(
               <Route path='student' element={<StudentPage />} />
               <Route path='signup' element={<SignupComp />} />
               <Route path='forgot-password' element={<ForgotPassword />} />
-              <Route path='update-debtor' element={<UpdateDebtor />} />
+              <Route
+                path='/admin/update-debtor/:id'
+                element={<UpdateDebtor />}
+              />
               <Route path='dashboard' element={<Dashboard />} />
 
               <Route path='/admin/adddebtor' element={<AddDebtor />} />
