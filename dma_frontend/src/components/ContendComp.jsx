@@ -6,6 +6,7 @@ import '../styles/contend-page.css';
 import { useCookies } from 'react-cookie';
 import { useMount } from 'react-use';
 import { useNavigate } from 'react-router-dom';
+import { useContextData } from '../lib/GlobalContext';
 
 const ContendComp = () => {
   const navigate = useNavigate();
@@ -15,6 +16,7 @@ const ContendComp = () => {
       navigate('/signin');
     }
   });
+  // const { schoolInfo } = useContextData();
 
   return (
     <div className='tw-mx-auto tw-min-h-screen tw-max-w-screen-xl tw-pt-6'>
