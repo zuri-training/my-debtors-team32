@@ -5,18 +5,72 @@ import '../styles/schoolsadmin.css';
 // import Toast from 'react-bootstrap/Toast';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Form from 'react-bootstrap/Form';
+// import Form from 'react-bootstrap/Form';
+import axios from 'axios';
 
 const SchoolRegistrationComp = () => {
   const navigate = useNavigate();
   const [showNext, setShowNext] = useState(false);
   const [showPass, setShowPass] = useState(false);
-
+  const [formValue, setFormValue] = useState({});
+  const [registerValue, setRegisterValue] = useState({});
   const handleShow = (e) => {
     e.preventDefault();
     setShowPass(!showPass);
   };
 
+  const handleForm = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setFormValue({ ...formValue, [name]: value });
+  };
+
+  const handleRegister = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setRegisterValue({ ...registerValue, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const result = await axios.post(
+        'http://localhost:8000/api/r/dj-rest-auth/registration/',
+        {
+          // username: formValue?.username,
+          // email: formValue?.schoolEmail,
+          // password1: formValue?.password1,
+          // password2: formValue?.password2,
+          ...registerValue,
+        }
+      );
+      console.log('result :>> ', result.data);
+      const token = result?.data?.key;
+
+      const result2 = await axios.get(
+        'http://localhost:8000/api/r/dj-rest-auth/user/',
+        {
+          headers: { Authorization: `Token ${token}` },
+        }
+      );
+      console.log('result2', result2?.data);
+
+      const result3 = await axios.post(
+        'http://localhost:8000/api/r/register/',
+        {
+          ...formValue,
+          author: result2?.data?.pk,
+        }
+      );
+      console.log('result3 :>> ', result3.data);
+      showToast();
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  console.log('reister formValue', formValue);
+  console.log('registerValue', registerValue);
   const showToast = () => {
     toast.success(
       `
@@ -51,13 +105,25 @@ const SchoolRegistrationComp = () => {
                 <label htmlFor='reg-parent' className='reg-label'>
                   Name of School
                 </label>
-                <input type='text' className='reg-input' id='reg-parent' />
+                <input
+                  name='school_name'
+                  type='text'
+                  onChange={(e) => handleForm(e)}
+                  className='reg-input'
+                  id='reg-parent'
+                />
               </div>
               <div className='form-group'>
                 <label htmlFor='reg-category' className='reg-label'>
                   School Category
                 </label>
-                <select name='schselect' className='reg-input' id='reg-input'>
+                <select
+                  name='school_category'
+                  onChange={(e) => handleForm(e)}
+                  // name='schselect'
+                  className='reg-input'
+                  id='reg-input'
+                >
                   <option selected value='Public'>
                     Select School Category
                   </option>
@@ -69,31 +135,61 @@ const SchoolRegistrationComp = () => {
                 <label htmlFor='reg-contact' className='reg-label'>
                   Description
                 </label>
-                <input type='text' className='reg-input' id='reg-contact' />
+                <input
+                  name='description'
+                  onChange={(e) => handleForm(e)}
+                  type='text'
+                  className='reg-input'
+                  id='reg-contact'
+                />
               </div>
               <div className='form-group'>
                 <label htmlFor='reg-schaddress' className='reg-label'>
                   School Address
                 </label>
-                <input type='text' className='reg-input' id='reg-schaddress' />
+                <input
+                  name='school_address'
+                  onChange={(e) => handleForm(e)}
+                  type='text'
+                  className='reg-input'
+                  id='reg-schaddress'
+                />
               </div>
               <div className='form-group'>
                 <label htmlFor='reg-num' className='reg-label'>
                   Contact Number
                 </label>
-                <input type='tel' className='reg-input' id='reg-num' />
+                <input
+                  name='contact_number'
+                  onChange={(e) => handleForm(e)}
+                  type='tel'
+                  className='reg-input'
+                  // id='reg-num'
+                />
               </div>
               <div className='form-group'>
                 <label htmlFor='reg-num' className='reg-label'>
                   User Name
                 </label>
-                <input type='text' className='reg-input' id='reg-num' />
+                <input
+                  name='username'
+                  onChange={(e) => handleRegister(e)}
+                  type='text'
+                  className='reg-input'
+                  // id='reg-num'
+                />
               </div>
               <div className='form-group'>
                 <label htmlFor='reg-email' className='reg-label'>
                   Email address
                 </label>
-                <input type='email' className='reg-input' id='reg-parent' />
+                <input
+                  name='email'
+                  onChange={(e) => handleRegister(e)}
+                  type='email'
+                  className='reg-input'
+                  // id='reg-parent'
+                />
               </div>
               <div className='form-group'>
                 <label htmlFor='pswd' className='reg-label'>
@@ -102,8 +198,10 @@ const SchoolRegistrationComp = () => {
 
                 <input
                   type={`${showPass ? 'text' : 'password'}`}
+                  name='password1'
                   className='reg-input'
-                  id='reg-parent'
+                  onChange={(e) => handleRegister(e)}
+                  // id='reg-parent'
                 />
                 <button onClick={(e) => handleShow(e)} className='tw-ml-2'>
                   Show
@@ -116,22 +214,15 @@ const SchoolRegistrationComp = () => {
 
                 <input
                   type={`${showPass ? 'text' : 'password'}`}
+                  name='password2'
+                  onChange={(e) => handleRegister(e)}
                   className='reg-input'
-                  id='reg-parent'
+                  // id='reg-parent'
                 />
               </div>
               <div className='reg-doc'>
                 <div>
                   <h3 className='reg-text'>Upload document</h3>
-                </div>
-                <div>
-                  <p className='reg-text--2'>
-                    The certificate for schools <br />
-                    <br />
-                    School registration certificate <br />
-                    <br />
-                    Approval by ministry of Education
-                  </p>
                 </div>
               </div>
               <br />
@@ -197,74 +288,133 @@ const SchoolRegistrationComp = () => {
             <label for='name' id='lab'>
               Name of proprietor
             </label>
-            <input type='text' class='proname' id='text' />
+            <input
+              name='proprietor_name'
+              type='text'
+              onChange={(e) => handleForm(e)}
+              class='proname'
+              id='text'
+            />
             <br />
             <br />
 
             <label for='email' id='lab'>
               Proprietor's Email
             </label>
-            <input type='Email' class='proemail' id='email' />
+            <input
+              name='proprietor_email'
+              type='Email'
+              onChange={(e) => handleForm(e)}
+              class='proemail'
+              id='email'
+            />
             <br />
             <br />
 
             <label for='number' id='lab'>
               Phone number
             </label>
-            <input type='number' class='pronumber' id='number' />
+            <input
+              name='proprietor_number'
+              type='tel'
+              onChange={(e) => handleForm(e)}
+              class='pronumber'
+              id='number'
+            />
             <br />
             <br />
 
             <label for='name' id='lab'>
               Name of principal
             </label>
-            <input type='text' class='prinname' id='text' />
+            <input
+              name='principal_name'
+              type='text'
+              onChange={(e) => handleForm(e)}
+              class='prinname'
+              id='text'
+            />
             <br />
             <br />
 
             <label for='email' id='lab'>
               Principal's Email
             </label>
-            <input type='email' class='prinemail' id='email' />
+            <input
+              name='principal_email'
+              type='email'
+              onChange={(e) => handleForm(e)}
+              class='prinemail'
+              id='email'
+            />
             <br />
             <br />
 
             <label for='number' id='lab'>
               Phone number
             </label>
-            <input type='number' class='pronumber' id='number' />
+            <input
+              name='principal_number'
+              type='tel'
+              class='pronumber'
+              onChange={(e) => handleForm(e)}
+              id='number'
+            />
             <br />
             <br />
 
             <label for='name' id='lab'>
               Name of Busar
             </label>
-            <input type='text' class='burname' id='text' />
+            <input
+              name='bursar_name'
+              onChange={(e) => handleForm(e)}
+              type='text'
+              class='burname'
+              id='text'
+            />
             <br />
             <br />
 
             <label for='email' id='lab'>
               Bursar's Email
             </label>
-            <input type='email' class='buremail' id='email' />
+            <input
+              name='bursar_email'
+              type='email'
+              onChange={(e) => handleForm(e)}
+              class='buremail'
+              id='email'
+            />
             <br />
             <br />
 
             <label for='number' id='lab'>
               Phone number
             </label>
-            <input type='number' class='pronumber' id='number' />
+            <input
+              name='bursar_number'
+              type='tel'
+              onChange={(e) => handleForm(e)}
+              class='pronumber'
+              id='number'
+            />
             <br />
             <br />
             <div className='tw-flex tw-justify-center'>
               <div
-                onClick={() => {
+                onClick={(e) => {
                   setTimeout(() => {
                     navigate('/signin');
                   }, 5000);
-                  showToast();
+                  // showToast();
+                  handleSubmit(e);
                   // navigate('/dashboard');
                 }}
+                // onClick={(e) => {
+                //   handleSubmit(e);
+                // }}
+
                 class='tw-w-1/2 tw-cursor-pointer tw-rounded-lg tw-bg-blue-800 tw-px-8 tw-py-2 tw-text-center tw-text-white tw-no-underline tw-shadow-lg tw-transition-all tw-duration-500 tw-ease-in-out hover:tw-bg-blue-700 hover:tw-text-white'
               >
                 Submit

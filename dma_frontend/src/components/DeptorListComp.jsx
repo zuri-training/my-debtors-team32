@@ -2,8 +2,12 @@ import React from 'react';
 import '../styles/DebtorList.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BsSearch } from 'react-icons/bs';
+// import { useNavigate } from 'react-router-dom';
+// import { useMount, useCookie } from 'react-use';
 
 const DeptorListComp = () => {
+  // let navigate = useNavigate();
+
   return (
     <div className='debtor dashboardInfo'>
       <div className='debtorhead'>

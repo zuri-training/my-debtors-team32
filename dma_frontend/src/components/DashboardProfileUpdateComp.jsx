@@ -10,6 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/dashboard-profile.css';
 import { useNavigate } from 'react-router-dom';
 import ProfileInput from './ProfileInput';
+// import { useMount, useCookie } from 'react-use';
 
 function DashboardProfileUpdateComp() {
   const [key, setKey] = useState('first');

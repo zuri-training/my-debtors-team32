@@ -3,10 +3,43 @@ import '../styles/signup.css';
 import signup from '../images/signup.png';
 import HeaderLayoutComp from './layout/HeaderLayout';
 import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { useCookies } from 'react-cookie';
+import { useMount } from 'react-use';
+
 const SignUpComp = () => {
   const [showPass, setShowPass] = useState(false);
+  const [formValue, setFormValue] = useState({});
+  const [cookies, setCookie] = useCookies(['dma-cookies']);
+
+  console.log('sign up', formValue);
+  const handleForm = (e) => {
+    setFormValue({
+      ...formValue,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const result = await axios.post(
+      'http://localhost:8000/api/r/dj-rest-auth/registration/',
+      {
+        ...formValue,
+      }
+    );
+    setCookie('dma-cookies', result?.data?.key);
+    navigate('/contend');
+  };
+  console.log('cookies', cookies);
 
   let navigate = useNavigate();
+
+  useMount(() => {
+    if (cookies['dma-cookies'] !== 'null') {
+      navigate('/contend');
+    }
+  });
 
   const handleShow = (e) => {
     e.preventDefault();
@@ -24,13 +57,14 @@ const SignUpComp = () => {
           <p id='p-1'>Sign up</p>
 
           <form className='forme'>
-            <label htmlFor='name'>Full name*</label>
+            <label htmlFor='name'>User Name*</label>
             <br />
             <br />
             <input
               type='text'
               className='fname'
-              name='text'
+              name='username'
+              onClick={(e) => handleForm(e)}
               required=''
               placeholder='Enter your full name'
             />
@@ -44,6 +78,7 @@ const SignUpComp = () => {
               type='email'
               className='email'
               name='email'
+              onClick={(e) => handleForm(e)}
               required=''
               placeholder='Enter your Email Address'
             />
@@ -57,9 +92,10 @@ const SignUpComp = () => {
             <br />
             <input
               type={`${showPass ? 'text' : 'password'}`}
-              name='password'
+              name='password1'
               placeholder='******************'
               className='pswd01'
+              onClick={(e) => handleForm(e)}
               autoComplete
               required
               id='id_password'
@@ -71,10 +107,11 @@ const SignUpComp = () => {
             <br />
             <input
               type={`${showPass ? 'text' : 'password'}`}
-              name='password'
+              name='password2'
               placeholder='******************'
               className='pswd01'
               autoComplete
+              onClick={(e) => handleForm(e)}
               required
               id='id_password'
             />
@@ -90,7 +127,7 @@ const SignUpComp = () => {
               </small>
             </p>
             <br />
-            <button onClick={() => navigate('/contend')} className='btn-a'>
+            <button onClick={(e) => handleSubmit(e)} className='btn-a'>
               Sign Up
             </button>
             <br />

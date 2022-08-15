@@ -1,6 +1,18 @@
 import React from 'react';
 import '../styles/school-list.css';
+// import { useNavigate } from 'react-router-dom';
+// import { useMount, useCookie } from 'react-use';
+
 const SchoolListComp = () => {
+  // let navigate = useNavigate();
+
+  // const [value] = useCookie('dma-cookies');
+  // useMount(() => {
+  //   if (!value) {
+  //     navigate('/signin');
+  //   }
+  // });
+
   return (
     <div className='dashboardInfo'>
       <div className=''>

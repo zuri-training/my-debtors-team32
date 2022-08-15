@@ -7,11 +7,15 @@ import { useNavigate } from 'react-router-dom';
 // import useWindowSize from 'react-use/lib/useWindowSize';
 // import Confetti from 'react-confetti';
 // import { useWindowSize } from 'rooks';
+// import { useMount, useCookie } from 'react-use';
+
 const AddDeptorComp = () => {
   const formRef = useRef();
   let navigate = useNavigate();
   // const { width, height } = useWindowSize();
   // const { innerWidth, innerHeight, outerHeight, outerWidth } = useWindowSize();
+
+  // let navigate = useNavigate();
 
   const [formValue, setformValue] = useState({});
   const [modalShow, setModalShow] = useState(false);

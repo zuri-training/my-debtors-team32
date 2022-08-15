@@ -1,10 +1,32 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import '../styles/dashboard.css';
 import notification from '../images/notification.svg';
+import axios from 'axios';
 // import DashboardSideNav from './layout/DashboardSideNav';
+import { useQuery } from '@tanstack/react-query';
+import { useCookies } from 'react-cookie';
+import Table from 'react-bootstrap/Table';
 
 const DashboardComp = () => {
+  const [cookies] = useCookies(['dma-cookies']);
+
+  const token = cookies['dma-cookies'];
+
+  const dahsboardList = async () => {
+    const news = await axios.get(
+      `${process.env.REACT_APP_BACKEND_URL}/api/r/dashboard/`,
+      {
+        headers: { Authorization: `Token ${token}` },
+      }
+    );
+    // console.log(news);
+    return news.data;
+  };
+  const { data, isSuccess } = useQuery(['todos'], dahsboardList);
+
+  console.log('info :>> ', data);
+
   return (
     <div className='dashboardInfo'>
       {/* main content */}
@@ -19,87 +41,59 @@ const DashboardComp = () => {
           </h1>
           <div className='dashbord__notify'>
             <img className='notify__icon' src={notification} alt='img1' />
-            <h3 className='notify__text'>Notifications</h3>
-            <h4 className='notify__num'>3</h4>
+            <h3 className='notify__text'>My Debtors</h3>
+            {/* <h4 className='notify__num'>{}</h4> */}
           </div>
         </div>
         <hr />
-        <div className='dashboard__cards'>
-          <div className='cards bg__gray'>
-            <div className=''>
-              <h1 className='card__text'>
-                You have received a new contend from a parent
-              </h1>
-              <p className='card__date'>25/07/2022</p>
-            </div>
-            <Link to='' className='card__view'>
-              View
-            </Link>
-          </div>
-          <div className='cards bg__gray'>
-            <div className=''>
-              <h1 className='card__text'>List of debtors has been updated</h1>
-              <p className='card__date'>20/07/2022</p>
-            </div>
-            <Link to='' className='card__view'>
-              View
-            </Link>
-          </div>
-          <div className='cards bg__gray'>
-            <div className=''>
-              <h1 className='card__text'>
-                D-Ivy college commented on your post
-              </h1>
-              <p className='card__date'>5/07/2022</p>
-            </div>
-            <Link to='' className='card--view'>
-              View
-            </Link>
-          </div>
-          <div className='cards' id='col__gray'>
-            <div className=''>
-              <h1 className='card__text'>
-                British International School commented on your post
-              </h1>
-              <p className='card--date'>28/06/2022</p>
-            </div>
-            <Link to='' className='card__view' id='view__gray'>
-              View
-            </Link>
-          </div>
-          <div className='cards' id='col__gray'>
-            <div className=''>
-              <h1 className='card__text'>
-                Ebun Pro Veritas International School posted a new debtor
-              </h1>
-              <p className='card__date'>25/07/2022</p>
-            </div>
-            <Link to='' className='card__view' id='view__gray'>
-              View
-            </Link>
-          </div>
-          <div className='cards' id='col__gray'>
-            <div className=''>
-              <h1 className='card__text'>
-                Ebun Pro Veritas International School posted a new debtor
-              </h1>
-              <p className='card__date'>25/07/2022</p>
-            </div>
-            <Link to='' className='card__view' id='view__gray'>
-              View
-            </Link>
-          </div>
-          <div className='cards' id='col__gray'>
-            <div className=''>
-              <h1 className='card__text'>
-                Ebun Pro Veritas International School posted a new debtor
-              </h1>
-              <p className='card__date'>25/07/2022</p>
-            </div>
-            <Link to='' className='card__view' id='view__gray'>
-              View
-            </Link>
-          </div>
+        <div className='mytable'>
+          {isSuccess && (
+            <Table responsive>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Name of student</th>
+                  <th>Amount Owed</th>
+                  <th>Payment status</th>
+                </tr>
+              </thead>
+              <tbody>
+                {/* <tr>
+                  <td>1</td>
+                  {data.map((debts) => (
+                    <td>{debts}</td>
+                  ))}
+                </tr> */}
+                {/* {data.map((debt) => (
+                  <tr key={debt.id}>
+                    <td>Table cell {debt}</td>
+                  </tr>
+                ))} */}
+                {data.map((onedebt) => {
+                  return (
+                    <tr key={onedebt.id}>
+                      <td>{onedebt.id}</td>
+                      <td>{onedebt.name_of_student}</td>
+                      <td>{onedebt.amount_owed}</td>
+                      <td>{onedebt.status}</td>
+                    </tr>
+                  );
+                })}
+                {/* <tr>
+                  <td>2</td>
+                  {Array.from({ length: 12 }).map((_, index) => (
+                    <td key={index}>Table cell {index}</td>
+                  ))}
+                </tr> */}
+                {/* <tr>
+                  <td>3</td>
+                  {Array.from({ length: 12 }).map((_, index) => (
+                    <td key={index}>Table cell {index}</td>
+                  ))}
+                </tr> */}
+              </tbody>
+            </Table>
+          )}
         </div>
       </div>
     </div>

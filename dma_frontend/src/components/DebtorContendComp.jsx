@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/contend-page.css';
+// import { useMount, useCookie } from 'react-use';
 
 const DebtorContendComp = () => {
+  // let navigate = useNavigate();
+
   return (
     <div className='dashboardInfo'>
       <div className=''>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Image, Offcanvas } from 'react-bootstrap';
 import dmalogo from '../../images/dmalogo.png';
 import Form from 'react-bootstrap/Form';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { BiHome } from 'react-icons/bi';
 import { FiUserCheck, FiEdit } from 'react-icons/fi';
 import {
@@ -18,14 +18,21 @@ import {
   AiOutlinePoweroff,
 } from 'react-icons/ai';
 // import { AiOutlineMenu } from 'react-icons/ai';
+// import { useCookie } from 'react-use';
+import { useCookies } from 'react-cookie';
 
 const DashboardSideNav = () => {
+  const navigate = useNavigate();
   const [showDebtors, setShowDebtors] = useState(false);
   const [showFeatures, setShowFeatures] = useState(false);
   const [show, setShow] = useState(false);
-
+  // const [value] = useCookie('dma-cookies');
+  // console.log('value', value);
+  const [setCookie] = useCookies(['dma-cookies']);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  // console.log('cookies', cookies['dma-cookies']);
+
   let activeStyle = {
     color: 'white',
     fontWeight: 'bold',
@@ -188,18 +195,16 @@ const DashboardSideNav = () => {
         </div>
         {/* logout */}
         <div className='tw-absolute tw-inset-x-0 tw-bottom-4 tw-flex tw-w-full tw-justify-center'>
-          <div
-            to='/admin/logout'
+          <button
+            onClick={() => {
+              // setCookie('dma-cookies', null);
+              // setCookie('dma-cookies', null);
+              navigate('/');
+            }}
             className='tw-flex tw-cursor-pointer tw-rounded-md tw-bg-green-300 tw-py-2 tw-px-3 tw-font-fam1 tw-text-blue-500 tw-no-underline tw-transition-all tw-duration-300 tw-ease-in-out hover:tw-text-blue-500 '
           >
-            <a
-              href='/'
-              className='tw-flex tw-items-center tw-space-x-2 tw-px-4 tw-no-underline'
-            >
-              <AiOutlinePoweroff />
-              <span>Log Out</span>
-            </a>
-          </div>
+            Log out
+          </button>
         </div>
       </div>
       {/* small screens */}
@@ -373,8 +378,11 @@ const DashboardSideNav = () => {
             </div>
             {/* logout */}
             <div className='tw-absolute tw-inset-x-0 tw-bottom-4 tw-flex tw-w-full tw-justify-center'>
-              <div
-                to='/admin/logout'
+              <button
+                onClick={() => {
+                  // setCookie('dma-cookies', null);
+                  navigate('/');
+                }}
                 className='tw-flex tw-cursor-pointer tw-rounded-md tw-bg-green-300 tw-py-2 tw-px-3 tw-font-fam1 tw-text-blue-500 tw-no-underline tw-transition-all tw-duration-300 tw-ease-in-out hover:tw-text-blue-500 '
               >
                 <a
@@ -384,7 +392,7 @@ const DashboardSideNav = () => {
                   <AiOutlinePoweroff />
                   <span>Log Out</span>
                 </a>
-              </div>
+              </button>
             </div>
           </Offcanvas.Body>
         </Offcanvas>

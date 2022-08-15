@@ -9,7 +9,7 @@ import { BsCheckLg } from 'react-icons/bs';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/dashboard-profile.css';
 import { useNavigate } from 'react-router-dom';
-
+// import { useMount, useCookie } from 'react-use';
 function DashboardProfileComp() {
   const [key, setKey] = useState('first');
   let navigate = useNavigate();
