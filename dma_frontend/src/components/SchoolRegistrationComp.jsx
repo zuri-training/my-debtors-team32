@@ -35,7 +35,7 @@ const SchoolRegistrationComp = () => {
     e.preventDefault();
     try {
       const result = await axios.post(
-        'http://localhost:8000/api/r/dj-rest-auth/registration/',
+        `${process.env.REACT_APP_BACKEND_URL}/api/r/dj-rest-auth/registration/`,
         {
           // username: formValue?.username,
           // email: formValue?.schoolEmail,
@@ -48,7 +48,7 @@ const SchoolRegistrationComp = () => {
       const token = result?.data?.key;
 
       const result2 = await axios.get(
-        'http://localhost:8000/api/r/dj-rest-auth/user/',
+        `${process.env.REACT_APP_BACKEND_URL}/api/r/dj-rest-auth/user/`,
         {
           headers: { Authorization: `Token ${token}` },
         }
@@ -56,7 +56,7 @@ const SchoolRegistrationComp = () => {
       console.log('result2', result2?.data);
 
       const result3 = await axios.post(
-        'http://localhost:8000/api/r/register/',
+        `${process.env.REACT_APP_BACKEND_URL}/api/r/register/`,
         {
           ...formValue,
           author: result2?.data?.pk,

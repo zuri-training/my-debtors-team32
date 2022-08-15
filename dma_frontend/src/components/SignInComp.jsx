@@ -18,13 +18,13 @@ const SignInComp = () => {
     try {
       const token = cookies['dma-cookies'];
       const result1 = await axios.get(
-        'http://localhost:8000/api/r/dj-rest-auth/user/',
+        `${process.env.REACT_APP_BACKEND_URL}/api/r/dj-rest-auth/user/`,
         {
           headers: { Authorization: `Token ${token}` },
         }
       );
       const result2 = await axios.get(
-        `http://localhost:8000/api/r/school/${result1?.data?.pk}/`,
+        `${process.env.REACT_APP_BACKEND_URL}/api/r/school/${result1?.data?.pk}/`,
         {
           headers: { Authorization: `Token ${token}` },
         }
@@ -62,7 +62,8 @@ const SignInComp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const result = await axios.post(
-      'http://localhost:8000/api/r/dj-rest-auth/login/',
+      // '${process.env.REACT_APP_BACKEND_URL}/api/r/dj-rest-auth/login/',
+      `${process.env.REACT_APP_BACKEND_URL}/api/r/dj-rest-auth/login/`,
       {
         ...formValue,
       }

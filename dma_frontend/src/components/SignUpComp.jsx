@@ -23,7 +23,8 @@ const SignUpComp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const result = await axios.post(
-      'http://localhost:8000/api/r/dj-rest-auth/registration/',
+      `${process.env.REACT_APP_BACKEND_URL}/api/r/dj-rest-auth/registration/`,
+
       {
         ...formValue,
       }
