@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import { useMount } from 'react-use';
 import { useCookies } from 'react-cookie';
@@ -18,12 +18,17 @@ export default function GlobalContext({ children }) {
         }
       );
       const result2 = await axios.get(
-        `${process.env.REACT_APP_BACKEND_URL}/api/r/school/${result1?.data?.pk}/`,
+        `${process.env.REACT_APP_BACKEND_URL}/api/r/school/`,
         {
           headers: { Authorization: `Token ${token}` },
         }
       );
-      return result2?.data;
+      const final = result2.data.filter(
+        (school) => school?.author === result1?.data?.pk
+      );
+      console.log('final :>> ', final[0]);
+      // return result2?.data;
+      return final[0];
     } catch (error) {
       return error;
     }
@@ -37,6 +42,15 @@ export default function GlobalContext({ children }) {
       setSchoolInfo(result);
     }
   });
+
+  // useEffect(() => {
+  //   const result = handleRole();
+
+  //   setSchoolInfo(result);
+
+  //   return () => {};
+  // }, []);
+
   const [schoolData, setSchoolData] = useState({});
   return (
     <GlobalContextData.Provider
