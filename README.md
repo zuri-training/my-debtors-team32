@@ -4,6 +4,10 @@
 
 This is the Github repo for Team 32 on the debtors web application. This project is a platform that allows schools in a certain locality list directory of people owing them - to help them avoid going to other schools. This service is a **Microservice web application**. The frontend was developed with **React.js** and Backend was developed developed using **Django**.
 
+- [Figma Link](https://www.figma.com/file/hveeuRURz7a3O7wOnyWwv0/Team32-%2FMy-debtor-project?node-id=187%3A37)
+- [Frontend App](https://my-debtors-team32.vercel.app/)
+- [Backend App](https://debtors-backend.herokuapp.com/docs/)
+
 ## Frontend Workflow 🍃
 
 1. Clone the repo and open the project on your prefered code editor
