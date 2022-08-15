@@ -16,7 +16,7 @@ const ContendComp = () => {
       navigate('/signin');
     }
   });
-  // const { schoolInfo } = useContextData();
+  const { schoolInfo } = useContextData();
 
   return (
     <div className='tw-mx-auto tw-min-h-screen tw-max-w-screen-xl tw-pt-6'>

@@ -33,11 +33,10 @@ const DashboardProfile = () => {
   useMount(async () => {
     const result = await handleRole();
     // console.log('result :>> ', result.message);
-    if (cookies['dma-cookies'] && result?.message) {
-      navigate('/contend');
-    } else if (!cookies['dma-cookies']) {
+    if (!cookies['dma-cookies']) {
       navigate('/signin');
     }
+    console.log(result);
   });
   return (
     <div className='tw-flex tw-flex-col tw-space-x-6 lg:tw-flex-row '>
