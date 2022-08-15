@@ -1,14 +1,35 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../styles/home.css';
 import '../styles/homepage.css';
 import ProjectLayoutComp from '../components/layout/ProjectLayout';
 import HeaderLayoutComp from '../components/layout/HeaderLayout';
 import { Link } from 'react-router-dom';
+import { useContextData } from '../lib/GlobalContext';
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
+import { useCookies } from 'react-cookie';
 
 const HomePageComp = () => {
+  const { dummyData } = useContextData();
+  const [removeCookie, setCookie] = useCookies(['dma-cookies']);
+
+  console.log('dummyData :>> ', dummyData);
+  const token = '8570a32bd896391aa127f6aa8bf2c9bd8b03aba5';
+
+  const testFunc = async () => {
+    const news = await axios.get('http://localhost:8000/api/r/users/', {
+      headers: { Authorization: `Token ${token}` },
+    });
+    console.log(news);
+  };
+  testFunc();
+  useEffect(() => {
+    setCookie('dma-cookies', null);
+  }, []);
+
   return (
     <div>
-      <ProjectLayoutComp >
+      <ProjectLayoutComp>
         <HeaderLayoutComp />
         <div className=''>
           <div className=''>

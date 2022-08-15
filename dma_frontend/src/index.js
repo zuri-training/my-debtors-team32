@@ -31,44 +31,61 @@ import UpdateDebtor from './routes/UpdateDebtor';
 // import HomePageComp from './routes/HomePage';
 import DocumentationPlain from './routes/DocumentationPlain';
 import ScrollToTop from './ScrolltoTop';
+import GlobalContext from './lib/GlobalContext';
+import {
+  // useQuery,
+  // useMutation,
+  // useQueryClient,
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query';
+import { CookiesProvider } from 'react-cookie';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const queryClient = new QueryClient();
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <ScrollToTop />
-      <Routes>
-        <Route path='/' element={<App />} />
-        <Route path='/about' element={<AboutPage />} />
-        <Route path='/features' element={<FeaturesPage />} />
-        <Route path='contact' element={<ContactPage />} />
-        <Route path='register' element={<SignupPage />} />
-        <Route path='signin' element={<LoginPage />} />
-        <Route path='school' element={<SchoolPage />} />
-        <Route path='student' element={<StudentPage />} />
-        <Route path='signup' element={<SignupComp />} />
-        <Route path='forgot-password' element={<ForgotPassword />} />
-        <Route path='update-debtor' element={<UpdateDebtor />} />
-        <Route path='dashboard' element={<Dashboard />} />
+    <CookiesProvider>
+      <GlobalContext>
+        <QueryClientProvider client={queryClient}>
+          <BrowserRouter>
+            <ScrollToTop />
+            <Routes>
+              <Route path='/' element={<App />} />
+              <Route path='/about' element={<AboutPage />} />
+              <Route path='/features' element={<FeaturesPage />} />
+              <Route path='contact' element={<ContactPage />} />
+              <Route path='register' element={<SignupPage />} />
+              <Route path='signin' element={<LoginPage />} />
+              <Route path='school' element={<SchoolPage />} />
+              <Route path='student' element={<StudentPage />} />
+              <Route path='signup' element={<SignupComp />} />
+              <Route path='forgot-password' element={<ForgotPassword />} />
+              <Route path='update-debtor' element={<UpdateDebtor />} />
+              <Route path='dashboard' element={<Dashboard />} />
 
-        <Route path='/admin/adddebtor' element={<AddDebtor />} />
-        <Route path='/admin/contend' element={<DebtorsContend />} />
-        <Route path='/contend' element={<ContendForm />} />
-        <Route path='/admin/listdebtors' element={<DeptorsList />} />
-        <Route path='/admin/listschools' element={<SchoolList />} />
-        <Route path='/admin/notifications' element={<Notifications />} />
-        <Route path='/admin/profile' element={<DashboardProfile />} />
-        <Route
-          path='/admin/profile/update'
-          element={<DashboardProfileUpdate />}
-        />
-        <Route path='admin/documentation' element={<Documentation />} />
-        <Route path='documentation' element={<DocumentationPlain />} />
+              <Route path='/admin/adddebtor' element={<AddDebtor />} />
+              <Route path='/admin/contend' element={<DebtorsContend />} />
+              <Route path='/contend' element={<ContendForm />} />
+              <Route path='/admin/listdebtors' element={<DeptorsList />} />
+              <Route path='/admin/listschools' element={<SchoolList />} />
+              <Route path='/admin/notifications' element={<Notifications />} />
+              <Route path='/admin/profile' element={<DashboardProfile />} />
+              <Route
+                path='/admin/profile/update'
+                element={<DashboardProfileUpdate />}
+              />
+              <Route path='admin/documentation' element={<Documentation />} />
+              <Route path='documentation' element={<DocumentationPlain />} />
 
-        <Route path='schoolreg' element={<SchoolRegistration />} />
-        <Route path='*' element={<ErrorPage />} />
-      </Routes>
-    </BrowserRouter>
+              <Route path='schoolreg' element={<SchoolRegistration />} />
+              <Route path='*' element={<ErrorPage />} />
+            </Routes>
+          </BrowserRouter>
+        </QueryClientProvider>
+      </GlobalContext>
+    </CookiesProvider>
   </React.StrictMode>
 );
 

@@ -2,8 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/notification.css';
 import notification from '../images/notification.svg';
+// import { useNavigate } from 'react-router-dom';
+// import { useMount, useCookie } from 'react-use';
 
 const NotificationComp = () => {
+  // let navigate = useNavigate();
+
+  // const [value] = useCookie('dma-cookies');
+  // useMount(() => {
+  //   if (!value) {
+  //     navigate('/signin');
+  //   }
+  // });
   return (
     <div className='dashboardInfo'>
       <div className=''>

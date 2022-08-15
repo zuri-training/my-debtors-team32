@@ -3,7 +3,19 @@ import HeaderLayoutComp from './layout/HeaderLayout';
 import { Link } from 'react-router-dom';
 import { HiOutlineTrash } from 'react-icons/hi';
 import '../styles/contend-page.css';
+import { useCookies } from 'react-cookie';
+import { useMount } from 'react-use';
+import { useNavigate } from 'react-router-dom';
+
 const ContendComp = () => {
+  const navigate = useNavigate();
+  const [cookies] = useCookies(['dma-cookies']);
+  useMount(() => {
+    if (!cookies['dma-cookies']) {
+      navigate('/signin');
+    }
+  });
+
   return (
     <div className='tw-mx-auto tw-min-h-screen tw-max-w-screen-xl tw-pt-6'>
       <HeaderLayoutComp />
