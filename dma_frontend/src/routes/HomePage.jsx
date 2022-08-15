@@ -5,13 +5,13 @@ import ProjectLayoutComp from '../components/layout/ProjectLayout';
 import HeaderLayoutComp from '../components/layout/HeaderLayout';
 import { Link } from 'react-router-dom';
 import { useContextData } from '../lib/GlobalContext';
-import { useQuery } from '@tanstack/react-query';
+// import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import { useCookies } from 'react-cookie';
 
 const HomePageComp = () => {
   const { dummyData } = useContextData();
-  const [removeCookie, setCookie] = useCookies(['dma-cookies']);
+  const [setCookie] = useCookies(['dma-cookies']);
 
   console.log('dummyData :>> ', dummyData);
   const token = '8570a32bd896391aa127f6aa8bf2c9bd8b03aba5';
