@@ -11,15 +11,21 @@ import { useCookies } from 'react-cookie';
 
 const HomePageComp = () => {
   const { dummyData } = useContextData();
-  const [setCookie] = useCookies(['dma-cookies']);
+  const [cookies, setCookie] = useCookies(['dma-cookies']);
 
   console.log('dummyData :>> ', dummyData);
-  const token = '8570a32bd896391aa127f6aa8bf2c9bd8b03aba5';
+  const token = cookies['dma-cookies'];
 
   const testFunc = async () => {
-    const news = await axios.get('http://localhost:8000/api/r/users/', {
-      headers: { Authorization: `Token ${token}` },
-    });
+    // const news = await axios.get('http://localhost:8000/api/r/users/', {
+    //   headers: { Authorization: `Token ${token}` },
+    // });
+    const news = await axios.get(
+      `${process.env.REACT_APP_BACKEND_URL}/api/r/users`,
+      {
+        headers: { Authorization: `Token ${token}` },
+      }
+    );
     console.log(news);
   };
   testFunc();
