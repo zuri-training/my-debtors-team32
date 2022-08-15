@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import HeaderLayoutComp from './layout/HeaderLayout';
 import { Link } from 'react-router-dom';
 import { HiOutlineTrash } from 'react-icons/hi';
@@ -10,6 +10,7 @@ import { useContextData } from '../lib/GlobalContext';
 
 const ContendComp = () => {
   const navigate = useNavigate();
+  const [formValue, setFormValue] = useState({});
   const [cookies] = useCookies(['dma-cookies']);
   useMount(() => {
     if (cookies['dma-cookies'] === 'null') {
@@ -17,6 +18,13 @@ const ContendComp = () => {
     }
   });
   const { schoolInfo } = useContextData();
+  console.log(schoolInfo);
+  const handleForm = (e) => {
+    setFormValue({
+      ...formValue,
+      [e.target.name]: e.target.value,
+    });
+  };
 
   return (
     <div className='tw-mx-auto tw-min-h-screen tw-max-w-screen-xl tw-pt-6'>
@@ -30,36 +38,44 @@ const ContendComp = () => {
           </p>
         </div>
         <form action='' className='form'>
-          <div className='form--group'>
+          {/* <div className='form--group'>
             <label htmlFor='name' className='form--label'>
               Parent's Name
             </label>
             <input type='text' id='name' className='form--input' />
-          </div>
-          <div className='form--group'>
+          </div> */}
+          {/* <div className='form--group'>
             <label htmlFor='student' className='form--label'>
               Student's Name
             </label>
             <input type='text' id='student' className='form--input' />
-          </div>
+          </div> */}
           <div className='form--group'>
             <label htmlFor='sch' className='form--label'>
               School's Name
             </label>
-            <input type='text' id='sch' className='form--input' />
+            <input
+              name='name'
+              disabled
+              value={schoolInfo?.school_name}
+              type='text'
+              id='sch'
+              className='form--input'
+            />
           </div>
-          <div className='form--group'>
+          {/* <div className='form--group'>
             <label htmlFor='subj' className='form--label'>
               Subject
             </label>
             <input type='text' id='subj' className='form--input' />
-          </div>
+          </div> */}
           <div className='form--group issue'>
             <label htmlFor='issue' className='form--label'>
               The Issue
             </label>
             <textarea
-              name=''
+              name='message'
+              onChange={(e) => handleForm(e)}
               id='issue'
               className='form--input'
               cols='30'

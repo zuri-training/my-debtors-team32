@@ -79,9 +79,9 @@ const AddDeptorComp = () => {
         'user_yKG0o8oFE1edTjUtFO2Dh'
       )
       .then(
-        (result) => {
+        async (result) => {
           console.log(result);
-          backendSubmit();
+          await backendSubmit();
           handleShow();
         },
         (error) => {
