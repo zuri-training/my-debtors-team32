@@ -65,7 +65,7 @@ const NavContentComp = () => {
           <button
             className=' tw-w-full tw-rounded-lg tw-bg-blue-900  tw-py-2 tw-px-10 tw-text-center  tw-text-white tw-no-underline tw-transition-all  tw-duration-300 tw-ease-in-out hover:tw-bg-blue-700 hover:tw-text-white'
             onClick={() => {
-              setCookie('dma-cookies', null);
+              setCookie('dma-cookies', 'null');
               navigate('/');
             }}
           >

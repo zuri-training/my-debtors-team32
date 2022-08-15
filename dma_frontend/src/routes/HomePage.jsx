@@ -24,7 +24,7 @@ const HomePageComp = () => {
   };
   testFunc();
   useEffect(() => {
-    setCookie('dma-cookies', null);
+    setCookie('dma-cookies', 'null');
   }, []);
 
   return (
