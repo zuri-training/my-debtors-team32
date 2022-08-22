@@ -8,6 +8,10 @@ This is the Github repo for Team 32 on the debtors web application. This project
 - [Frontend App](https://my-debtors-team32.vercel.app/)
 - [Backend App](https://debtors-backend.herokuapp.com/docs/)
 
+### Admin Login to backend
+username: testadmin
+password: zuridma123
+
 ## Frontend Workflow 🍃
 
 1. Clone the repo and open the project on your prefered code editor
