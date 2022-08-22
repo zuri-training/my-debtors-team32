@@ -20,26 +20,35 @@ const Notifications = () => {
           headers: { Authorization: `Token ${token}` },
         }
       );
+      console.log('result1 :>> ', result1);
       const result2 = await axios.get(
-        `${process.env.REACT_APP_BACKEND_URL}/api/r/school/${result1?.data?.pk}/`,
+        `${process.env.REACT_APP_BACKEND_URL}/api/r/school/`,
         {
           headers: { Authorization: `Token ${token}` },
         }
       );
-      return result2?.data;
+      console.log('result2', result2);
+      const final = result2.data.filter(
+        (school) => school?.username === result1?.data?.username
+      );
+      console.log('final :>> ', final);
+      // return result2?.data;
+      return final[0];
     } catch (error) {
       return error;
     }
   };
   useMount(async () => {
-    const result = await handleRole();
     // console.log('result :>> ', result.message);
     if (!cookies['dma-cookies']) {
       navigate('/signin');
+    } else {
+      const result = await handleRole();
+      if (!result) {
+        navigate('/contend');
+      }
     }
-    console.log(result);
   });
-
   return (
     <div className='tw-flex tw-flex-col tw-space-x-6 lg:tw-flex-row '>
       {/* sidebar */}

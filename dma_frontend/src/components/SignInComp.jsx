@@ -13,7 +13,10 @@ const SignInComp = () => {
   let navigate = useNavigate();
   // const [value, updateCookie] = useCookie('dma-cookies');
   const [cookies, setCookie] = useCookies(['dma-cookies']);
-  const [formValue, setFormValue] = useState({});
+  const [formValue, setFormValue] = useState({
+    username: '',
+    password: '',
+  });
   const [showPass, setShowPass] = useState(false);
 
   const handleRole = async () => {
@@ -68,40 +71,45 @@ const SignInComp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const { username, password } = formValue;
     try {
-      const result = await axios.post(
-        // '${process.env.REACT_APP_BACKEND_URL}/api/r/dj-rest-auth/login/',
-        `${process.env.REACT_APP_BACKEND_URL}/api/r/dj-rest-auth/login/`,
-        {
-          ...formValue,
-        }
-      );
-      console.log('result', result);
+      if (username && password && username !== '' && password !== '') {
+        const result = await axios.post(
+          // '${process.env.REACT_APP_BACKEND_URL}/api/r/dj-rest-auth/login/',
+          `${process.env.REACT_APP_BACKEND_URL}/api/r/dj-rest-auth/login/`,
+          {
+            ...formValue,
+          }
+        );
+        console.log('result', result);
 
-      setCookie('dma-cookies', result?.data?.key);
-      const token = result?.data?.key;
-      const result1 = await axios.get(
-        `${process.env.REACT_APP_BACKEND_URL}/api/r/dj-rest-auth/user/`,
-        {
-          headers: { Authorization: `Token ${token}` },
+        setCookie('dma-cookies', result?.data?.key);
+        const token = result?.data?.key;
+        const result1 = await axios.get(
+          `${process.env.REACT_APP_BACKEND_URL}/api/r/dj-rest-auth/user/`,
+          {
+            headers: { Authorization: `Token ${token}` },
+          }
+        );
+        const result2 = await axios.get(
+          `${process.env.REACT_APP_BACKEND_URL}/api/r/school/`,
+          {
+            headers: { Authorization: `Token ${token}` },
+          }
+        );
+        const final = result2.data.filter(
+          (school) => school?.author === result1?.data?.pk
+        );
+        // const result2 = await handleRole();
+        if (final[0]) {
+          navigate('/dashboard');
+          console.log('dashboard');
+        } else {
+          console.log('contend');
+          navigate('/contend');
         }
-      );
-      const result2 = await axios.get(
-        `${process.env.REACT_APP_BACKEND_URL}/api/r/school/`,
-        {
-          headers: { Authorization: `Token ${token}` },
-        }
-      );
-      const final = result2.data.filter(
-        (school) => school?.author === result1?.data?.pk
-      );
-      // const result2 = await handleRole();
-      if (final[0]) {
-        navigate('/dashboard');
-        console.log('dashboard');
       } else {
-        console.log('contend');
-        navigate('/contend');
+        toast.error('Please fill all fields');
       }
     } catch (error) {
       console.error('error', error);
@@ -139,6 +147,7 @@ const SignInComp = () => {
                 type='text'
                 className='email-in'
                 name='username'
+                value={formValue?.username}
                 onChange={(e) => handleForm(e)}
                 required=''
                 placeholder='Enter your User Name'
@@ -159,6 +168,7 @@ const SignInComp = () => {
                 // type='password'
                 type={`${showPass ? 'text' : 'password'}`}
                 name='password'
+                value={formValue?.password}
                 onChange={(e) => handleForm(e)}
                 placeholder='******************'
                 className='pswd01-in'
