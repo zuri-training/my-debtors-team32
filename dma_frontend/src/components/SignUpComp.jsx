@@ -32,12 +32,12 @@ const SignUpComp = () => {
     setCookie('dma-cookies', result?.data?.key);
     navigate('/contend');
   };
-  console.log('cookies', cookies);
+  // console.log('cookies', cookies);
 
   let navigate = useNavigate();
 
   useMount(() => {
-    if (cookies['dma-cookies'] !== 'null') {
+    if (cookies['dma-cookies']) {
       navigate('/contend');
     }
   });

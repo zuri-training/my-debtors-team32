@@ -10,6 +10,7 @@ const AddDeptor = () => {
   let navigate = useNavigate();
 
   const [cookies] = useCookies(['dma-cookies']);
+
   const handleRole = async () => {
     try {
       const token = cookies['dma-cookies'];
@@ -20,12 +21,15 @@ const AddDeptor = () => {
         }
       );
       const result2 = await axios.get(
-        `${process.env.REACT_APP_BACKEND_URL}/api/r/school/${result1?.data?.pk}/`,
+        `${process.env.REACT_APP_BACKEND_URL}/api/r/school/`,
         {
           headers: { Authorization: `Token ${token}` },
         }
       );
-      return result2?.data;
+      const final = result2.data.filter(
+        (school) => school?.author === result1?.data?.pk
+      );
+      return final[0];
     } catch (error) {
       return error;
     }
@@ -34,10 +38,11 @@ const AddDeptor = () => {
   useMount(async () => {
     const result = await handleRole();
     // console.log('result :>> ', result.message);
-    if (!cookies['dma-cookies']) {
+    if (cookies['dma-cookies'] && result?.message) {
+      navigate('/contend');
+    } else if (!cookies['dma-cookies']) {
       navigate('/signin');
     }
-    console.log(result);
   });
   return (
     <div>

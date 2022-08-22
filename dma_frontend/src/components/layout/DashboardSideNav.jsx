@@ -28,7 +28,8 @@ const DashboardSideNav = () => {
   const [show, setShow] = useState(false);
   // const [value] = useCookie('dma-cookies');
   // console.log('value', value);
-  const [setCookie, removeCookie] = useCookies(['dma-cookies']);
+  // eslint-disable-next-line no-unused-vars
+  const [_, setCookie, removeCookie] = useCookies(['dma-cookies']);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   // console.log('cookies', cookies['dma-cookies']);
@@ -198,7 +199,7 @@ const DashboardSideNav = () => {
           <button
             onClick={() => {
               // setCookie('dma-cookies', null);
-              removeCookie('dma-cookies', null);
+              removeCookie('dma-cookies');
               navigate('/');
             }}
             className='tw-flex tw-cursor-pointer tw-rounded-md tw-bg-green-300 tw-py-2 tw-px-3 tw-font-fam1 tw-text-blue-500 tw-no-underline tw-transition-all tw-duration-300 tw-ease-in-out hover:tw-text-blue-500 '
@@ -380,7 +381,7 @@ const DashboardSideNav = () => {
             <div className='tw-absolute tw-inset-x-0 tw-bottom-4 tw-flex tw-w-full tw-justify-center'>
               <button
                 onClick={() => {
-                  // setCookie('dma-cookies', null);
+                  setCookie('dma-cookies', null);
                   navigate('/');
                 }}
                 className='tw-flex tw-cursor-pointer tw-rounded-md tw-bg-green-300 tw-py-2 tw-px-3 tw-font-fam1 tw-text-blue-500 tw-no-underline tw-transition-all tw-duration-300 tw-ease-in-out hover:tw-text-blue-500 '

@@ -3,9 +3,11 @@ import '../styles/signin.css';
 import signin from '../images/signin.jpg';
 import HeaderLayoutComp from './layout/HeaderLayout';
 import { Link, useNavigate } from 'react-router-dom';
-import { useMount } from 'react-use';
+import { useMount, useUpdateEffect } from 'react-use';
 import axios from 'axios';
 import { useCookies } from 'react-cookie';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SignInComp = () => {
   let navigate = useNavigate();
@@ -24,29 +26,34 @@ const SignInComp = () => {
         }
       );
       const result2 = await axios.get(
-        `${process.env.REACT_APP_BACKEND_URL}/api/r/school/${result1?.data?.pk}/`,
+        `${process.env.REACT_APP_BACKEND_URL}/api/r/school/`,
         {
           headers: { Authorization: `Token ${token}` },
         }
       );
-      return result2?.data;
+      const final = result2.data.filter(
+        (school) => school?.author === result1?.data?.pk
+      );
+      return final[0];
     } catch (error) {
       return error;
     }
   };
 
   useMount(async () => {
-    const result = await handleRole();
-    console.log('result :>> ', result.message);
-    if (cookies['dma-cookies'] && !result?.message) {
-      navigate('/dashboard');
-    } else if (cookies['dma-cookies'] !== 'null') {
-      navigate('/contend');
+    if (cookies['dma-cookies']) {
+      const result = await handleRole();
+      console.log('result :>> ', result);
+      if (result) {
+        navigate('/dashboard');
+      } else {
+        navigate('/contend');
+      }
     }
   });
 
-  console.log('cookies :>> ', cookies);
-  console.log('login', formValue);
+  // console.log('cookies :>> ', cookies);
+  // console.log('login', formValue);
   const handleForm = (e) => {
     setFormValue({
       ...formValue,
@@ -61,17 +68,54 @@ const SignInComp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const result = await axios.post(
-      // '${process.env.REACT_APP_BACKEND_URL}/api/r/dj-rest-auth/login/',
-      `${process.env.REACT_APP_BACKEND_URL}/api/r/dj-rest-auth/login/`,
-      {
-        ...formValue,
-      }
-    );
-    console.log('result', result);
+    try {
+      const result = await axios.post(
+        // '${process.env.REACT_APP_BACKEND_URL}/api/r/dj-rest-auth/login/',
+        `${process.env.REACT_APP_BACKEND_URL}/api/r/dj-rest-auth/login/`,
+        {
+          ...formValue,
+        }
+      );
+      console.log('result', result);
 
-    setCookie('dma-cookies', result?.data?.key);
-    navigate('/dashboard');
+      setCookie('dma-cookies', result?.data?.key);
+      const token = result?.data?.key;
+      const result1 = await axios.get(
+        `${process.env.REACT_APP_BACKEND_URL}/api/r/dj-rest-auth/user/`,
+        {
+          headers: { Authorization: `Token ${token}` },
+        }
+      );
+      const result2 = await axios.get(
+        `${process.env.REACT_APP_BACKEND_URL}/api/r/school/`,
+        {
+          headers: { Authorization: `Token ${token}` },
+        }
+      );
+      const final = result2.data.filter(
+        (school) => school?.author === result1?.data?.pk
+      );
+      // const result2 = await handleRole();
+      if (final[0]) {
+        navigate('/dashboard');
+        console.log('dashboard');
+      } else {
+        console.log('contend');
+        navigate('/contend');
+      }
+    } catch (error) {
+      console.error('error', error);
+      toast.error('Incorrect Credentials', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    }
+
+    // navigate('/dashboard');
   };
 
   return (
@@ -118,7 +162,7 @@ const SignInComp = () => {
                 onChange={(e) => handleForm(e)}
                 placeholder='******************'
                 className='pswd01-in'
-                autocomplete='current-password'
+                autoComplete='current-password'
                 required=''
                 id='id_password-in'
               />
@@ -154,6 +198,7 @@ const SignInComp = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

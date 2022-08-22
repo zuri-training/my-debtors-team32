@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useContext, useState } from 'react';
 import axios from 'axios';
 import { useMount } from 'react-use';
 import { useCookies } from 'react-cookie';
@@ -6,8 +6,12 @@ import { useCookies } from 'react-cookie';
 export const GlobalContextData = createContext();
 
 export default function GlobalContext({ children }) {
+  // const [value, setValue, remove] = useLocalStorage('dma-local-storage');
   const [cookies] = useCookies(['dma-cookies']);
   const [schoolInfo, setSchoolInfo] = useState(null);
+
+  console.log('schoolInfo', schoolInfo);
+  console.log('cookies', cookies);
   const handleRole = async () => {
     try {
       const token = cookies['dma-cookies'];
@@ -35,21 +39,15 @@ export default function GlobalContext({ children }) {
   };
 
   useMount(async () => {
-    const result = await handleRole();
-    console.log('result :>> ', result.message);
-    if (!result?.message) {
-      console.log(result);
-      setSchoolInfo(result);
+    if (cookies['dma-cookies']) {
+      const result = await handleRole();
+      console.log('result :>> ', result);
+      if (!result?.message) {
+        console.log('there is school info');
+        setSchoolInfo(result);
+      }
     }
   });
-
-  // useEffect(() => {
-  //   const result = handleRole();
-
-  //   setSchoolInfo(result);
-
-  //   return () => {};
-  // }, []);
 
   const [schoolData, setSchoolData] = useState({});
   return (

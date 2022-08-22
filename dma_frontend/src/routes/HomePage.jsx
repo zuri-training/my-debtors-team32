@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import '../styles/home.css';
 import '../styles/homepage.css';
 import ProjectLayoutComp from '../components/layout/ProjectLayout';
@@ -6,32 +6,29 @@ import HeaderLayoutComp from '../components/layout/HeaderLayout';
 import { Link } from 'react-router-dom';
 import { useContextData } from '../lib/GlobalContext';
 // import { useQuery } from '@tanstack/react-query';
-import axios from 'axios';
-import { useCookies } from 'react-cookie';
+// import axios from 'axios';
+// import { useCookies } from 'react-cookie';
 
 const HomePageComp = () => {
   const { dummyData } = useContextData();
-  const [cookies, setCookie] = useCookies(['dma-cookies']);
+  // const [cookies] = useCookies(['dma-cookies']);
 
   console.log('dummyData :>> ', dummyData);
-  const token = cookies['dma-cookies'];
+  // const token = cookies['dma-cookies'];
 
-  const testFunc = async () => {
-    // const news = await axios.get('http://localhost:8000/api/r/users/', {
-    //   headers: { Authorization: `Token ${token}` },
-    // });
-    const news = await axios.get(
-      `${process.env.REACT_APP_BACKEND_URL}/api/r/users`,
-      {
-        headers: { Authorization: `Token ${token}` },
-      }
-    );
-    console.log(news);
-  };
-  testFunc();
-  useEffect(() => {
-    // setCookie('dma-cookies', 'null');
-  }, []);
+  // const testFunc = async () => {
+  //   // const news = await axios.get('http://localhost:8000/api/r/users/', {
+  //   //   headers: { Authorization: `Token ${token}` },
+  //   // });
+  //   const news = await axios.get(
+  //     `${process.env.REACT_APP_BACKEND_URL}/api/r/users`,
+  //     {
+  //       headers: { Authorization: `Token ${token}` },
+  //     }
+  //   );
+  //   console.log(news);
+  // };
+  // testFunc();
 
   return (
     <div>

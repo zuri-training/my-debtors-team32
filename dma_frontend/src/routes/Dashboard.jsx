@@ -35,7 +35,7 @@ const Dashboard = () => {
   useMount(async () => {
     // const result = await handleRole();
     // console.log('result :>> ', result.message);
-    if (cookies['dma-cookies'] === 'null') {
+    if (!cookies['dma-cookies']) {
       navigate('/signin');
     }
   });

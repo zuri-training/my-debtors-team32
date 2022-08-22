@@ -29,12 +29,15 @@ const SchoolRegistrationComp = () => {
         }
       );
       const result2 = await axios.get(
-        `${process.env.REACT_APP_BACKEND_URL}/api/r/school/${result1?.data?.pk}/`,
+        `${process.env.REACT_APP_BACKEND_URL}/api/r/school/`,
         {
           headers: { Authorization: `Token ${token}` },
         }
       );
-      return result2?.data;
+      const final = result2.data.filter(
+        (school) => school?.author === result1?.data?.pk
+      );
+      return final[0];
     } catch (error) {
       return error;
     }
@@ -42,7 +45,7 @@ const SchoolRegistrationComp = () => {
 
   useMount(async () => {
     const result = await handleRole();
-    console.log('result :>> ', result.message);
+    console.log('result :>> ', result);
     if (cookies['dma-cookies'] && !result?.message) {
       navigate('/dashboard');
     } else if (cookies['dma-cookies'] !== 'null') {
