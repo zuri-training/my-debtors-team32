@@ -1,7 +1,8 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 import axios from 'axios';
-import { useMount } from 'react-use';
+import { useMount, useUnmount } from 'react-use';
 import { useCookies } from 'react-cookie';
+import { useDidUpdate } from 'rooks';
 
 export const GlobalContextData = createContext();
 
@@ -11,7 +12,9 @@ export default function GlobalContext({ children }) {
   const [schoolInfo, setSchoolInfo] = useState(null);
 
   console.log('schoolInfo', schoolInfo);
-  console.log('cookies', cookies);
+  // console.log('cookies :>>', cookies);
+  console.log('cookies', cookies['dma-cookies']);
+
   const handleRole = async () => {
     try {
       const token = cookies['dma-cookies'];
@@ -21,16 +24,18 @@ export default function GlobalContext({ children }) {
           headers: { Authorization: `Token ${token}` },
         }
       );
+      console.log('result1 :>> ', result1);
       const result2 = await axios.get(
         `${process.env.REACT_APP_BACKEND_URL}/api/r/school/`,
         {
           headers: { Authorization: `Token ${token}` },
         }
       );
+      console.log('result2', result2);
       const final = result2.data.filter(
-        (school) => school?.author === result1?.data?.pk
+        (school) => school?.username === result1?.data?.username
       );
-      console.log('final :>> ', final[0]);
+      console.log('final :>> ', final);
       // return result2?.data;
       return final[0];
     } catch (error) {
@@ -38,16 +43,21 @@ export default function GlobalContext({ children }) {
     }
   };
 
-  useMount(async () => {
+  useDidUpdate(async () => {
+    console.log('update state');
     if (cookies['dma-cookies']) {
+      console.log('there is cookie');
       const result = await handleRole();
       console.log('result :>> ', result);
-      if (!result?.message) {
+      if (result) {
         console.log('there is school info');
         setSchoolInfo(result);
       }
+    } else {
+      console.log('there is no school info');
+      setSchoolInfo(null);
     }
-  });
+  }, [cookies]);
 
   const [schoolData, setSchoolData] = useState({});
   return (

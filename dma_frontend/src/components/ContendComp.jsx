@@ -12,8 +12,9 @@ const ContendComp = () => {
   const navigate = useNavigate();
   const [formValue, setFormValue] = useState({});
   const [cookies] = useCookies(['dma-cookies']);
+
   useMount(() => {
-    if (cookies['dma-cookies'] === 'null') {
+    if (!cookies['dma-cookies']) {
       navigate('/signin');
     }
   });
@@ -103,7 +104,7 @@ const ContendComp = () => {
             See All Your List Of Contends Starting From The Most Recent
           </Link>
         </div>
-        <table class='contend--table'>
+        <table className='contend--table'>
           <thead>
             <tr>
               <th>Student Name</th>

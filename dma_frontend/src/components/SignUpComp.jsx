@@ -6,12 +6,18 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useCookies } from 'react-cookie';
 import { useMount } from 'react-use';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SignUpComp = () => {
   const [showPass, setShowPass] = useState(false);
-  const [formValue, setFormValue] = useState({});
+  const [formValue, setFormValue] = useState({
+    username: '',
+    email: '',
+    password1: '',
+    password2: '',
+  });
   const [cookies, setCookie] = useCookies(['dma-cookies']);
-
   console.log('sign up', formValue);
   const handleForm = (e) => {
     setFormValue({
@@ -22,23 +28,76 @@ const SignUpComp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const result = await axios.post(
-      `${process.env.REACT_APP_BACKEND_URL}/api/r/dj-rest-auth/registration/`,
+    const { username, email, password1, password2 } = formValue;
+    try {
+      if (
+        username !== '' &&
+        email !== '' &&
+        password1 !== '' &&
+        password2 !== '' &&
+        username &&
+        email &&
+        password1 &&
+        password2
+      ) {
+        if (password1 !== password2) {
+          toast.error('Password does not match');
+        } else {
+          const result = await axios.post(
+            `${process.env.REACT_APP_BACKEND_URL}/api/r/dj-rest-auth/registration/`,
 
-      {
-        ...formValue,
+            {
+              ...formValue,
+            }
+          );
+          setCookie('dma-cookies', result?.data?.key);
+          toast.success('Successfully registered');
+          navigate('/contend');
+        }
+      } else {
+        toast.error('Please fill all fields');
       }
-    );
-    setCookie('dma-cookies', result?.data?.key);
-    navigate('/contend');
+    } catch (error) {
+      toast.error('Not Completed, Please try again with different credentials');
+    }
   };
   // console.log('cookies', cookies);
 
   let navigate = useNavigate();
 
-  useMount(() => {
+  const handleRole = async () => {
+    try {
+      const token = cookies['dma-cookies'];
+      const result1 = await axios.get(
+        `${process.env.REACT_APP_BACKEND_URL}/api/r/dj-rest-auth/user/`,
+        {
+          headers: { Authorization: `Token ${token}` },
+        }
+      );
+      const result2 = await axios.get(
+        `${process.env.REACT_APP_BACKEND_URL}/api/r/school/`,
+        {
+          headers: { Authorization: `Token ${token}` },
+        }
+      );
+      const final = result2.data.filter(
+        (school) => school?.author === result1?.data?.pk
+      );
+      return final[0];
+    } catch (error) {
+      return error;
+    }
+  };
+
+  useMount(async () => {
     if (cookies['dma-cookies']) {
-      navigate('/contend');
+      const result = await handleRole();
+      console.log('result :>> ', result);
+      if (result) {
+        navigate('/dashboard');
+      } else {
+        navigate('/contend');
+      }
     }
   });
 
@@ -65,7 +124,8 @@ const SignUpComp = () => {
               type='text'
               className='fname'
               name='username'
-              onClick={(e) => handleForm(e)}
+              value={formValue?.username}
+              onChange={(e) => handleForm(e)}
               required=''
               placeholder='Enter your full name'
             />
@@ -78,8 +138,9 @@ const SignUpComp = () => {
             <input
               type='email'
               className='email'
+              value={formValue?.email}
               name='email'
-              onClick={(e) => handleForm(e)}
+              onChange={(e) => handleForm(e)}
               required=''
               placeholder='Enter your Email Address'
             />
@@ -96,8 +157,9 @@ const SignUpComp = () => {
               name='password1'
               placeholder='******************'
               className='pswd01'
-              onClick={(e) => handleForm(e)}
-              autoComplete
+              value={formValue?.password1}
+              onChange={(e) => handleForm(e)}
+              // autoComplete
               required
               id='id_password'
             />
@@ -111,8 +173,8 @@ const SignUpComp = () => {
               name='password2'
               placeholder='******************'
               className='pswd01'
-              autoComplete
-              onClick={(e) => handleForm(e)}
+              value={formValue?.password2}
+              onChange={(e) => handleForm(e)}
               required
               id='id_password'
             />
@@ -141,6 +203,7 @@ const SignUpComp = () => {
           </form>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
