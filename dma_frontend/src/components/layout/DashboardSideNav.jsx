@@ -381,7 +381,7 @@ const DashboardSideNav = () => {
             <div className='tw-absolute tw-inset-x-0 tw-bottom-4 tw-flex tw-w-full tw-justify-center'>
               <button
                 onClick={() => {
-                  setCookie('dma-cookies', null);
+                  removeCookie('dma-cookies');
                   navigate('/');
                 }}
                 className='tw-flex tw-cursor-pointer tw-rounded-md tw-bg-green-300 tw-py-2 tw-px-3 tw-font-fam1 tw-text-blue-500 tw-no-underline tw-transition-all tw-duration-300 tw-ease-in-out hover:tw-text-blue-500 '

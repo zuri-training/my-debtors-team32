@@ -1,6 +1,6 @@
-import { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useContext, useState } from 'react';
 import axios from 'axios';
-import { useMount, useUnmount } from 'react-use';
+// import { useMount, useUnmount } from 'react-use';
 import { useCookies } from 'react-cookie';
 import { useDidUpdate } from 'rooks';
 
@@ -10,7 +10,7 @@ export default function GlobalContext({ children }) {
   // const [value, setValue, remove] = useLocalStorage('dma-local-storage');
   const [cookies] = useCookies(['dma-cookies']);
   const [schoolInfo, setSchoolInfo] = useState(null);
-
+  const [localCookies, setlocalCookies] = useState(null);
   console.log('schoolInfo', schoolInfo);
   // console.log('cookies :>>', cookies);
   console.log('cookies', cookies['dma-cookies']);
@@ -47,6 +47,7 @@ export default function GlobalContext({ children }) {
     console.log('update state');
     if (cookies['dma-cookies']) {
       console.log('there is cookie');
+      setlocalCookies(cookies['dma-cookies']);
       const result = await handleRole();
       console.log('result :>> ', result);
       if (result) {
@@ -56,13 +57,20 @@ export default function GlobalContext({ children }) {
     } else {
       console.log('there is no school info');
       setSchoolInfo(null);
+      setlocalCookies(null);
     }
   }, [cookies]);
 
   const [schoolData, setSchoolData] = useState({});
   return (
     <GlobalContextData.Provider
-      value={{ schoolData, setSchoolData, schoolInfo, setSchoolInfo }}
+      value={{
+        schoolData,
+        setSchoolData,
+        schoolInfo,
+        setSchoolInfo,
+        localCookies,
+      }}
     >
       {children}
     </GlobalContextData.Provider>
