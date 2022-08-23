@@ -7,7 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 // import Form from 'react-bootstrap/Form';
 import axios from 'axios';
-import { useMount, useUpdateEffect } from 'react-use';
+import { useMount } from 'react-use';
 import { useCookies } from 'react-cookie';
 
 const SchoolRegistrationComp = () => {
@@ -21,7 +21,7 @@ const SchoolRegistrationComp = () => {
     school_address: '',
     contact_number: '',
     school_cert: '',
-    registration_cert: '',
+    registeration_cert: '',
     ministry_approval: '',
     proprietor_name: '',
     proprietor_email: '',
@@ -41,7 +41,7 @@ const SchoolRegistrationComp = () => {
   });
   const [imageName, setImageName] = useState({
     school_cert: '',
-    registration_cert: '',
+    registeration_cert: '',
     ministry_approval: '',
   });
   const [cookies] = useCookies(['dma-cookies']);
@@ -124,7 +124,7 @@ const SchoolRegistrationComp = () => {
         school_address,
         contact_number,
         school_cert,
-        registration_cert,
+        registeration_cert,
         ministry_approval,
         proprietor_name,
         proprietor_email,
@@ -145,7 +145,7 @@ const SchoolRegistrationComp = () => {
         school_address &&
         contact_number &&
         school_cert &&
-        registration_cert &&
+        registeration_cert &&
         ministry_approval &&
         proprietor_name &&
         proprietor_email &&
@@ -166,7 +166,7 @@ const SchoolRegistrationComp = () => {
         school_address !== '' &&
         contact_number !== '' &&
         school_cert !== '' &&
-        registration_cert !== '' &&
+        registeration_cert !== '' &&
         ministry_approval !== '' &&
         proprietor_name !== '' &&
         proprietor_email !== '' &&
@@ -418,14 +418,14 @@ const SchoolRegistrationComp = () => {
                       type='file'
                       id='myFile'
                       accept='image/*'
-                      name='registration_cert'
+                      name='registeration_cert'
                       onChange={(e) => handleImageForm(e)}
                     />
                   </div>
                   <br />
-                  {formValue.registration_cert && (
+                  {formValue.registeration_cert && (
                     <a
-                      href={formValue.registration_cert}
+                      href={formValue.registeration_cert}
                       target='_blank'
                       rel='noopener noreferrer'
                     >

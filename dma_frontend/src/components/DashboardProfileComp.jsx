@@ -9,10 +9,13 @@ import { BsCheckLg } from 'react-icons/bs';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/dashboard-profile.css';
 import { useNavigate } from 'react-router-dom';
+import { useContextData } from '../lib/GlobalContext';
+import { AiOutlineClose } from 'react-icons/ai';
 // import { useMount, useCookie } from 'react-use';
 function DashboardProfileComp() {
   const [key, setKey] = useState('first');
   let navigate = useNavigate();
+  const { schoolInfo } = useContextData();
 
   function styleNav(agba) {
     if (key === agba) {
@@ -26,8 +29,8 @@ function DashboardProfileComp() {
     <div className='profile-all dashboardInfo'>
       <div className='profile-header'>
         <div className='p-header-title p-header'>
-          <h2>Apata Memorial High School</h2>
-          <p>School ID: 3589DT47R9</p>
+          <h2>{schoolInfo?.school_name}</h2>
+          {/* <p>School ID: 3589DT47R9</p> */}
         </div>
         <div className='p-header-button p-header'>
           <Button
@@ -72,7 +75,7 @@ function DashboardProfileComp() {
                       <p>Name of School</p>
                     </Col>
                     <Col className='final-detail'>
-                      <b>Apata Memorial High School</b>
+                      <b>{schoolInfo?.school_name}</b>
                     </Col>
                   </Row>
                   <Row className='row-entry'>
@@ -80,7 +83,7 @@ function DashboardProfileComp() {
                       <p>School Address</p>
                     </Col>
                     <Col className='final-detail'>
-                      <b>Ireakari Estate, Isolo, Lagos</b>
+                      <b>{schoolInfo?.school_address}</b>
                     </Col>
                   </Row>
                   <Row className='row-entry'>
@@ -88,7 +91,7 @@ function DashboardProfileComp() {
                       <p>Email Address</p>
                     </Col>
                     <Col className='final-detail'>
-                      <b>apatamemorial@gmail.com</b>
+                      <b>{schoolInfo?.email}</b>
                     </Col>
                   </Row>
                 </div>
@@ -98,7 +101,7 @@ function DashboardProfileComp() {
                       <p>School Category</p>
                     </Col>
                     <Col className='final-detail'>
-                      <b>Private</b>
+                      <b>{schoolInfo?.school_category}</b>
                     </Col>
                   </Row>
                   <Row className='row-entry'>
@@ -106,7 +109,7 @@ function DashboardProfileComp() {
                       <p>Contact Number</p>
                     </Col>
                     <Col className='final-detail'>
-                      <b>08056789123</b>
+                      <b>{schoolInfo?.contact_number}</b>
                     </Col>
                   </Row>
                   <Row className='row-entry'>
@@ -114,13 +117,7 @@ function DashboardProfileComp() {
                       <p>Description</p>
                     </Col>
                     <Col className='final-detail'>
-                      <b>
-                        military-style private boarding school in Lagos,
-                        Nigeria.It has about 1550 pupils and 150 teachers. There
-                        are both boarding and day students. It is said to be the
-                        best school in Oshodi-Isolo local government and one of
-                        the best in lagos state.
-                      </b>
+                      <b>{schoolInfo?.description}</b>
                     </Col>
                   </Row>
                 </div>
@@ -130,17 +127,32 @@ function DashboardProfileComp() {
                     <ul>
                       <li className='req-list'>
                         <b>
-                          Tax certification for Schools <BsCheckLg />
+                          Tax certification for Schools{' '}
+                          {schoolInfo?.school_cert ? (
+                            <BsCheckLg />
+                          ) : (
+                            <AiOutlineClose />
+                          )}
                         </b>
                       </li>
                       <li className='req-list'>
                         <b>
-                          School Registration Certificate <BsCheckLg />
+                          School Registration Certificate{' '}
+                          {schoolInfo?.registeration_cert ? (
+                            <BsCheckLg />
+                          ) : (
+                            <AiOutlineClose />
+                          )}
                         </b>
                       </li>
                       <li className='req-list'>
                         <b>
-                          Approval by Ministry of Education <BsCheckLg />
+                          Approval by Ministry of Education{' '}
+                          {schoolInfo?.ministry_approval ? (
+                            <BsCheckLg />
+                          ) : (
+                            <AiOutlineClose />
+                          )}{' '}
                         </b>
                       </li>
                     </ul>
@@ -151,12 +163,13 @@ function DashboardProfileComp() {
             <Tab.Pane eventKey='second'>
               <Container bsPrefix='user-details'>
                 <div className='each-user'>
+                  <p className='tw-text-xl tw-font-bold'>Proprietor</p>
                   <Row className='row-entry'>
                     <Col md={4} className='detail-title'>
-                      <p>Name of Proprietor</p>
+                      <p>Name</p>
                     </Col>
                     <Col className='final-detail'>
-                      <b>Adachukwu Ezenwaka</b>
+                      <b>{schoolInfo?.proprietor_name}</b>
                     </Col>
                   </Row>
                   <Row className='row-entry'>
@@ -164,7 +177,7 @@ function DashboardProfileComp() {
                       <p>Email</p>
                     </Col>
                     <Col className='final-detail'>
-                      <b>adachukwuezenwaka@gmail.com</b>
+                      <b>{schoolInfo?.proprietor_email}</b>
                     </Col>
                   </Row>
                   <Row className='row-entry'>
@@ -172,17 +185,18 @@ function DashboardProfileComp() {
                       <p>Phone number</p>
                     </Col>
                     <Col className='final-detail'>
-                      <b>08012345678</b>
+                      <b>{schoolInfo?.proprietor_number}</b>
                     </Col>
                   </Row>
                 </div>
                 <div className='each-user'>
+                  <p className='tw-text-xl tw-font-bold'>Principal</p>
                   <Row className='row-entry'>
                     <Col md={4} className='detail-title'>
-                      <p>Name of Proprietor</p>
+                      <p>Name</p>
                     </Col>
                     <Col className='final-detail'>
-                      <b>Adachukwu Ezenwaka</b>
+                      <b>{schoolInfo?.principal_name}</b>
                     </Col>
                   </Row>
                   <Row className='row-entry'>
@@ -190,7 +204,7 @@ function DashboardProfileComp() {
                       <p>Email</p>
                     </Col>
                     <Col className='final-detail'>
-                      <b>adachukwuezenwaka@gmail.com</b>
+                      <b>{schoolInfo?.principal_email}</b>
                     </Col>
                   </Row>
                   <Row className='row-entry'>
@@ -198,17 +212,18 @@ function DashboardProfileComp() {
                       <p>Phone number</p>
                     </Col>
                     <Col className='final-detail'>
-                      <b>08012345678</b>
+                      <b>{schoolInfo?.principal_number}</b>
                     </Col>
                   </Row>
                 </div>
                 <div className='each-user'>
+                  <p className='tw-text-xl tw-font-bold'>Bursar</p>
                   <Row className='row-entry'>
                     <Col md={4} className='detail-title'>
-                      <p>Name of Proprietor</p>
+                      <p>Name</p>
                     </Col>
                     <Col className='final-detail'>
-                      <b>Adachukwu Ezenwaka</b>
+                      <b>{schoolInfo?.bursar_name}</b>
                     </Col>
                   </Row>
                   <Row className='row-entry'>
@@ -216,7 +231,7 @@ function DashboardProfileComp() {
                       <p>Email</p>
                     </Col>
                     <Col className='final-detail'>
-                      <b>adachukwuezenwaka@gmail.com</b>
+                      <b>{schoolInfo?.bursar_email}</b>
                     </Col>
                   </Row>
                   <Row className='row-entry'>
@@ -224,7 +239,7 @@ function DashboardProfileComp() {
                       <p>Phone number</p>
                     </Col>
                     <Col className='final-detail'>
-                      <b>08012345678</b>
+                      <b>{schoolInfo?.bursar_number}</b>
                     </Col>
                   </Row>
                 </div>

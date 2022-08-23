@@ -7,6 +7,7 @@ import { useCookies } from 'react-cookie';
 import { useMount } from 'react-use';
 import DashboardSideNav from '../components/layout/DashboardSideNav';
 import { useQuery } from '@tanstack/react-query';
+import { useContextData } from '../lib/GlobalContext';
 
 const UpdateDebtor = () => {
   let navigate = useNavigate();
@@ -32,6 +33,8 @@ const UpdateDebtor = () => {
   console.log('params :>> ', params);
   console.log('data', data);
   console.log('debtorInfo :>> ', debtorInfo);
+
+  const { setSchoolInfo } = useContextData();
 
   // const [cookies] = useCookies(['dma-cookies']);
   const handleRole = async () => {
@@ -67,6 +70,8 @@ const UpdateDebtor = () => {
       navigate('/signin');
     } else {
       const result = await handleRole();
+      setSchoolInfo(result);
+
       if (!result) {
         navigate('/contend');
       }

@@ -21,6 +21,9 @@ const ProfileInput = (props) => {
             type={props.type}
             className='final-update tw-w-full tw-appearance-none tw-rounded tw-border tw-py-2 tw-px-3 tw-text-gray-700 tw-shadow focus:tw-border-blue-300 focus:tw-outline-none'
             id={props.id}
+            name={props.id}
+            value={props.value}
+            onChange={props.handleForm}
             placeholder={props.placeholder}
           />
         </Col>

@@ -5,9 +5,11 @@ import { useMount } from 'react-use';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useCookies } from 'react-cookie';
+import { useContextData } from '../lib/GlobalContext';
 
 const AddDeptor = () => {
   let navigate = useNavigate();
+  const { setSchoolInfo } = useContextData();
 
   const [cookies] = useCookies(['dma-cookies']);
 
@@ -44,6 +46,8 @@ const AddDeptor = () => {
       navigate('/signin');
     } else {
       const result = await handleRole();
+      setSchoolInfo(result);
+
       if (!result) {
         navigate('/contend');
       }
